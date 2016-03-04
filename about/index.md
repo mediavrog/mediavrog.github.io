@@ -1,25 +1,20 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, responsive]
-modified: 2014-08-08T20:53:07.573882-04:00
-comments: true
-image:
-  feature: sample-image-2.jpg
+title: About me
+tags: 
+  - about
+modified: {}
+comments: false
+image: 
+  feature: "sample-image-2.jpg"
   credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  creditlink: "http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/"
+published: true
 ---
 
-Minimal Mistakes is responsive Jekyll theme with large featured images and solid typography. As the name implies the styling is fairly minimal to make it easier for you to build on top of.
 
-## Minimal Mistakes is all about:
+I'm a communicative person with a structured and creative open mind. I love how ubiquitous computing changes and enhances our daily life and therefore want to be part of the innovation and creation of new mobile services. I personally see mobile health becoming more and more important especially in the emerging markets.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
+I always keep a critical stance to the code I read and write, and am never afraid of digging into unknown and my own code to refactor it. Using tickets and versioning systems is as much part of my daily work as documenting and striving to produce easily understandable and readable, well commented code. I am not a big fan of a low bus factor.
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+Specialties: Focus on (open) standards at work, RESTful API Design, Android, Scala, XML, Web Technologies, JavaScript, Ruby on Rails, Empathy

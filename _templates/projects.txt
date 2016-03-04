@@ -1,0 +1,9 @@
+---
+layout: projects-index
+title: {{ title }}
+permalink:
+modified:
+excerpt:
+image:
+  feature:
+---

@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Site Title
+title:            mediavrog
 locale:           en_US
 url:
 
@@ -41,21 +41,21 @@ titlecase: true
 
 # Site owner
 owner:
-  name: Your Name
+  name: Maik Vlcek
   avatar: bio-photo.jpg
-  bio: "Describe your self."
+  bio: "Full stack & mobile engineer"
   email:
   disqus-shortname:
-  twitter: #username
+  twitter: mediavrog
   facebook: #username
   google:
     plus: #username
-    analytics:
+    analytics: UA-1304393-2
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: mediavrog
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username

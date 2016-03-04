@@ -1,10 +1,14 @@
 ---
 published: true
-title: Read-only for bootstrap datepicker calendar popup
+title: "Read-only for bootstrap datepicker calendar popup"
 layout: post
-tags: [javascript, bootstrap]
-categories: [javascript]
+tags: 
+  - javascript
+  - bootstrap
+categories: 
+  - javascript
 ---
+
 So if you ever came across the need to just show selected dates/date ranges in the bootstrap datepicker, use the following code to prevent date selection by the user.
 
 The following code uses a date range to show some period in the calendar.

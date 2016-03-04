@@ -1,5 +1,5 @@
 ---
-layout: projects-index
+layout: project-index
 title: {{ title }}
 permalink:
 modified:

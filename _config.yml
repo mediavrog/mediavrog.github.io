@@ -3,6 +3,7 @@
 title:            mediavrog
 locale:           en_US
 url:              http://mediavrog.github.io
+#url:              http://127.0.0.1:4000
 
 
 # Jekyll configuration
@@ -42,7 +43,7 @@ titlecase: true
 # Site owner
 owner:
   name: Maik Vlcek
-  avatar: bio-photo.jpg
+  avatar: bio-photo.png
   bio: "Full stack & mobile engineer"
   email:
   disqus-shortname:

@@ -1,11 +1,24 @@
 /* ==========================================================================
    Page layout
    ========================================================================== */
+html {
+	height: 100%;
+	max-height: 100%;
+	font-size: 62.5%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 body {
 	background-color: $bodycolor;
 	font-family: $base-font;
 	color: $text-color;
+	letter-spacing: 0.01rem;
+	-webkit-font-feature-settings: 'kern' 1;
+	-moz-font-feature-settings: 'kern' 1;
+	-o-font-feature-settings: 'kern' 1;
+	font-size: 1.8rem;
+	line-height: 1.75em;
+	position: relative;
 }
 
 /*
@@ -239,10 +252,10 @@ $button-size: 1.5rem;
 			@include suffix(12,0);
 		}
 		@media #{$large} {
-		@include grid(12,6);
+		@include grid(12,7);
 		}
 		@media #{$x-large} {
-			@include grid(12,5);
+			@include grid(12,6);
 		}
 	}
 }
@@ -268,8 +281,9 @@ $button-size: 1.5rem;
 	h3 {
 		margin: 0;
 		padding-bottom: .5em;
+		margin-bottom: .5em;
 		@include font-rem(28);
-		border-bottom: 1px solid lighten($black,70);
+		border-bottom: 1px solid #EFEFEF;
 	}
 	article {
 		h2 {
@@ -410,7 +424,7 @@ $button-size: 1.5rem;
 		.bio-photo,
 		p,
 		.author-social {
-			max-width: 150px;
+			max-width: 140px;
 		}
 	}
 	@media #{$x-large} {
@@ -451,7 +465,7 @@ $button-size: 1.5rem;
 	p > a,
 	p > em > a,
 	p > strong > a,
-	li > a {
+	li > a, cite > a {
 		text-decoration: underline;
 	}
 }
@@ -631,10 +645,15 @@ $button-size: 1.5rem;
 
 /* Footer wrapper */
 .footer-wrap {
-	@include container;
 	@include clearfix;
 	clear: both;
-	padding-bottom: 3em;
+	padding: 1rem 15px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+
 	a,
 	a:active,
 	a:visited,
@@ -642,24 +661,34 @@ $button-size: 1.5rem;
 	h4,
 	h5,
 	h6,
-	span {
-		@include font-rem(14);
+	span, section {
+		font-family: "Open Sans", sans-serif;
+		font-weight: 300;
+		font-size: 1rem;
+		line-height: 1.75em;
+		color: #BBC7CC;
 	}
-	footer {
-		@include grid(12,10);
-		@include prefix(12,1);
-		@include suffix(12,1);
-		@media #{$small} {
-			@include grid(12,6);
-			@include prefix(12,3);
-			@include suffix(12,3);
-		}
-		@media #{$x-large} {
-			@include grid(12,4.5);
-			@include prefix(12,4);
-			@include suffix(12,3.5);
-		}
+
+	a {
+		font-weight: bold;
 	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.copyright {
+	display: block;
+	width: 45%;
+	float: left;
+}
+
+.poweredby {
+	display: block;
+	width: 45%;
+	float: right;
+	text-align: right;
 }
 
 /* Related articles list */

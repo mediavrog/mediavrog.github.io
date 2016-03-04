@@ -1,7 +1,7 @@
 ---
-published: true
-title: "Read-only for bootstrap datepicker calendar popup"
 layout: post
+title: "Read-only for bootstrap datepicker calendar popup"
+excerpt: "Small js to simulate read only in the calendar popup."
 tags: 
   - javascript
   - bootstrap

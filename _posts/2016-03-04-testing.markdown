@@ -1,8 +1,0 @@
----
-published: true
-title: Testing
-layout: post
-tags: [test, moar]
-categories: [cat1, cat2]
----
-Test

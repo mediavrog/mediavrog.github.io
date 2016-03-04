@@ -13,7 +13,7 @@ So if you ever came across the need to just show selected dates/date ranges in t
 
 The following code uses a date range to show some period in the calendar.
 
-{% highlight javascript %}
+```javascript
 var el = $('.input-daterange');
 el.datepicker(myOptions);
 if el.data('readonly') // use a data attribute
@@ -24,4 +24,4 @@ if el.data('readonly') // use a data attribute
       e.stopPropagation();
      });
   });
-{% endhighlight %}
+```

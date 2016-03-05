@@ -273,32 +273,48 @@ $button-size: 1.5rem;
 		@include suffix(12,0);
 	}
 	@media #{$large} {
-		@include grid(12,6);
+		@include grid(12,7);
 	}
 	@media #{$x-large} {
-		@include grid(12,5);
+		@include grid(12,6);
 	}
 	h3 {
-		margin: 0;
+		margin: 2em 0 .5em;
 		padding-bottom: .5em;
-		margin-bottom: .5em;
 		@include font-rem(28);
 		border-bottom: 1px solid #EFEFEF;
 	}
 	article {
+		clear: both;
+
 		h2 {
-			margin-bottom: 4px;
+			font-weight: normal;
+			padding: 10px;
 			@include font-rem(20);
 			&.link-post {
 				margin-bottom: 0px + $doc-line-height;
 				margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
 			}
-		}
-		p {
-			@include font-rem(14);
-		}
-		p+p {
-			text-indent: 0;
+
+			img {
+				@include rounded(100px);
+				height: 2rem;
+				padding: 4px;
+				vertical-align: text-top;
+			}
+
+			time {
+				@include font-rem(12);
+				line-height: 34px;
+				float: right;
+				text-transform: uppercase;
+				color: #ddd;
+				display: none;
+
+				@media #{$medium} {
+					display: inline-block;
+				}
+			}
 		}
 	}
 }
@@ -348,6 +364,38 @@ $button-size: 1.5rem;
 			color: $white;
 			@include text-shadow(0 1px 2px rgba(0,0,0,.25));
 		}
+	}
+}
+
+.post .thumb {
+	text-align: center;
+	border-top: 1px solid #f8f8f8;
+	margin-top: 2.5em;
+
+	img {
+		@include rounded(100px);
+		height: 3rem;
+		width: 3rem;
+		padding: 4px;
+		vertical-align: text-top;
+		margin-top: -2.5rem;
+
+		&:hover {
+			transform: scale(2);
+		}
+
+		@media #{$medium} {
+			height: 6rem;
+			width: 6rem;
+			margin-top: -4.5rem;
+		}
+	}
+
+	img:before {
+		content: " ";
+		height: 5rem;
+		width: 5rem;
+
 	}
 }
 
@@ -467,6 +515,10 @@ $button-size: 1.5rem;
 	p > strong > a,
 	li > a, cite > a {
 		text-decoration: underline;
+	}
+
+	& > blockquote:first-child {
+		margin-top: 0.5em;
 	}
 }
 

@@ -39,6 +39,11 @@
       {% else %}
         <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
       {% endif %}
+      {% if page.image.thumb %}
+        <div class="thumb">
+          <img src="{{ site.url }}/images/{{ page.image.thumb }}" alt="{{ page.title }} thumb image" />
+        </div>
+      {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       {{ content }}

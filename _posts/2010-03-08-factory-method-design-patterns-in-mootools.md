@@ -11,6 +11,7 @@ tags:
     - mixin
 categories:
     - mootools
+permalink: /blog/2010/03/08/mootools/factory-method-design-patterns-in-mootools-1
 image:
     thumb: mootools.jpg
 ---

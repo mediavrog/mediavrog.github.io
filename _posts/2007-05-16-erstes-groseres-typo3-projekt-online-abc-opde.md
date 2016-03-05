@@ -13,6 +13,7 @@ tags:
     - xhtml
 categories:
     - typo3
+permalink: /blog/2007/05/16/typo3/erstes-groseres-typo3-projekt-online-abc-opde
 image:
     thumb: abc.jpg
 ---

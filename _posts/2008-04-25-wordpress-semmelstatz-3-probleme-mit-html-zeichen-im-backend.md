@@ -10,6 +10,7 @@ tags:
     - Wordpress (WP)
 categories:
     - wordpress
+permalink: /blog/2008/04/25/wordpress/wordpress-semmelstatz-3-probleme-mit-html-zeichen-im-backend
 image:
     thumb: wordpress.jpg
 ---

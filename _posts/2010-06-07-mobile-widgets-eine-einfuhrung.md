@@ -19,7 +19,7 @@ tags:
     - wrt
 categories:
     - widgets-wgt
-permalink: /2010/06/07/widgets-wgt/mobile-widgets-eine-einfuhrung
+permalink: /blog/2010/06/07/widgets-wgt/mobile-widgets-eine-einfuhrung
 image:
     thumb: mobileworld.png
 ---

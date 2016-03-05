@@ -9,7 +9,7 @@ tags:
     - server
 categories:
     - server
-permalink: /2007/07/26/weitere-themen/server/wieder-online
+permalink: /blog/2007/07/26/weitere-themen/server/wieder-online
 image:
     thumb: server.jpg
 ---

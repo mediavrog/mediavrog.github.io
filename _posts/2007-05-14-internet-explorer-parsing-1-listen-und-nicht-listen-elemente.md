@@ -13,6 +13,7 @@ tags:
 categories:
     - internetexplorer
     - javascript
+permalink: /blog/2007/05/14/browser/internetexplorer/internet-explorer-parsing-1-listen-und-nicht-listen-elemente
 image:
     thumb: ie.jpg
 ---

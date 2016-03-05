@@ -9,6 +9,7 @@ tags:
     - verkauf
 categories:
     - domains
+permalink: /blog/2007/05/29/weitere-themen/domains/domain-zu-verkaufen-japanerlebende
 image:
     thumb: japanerleben.jpg
 ---

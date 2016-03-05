@@ -8,6 +8,7 @@ tags:
     - spiele
 categories:
     - 180grad
+permalink: /blog/2008/05/21/180grad/boules-spielen-bei-nacht-mit-leuchtenden-boule-kugeln
 image:
     thumb: boules.jpg
 ---

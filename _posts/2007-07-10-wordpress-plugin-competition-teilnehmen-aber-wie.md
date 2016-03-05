@@ -11,6 +11,7 @@ tags:
     - Wordpress (WP)
 categories:
     - wordpress
+permalink: /blog/2007/07/10/wordpress/wordpress-plugin-competition-teilnehmen-aber-wie
 image:
     thumb: wordpress.jpg
 ---

@@ -16,7 +16,7 @@ tags:
     - vserver
 categories:
     - server
-permalink: /2008/02/25/weitere-themen/server/mysql-lastet-vserver-aus
+permalink: /blog/2008/02/25/weitere-themen/server/mysql-lastet-vserver-aus
 image:
     thumb: server.jpg
 ---

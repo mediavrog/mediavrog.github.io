@@ -12,6 +12,7 @@ tags:
 categories:
     - extensions
     - typo3
+permalink: /blog/2007/07/11/typo3/typo3-benutzer-aufgaben-richtig-nutzen-taskcenter
 image:
     thumb: typo31.jpg
 ---

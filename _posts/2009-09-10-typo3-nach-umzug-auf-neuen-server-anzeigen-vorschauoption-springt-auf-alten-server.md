@@ -10,6 +10,7 @@ tags:
     - typo3
 categories:
     - typo3
+permalink: /blog/2009/09/10/typo3/typo3-nach-umzug-auf-neuen-server-anzeigen-vorschauoption-springt-auf-alten-server
 image:
     thumb: typo33.jpg
 ---

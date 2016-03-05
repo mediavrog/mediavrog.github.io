@@ -13,6 +13,7 @@ tags:
     - Wordpress (WP)
 categories:
     - wordpress
+permalink: /blog/2008/04/25/wordpress/wordpress-25-bilder-groser-als-500-pixel-breite-in-beitrage-einfugen
 image:
     thumb: wordpress.jpg
 ---

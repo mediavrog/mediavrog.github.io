@@ -10,7 +10,7 @@ tags:
     - mootools
 categories:
     - mootools
-permalink: /2008/06/11/mootools/mootools-12-cheat-sheet
+permalink: /blog/2008/06/11/mootools/mootools-12-cheat-sheet
 image:
     thumb: mt12cheat.jpg
 ---

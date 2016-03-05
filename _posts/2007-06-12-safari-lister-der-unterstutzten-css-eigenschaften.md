@@ -11,6 +11,7 @@ tags:
     - webentwicklung
 categories:
     - safari
+permalink: /blog/2007/06/12/browser/safari/safari-lister-der-unterstutzten-css-eigenschaften
 image:
     thumb: safari.jpg
 ---

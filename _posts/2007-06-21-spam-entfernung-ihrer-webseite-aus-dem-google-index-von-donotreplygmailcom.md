@@ -12,6 +12,7 @@ tags:
     - spam
 categories:
     - kurios-nervig
+permalink: /blog/2007/06/21/kurios-nervig/spam-entfernung-ihrer-webseite-aus-dem-google-index-von-donotreplygmailcom
 image:
     thumb: spam.jpg
 ---

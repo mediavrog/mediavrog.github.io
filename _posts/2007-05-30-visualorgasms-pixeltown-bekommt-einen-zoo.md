@@ -11,6 +11,7 @@ tags:
     - visualorgasm
 categories:
     - linktipps-spass
+permalink: /blog/2007/05/30/weitere-themen/linktipps-spass/visualorgasms-pixeltown-bekommt-einen-zoo
 image:
     thumb: pixeltown.jpg
 ---

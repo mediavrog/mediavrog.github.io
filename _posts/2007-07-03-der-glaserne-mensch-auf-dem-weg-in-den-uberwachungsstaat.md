@@ -9,6 +9,7 @@ tags:
     - flash
 categories:
     - kurios-nervig
+permalink: /blog/2007/07/03/kurios-nervig/der-glaserne-mensch-auf-dem-weg-in-den-uberwachungsstaat
 image:
     thumb: pano.jpg
 ---

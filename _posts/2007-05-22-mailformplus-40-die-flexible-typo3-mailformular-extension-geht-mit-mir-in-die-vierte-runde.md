@@ -17,6 +17,7 @@ tags:
 categories:
     - browser
     - extensions
+permalink: /blog/2007/05/22/browser/mailformplus-40-die-flexible-typo3-mailformular-extension-geht-mit-mir-in-die-vierte-runde
 image:
     thumb: mailformplus.jpg
 ---

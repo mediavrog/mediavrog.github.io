@@ -12,6 +12,7 @@ tags:
 categories:
     - browser
     - chrome-browser
+permalink: /blog/2008/09/02/browser/google-chrome-googles-antwort-auf-neue-anforderungen-im-browsermarkt
 image:
     thumb: chrome.jpg
 ---

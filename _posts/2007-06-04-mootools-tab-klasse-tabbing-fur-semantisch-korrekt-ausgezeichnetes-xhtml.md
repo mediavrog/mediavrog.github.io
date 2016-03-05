@@ -14,6 +14,7 @@ tags:
     - xhtml
 categories:
     - mootools
+permalink: /blog/2007/06/04/mootools/mootools-tab-klasse-tabbing-fur-semantisch-korrekt-ausgezeichnetes-xhtml
 image:
     thumb: mootools.jpg
 ---

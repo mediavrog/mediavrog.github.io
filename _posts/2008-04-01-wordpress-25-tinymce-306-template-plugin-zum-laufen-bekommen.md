@@ -16,6 +16,7 @@ tags:
     - Wordpress (WP)
 categories:
     - wordpress
+permalink: /blog/2008/04/01/wordpress/wordpress-25-tinymce-306-template-plugin-zum-laufen-bekommen
 image:
     thumb: wordpress.jpg
 ---

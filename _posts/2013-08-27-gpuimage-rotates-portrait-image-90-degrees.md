@@ -14,6 +14,7 @@ tags:
     - rotation
 categories:
     - android
+permalink: /blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees
 image:
     thumb: device-2013-08-27-104732preview.png
 ---

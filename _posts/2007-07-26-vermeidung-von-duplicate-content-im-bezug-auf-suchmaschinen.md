@@ -12,6 +12,7 @@ tags:
     - Wordpress (WP)
 categories:
     - seo
+permalink: /blog/2007/07/26/seo/vermeidung-von-duplicate-content-im-bezug-auf-suchmaschinen
 image:
     thumb: wordpress.jpg
 ---

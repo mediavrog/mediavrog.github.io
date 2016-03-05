@@ -10,6 +10,7 @@ tags:
     - typo3
 categories:
     - extensions
+permalink: /blog/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
 image:
     thumb: typo31.jpg
 ---

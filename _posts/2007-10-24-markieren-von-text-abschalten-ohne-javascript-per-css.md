@@ -10,6 +10,7 @@ tags:
     - selection
 categories:
     - browser
+permalink: /blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css
 image:
     thumb: css.jpg
 ---

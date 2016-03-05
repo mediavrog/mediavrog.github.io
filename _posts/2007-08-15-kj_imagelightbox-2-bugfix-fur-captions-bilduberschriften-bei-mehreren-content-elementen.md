@@ -12,6 +12,7 @@ tags:
     - typo3
 categories:
     - extensions
+permalink: /blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen
 image:
     thumb: typo33.jpg
 ---

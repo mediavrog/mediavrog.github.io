@@ -15,6 +15,7 @@ tags:
 categories:
     - browser
     - javascript
+permalink: /blog/2007/10/24/browser/browser-hangt-sich-beim-einbinden-von-javascript-auf-oder-sturzt-ab
 image:
     thumb: javascript.jpg
 ---

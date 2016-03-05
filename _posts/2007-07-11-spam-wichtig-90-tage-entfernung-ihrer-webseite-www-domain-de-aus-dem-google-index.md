@@ -12,6 +12,7 @@ tags:
     - Suchmaschinenoptimierung (SEO)
 categories:
     - kurios-nervig
+permalink: /blog/2007/07/11/kurios-nervig/spam-wichtig-90-tage-entfernung-ihrer-webseite-www-domain-de-aus-dem-google-index
 image:
     thumb: spam.jpg
 ---

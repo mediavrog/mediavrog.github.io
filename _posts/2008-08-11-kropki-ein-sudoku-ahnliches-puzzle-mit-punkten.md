@@ -8,6 +8,7 @@ tags:
     - rÃ¤tsel
 categories:
     - 180grad
+permalink: /blog/2008/08/11/180grad/kropki-ein-sudoku-ahnliches-puzzle-mit-punkten
 ---
 > Ich habe vor Kurzem in der PM Kreativ einen mir bis dato unbekannten Rätseltyp entdeckt:
 

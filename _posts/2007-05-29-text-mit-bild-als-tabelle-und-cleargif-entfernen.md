@@ -11,6 +11,7 @@ tags:
     - typo3
 categories:
     - ts-snippets
+permalink: /blog/2007/05/29/typo3/ts-snippets/text-mit-bild-als-tabelle-und-cleargif-entfernen
 image:
     thumb: typo32.jpg
 ---

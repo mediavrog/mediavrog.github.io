@@ -19,6 +19,7 @@ tags:
     - wmode
 categories:
     - firefox
+permalink: /blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox
 image:
     thumb: firefox.jpg
 ---

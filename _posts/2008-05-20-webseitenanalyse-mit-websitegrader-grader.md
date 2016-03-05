@@ -11,7 +11,7 @@ tags:
     - Suchmaschinenoptimierung (SEO)
 categories:
     - seo
-permalink: /2008/05/20/seo/webseitenanalyse-mit-websitegrader-grader
+permalink: /blog/2008/05/20/seo/webseitenanalyse-mit-websitegrader-grader
 ---
 > Ich habe meine Webseite gerade mal dem Test mit dem kostenlosen SEO-Tool [websitegrader][1] unterzogen und bin reichlich erfreut über die Ergebnisse &#8211; keine gravierenden Mängel soweit und einen Score von 85 von 100.
 

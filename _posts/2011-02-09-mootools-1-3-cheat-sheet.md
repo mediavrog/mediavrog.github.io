@@ -12,7 +12,7 @@ tags:
     - reference
 categories:
     - mootools
-permalink: /2011/02/09/mootools/mootools-1-3-cheat-sheet
+permalink: /blog/2011/02/09/mootools/mootools-1-3-cheat-sheet
 image:
     thumb: mt13cheat.jpg
 ---

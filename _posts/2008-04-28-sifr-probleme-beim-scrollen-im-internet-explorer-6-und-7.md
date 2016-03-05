@@ -12,6 +12,7 @@ tags:
     - sifr
 categories:
     - javascript
+permalink: /blog/2008/04/28/javascript/sifr-probleme-beim-scrollen-im-internet-explorer-6-und-7
 image:
     thumb: javascript.jpg
 ---

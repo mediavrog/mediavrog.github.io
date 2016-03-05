@@ -11,6 +11,7 @@ tags:
     - statistiken
 categories:
     - freischwebend
+permalink: /blog/2008/05/19/weitere-themen/freischwebend/verspateter-geburtstag-blog-wird-1-jahr-und-1-woche-alt
 ---
 > Mein Blog ist nun schon etwas über ein Jahr alt (um genau zu sein1 Jahr und 1 Woche) und das habe ich zum Anlass genommen, den Blog eine kleine Schönheitskur zu verpassen. Das war dringend notwendig!
 

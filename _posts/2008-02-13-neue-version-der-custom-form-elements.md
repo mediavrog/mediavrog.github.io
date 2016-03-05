@@ -14,7 +14,7 @@ tags:
     - radiobutton
 categories:
     - mootools
-permalink: /2008/02/13/mootools/neue-version-der-custom-form-elements
+permalink: /blog/2008/02/13/mootools/neue-version-der-custom-form-elements
 image:
     thumb: mootools.jpg
 ---

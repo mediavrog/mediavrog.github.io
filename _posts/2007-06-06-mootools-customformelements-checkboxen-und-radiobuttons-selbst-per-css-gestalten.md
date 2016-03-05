@@ -20,6 +20,7 @@ tags:
     - stylesheet
 categories:
     - mootools
+permalink: /blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten
 image:
     thumb: cfe.jpg
 ---

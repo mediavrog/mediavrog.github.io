@@ -16,6 +16,7 @@ tags:
     - xhtml
 categories:
     - firefox
+permalink: /blog/2007/06/05/browser/firefox/firefox-die-10-nutzlichsten-addons-plugins-fur-webentwickler
 image:
     thumb: firefox.jpg
 ---

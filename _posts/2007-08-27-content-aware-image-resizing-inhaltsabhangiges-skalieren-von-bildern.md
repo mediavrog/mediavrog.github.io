@@ -9,6 +9,7 @@ tags:
     - bildskalierung
 categories:
     - innovation
+permalink: /blog/2007/08/27/innovation/content-aware-image-resizing-inhaltsabhangiges-skalieren-von-bildern
 image:
     thumb: imgresizing.jpg
 ---

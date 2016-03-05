@@ -10,6 +10,7 @@ tags:
     - typo3
 categories:
     - extensions
+permalink: /blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-seiten-bilderset
 image:
     thumb: typo33.jpg
 ---

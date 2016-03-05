@@ -14,6 +14,7 @@ tags:
     - typo3
 categories:
     - ts-snippets
+permalink: /blog/2007/06/03/typo3/ts-snippets/typo3-mailformular-mit-eigenem-css-per-mailformplus
 image:
     thumb: typo33.jpg
 ---

@@ -9,6 +9,7 @@ tags:
     - statistiken
 categories:
     - wordpress
+permalink: /blog/2007/05/31/wordpress/wordpress-statistik-plugin-semmelstatz-im-einsatz
 image:
     thumb: wordpress.jpg
 ---

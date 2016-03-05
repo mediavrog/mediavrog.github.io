@@ -10,6 +10,7 @@ tags:
 categories:
     - internetexplorer
     - xhtml
+permalink: /blog/2009/06/23/xhtml/ie-bug-accept-charset-utf-8-in-formularen-welche-in-iso-seiten-eingebettet-sind
 image:
     thumb: ie.jpg
 ---

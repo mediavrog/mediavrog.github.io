@@ -10,6 +10,7 @@ tags:
     - widget
 categories:
     - kompare
+permalink: /blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released
 image:
     thumb: ic_launcher-web.png
 ---

@@ -10,7 +10,7 @@ tags:
     - xml
 categories:
     - javascript
-permalink: /2009/10/21/javascript/parse-string-to-dom-and-dom-to-strin
+permalink: /blog/2009/10/21/javascript/parse-string-to-dom-and-dom-to-strin
 image:
     thumb: javascript.jpg
 ---

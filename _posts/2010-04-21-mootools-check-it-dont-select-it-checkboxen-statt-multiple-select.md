@@ -13,6 +13,7 @@ tags:
     - usability
 categories:
     - mootools
+permalink: /blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select
 image:
     thumb: Check-it-dont-select-it.gif
 ---

@@ -10,6 +10,7 @@ tags:
 categories:
     - javascript
     - xhtml
+permalink: /blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden
 image:
     thumb: javascript.jpg
 ---

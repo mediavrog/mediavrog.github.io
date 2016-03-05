@@ -9,6 +9,7 @@ tags:
     - typo3
 categories:
     - ts-snippets
+permalink: /blog/2007/05/30/typo3/ts-snippets/dynamischer-seitentitel-in-typo3-wie-klickpfadbreadcrumb
 image:
     thumb: typo33.jpg
 ---

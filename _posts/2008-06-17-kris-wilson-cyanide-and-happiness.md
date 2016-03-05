@@ -9,6 +9,7 @@ tags:
     - spaÃŸ
 categories:
     - linktipps-spass
+permalink: /blog/2008/06/17/weitere-themen/linktipps-spass/kris-wilson-cyanide-and-happiness
 image:
     thumb: kriswilson.jpg
 ---

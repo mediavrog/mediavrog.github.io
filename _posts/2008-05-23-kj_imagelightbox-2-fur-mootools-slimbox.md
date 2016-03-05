@@ -13,6 +13,7 @@ tags:
 categories:
     - extensions
     - mootools
+permalink: /blog/2008/05/23/typo3/extensions/kj_imagelightbox-2-fur-mootools-slimbox
 image:
     thumb: mootools.jpg
 ---

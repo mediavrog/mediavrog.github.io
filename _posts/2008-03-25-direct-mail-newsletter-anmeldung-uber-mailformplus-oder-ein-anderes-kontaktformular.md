@@ -12,6 +12,7 @@ tags:
     - userFunc
 categories:
     - typo3
+permalink: /blog/2008/03/25/typo3/direct-mail-newsletter-anmeldung-uber-mailformplus-oder-ein-anderes-kontaktformular
 image:
     thumb: typo33.jpg
 ---

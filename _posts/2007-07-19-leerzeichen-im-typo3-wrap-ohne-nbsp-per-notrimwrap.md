@@ -14,6 +14,7 @@ tags:
 categories:
     - typo3
     - ts-snippets
+permalink: /blog/2007/07/19/typo3/leerzeichen-im-typo3-wrap-ohne-nbsp-per-notrimwrap
 image:
     thumb: typo33.jpg
 ---

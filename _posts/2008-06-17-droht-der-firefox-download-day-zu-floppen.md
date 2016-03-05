@@ -9,6 +9,7 @@ tags:
     - firefox
 categories:
     - firefox
+permalink: /blog/2008/06/17/browser/firefox/droht-der-firefox-download-day-zu-floppen
 image:
     thumb: ffdownloadday.jpg
 ---

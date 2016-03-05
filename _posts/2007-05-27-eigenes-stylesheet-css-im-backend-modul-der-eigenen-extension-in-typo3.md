@@ -12,6 +12,7 @@ tags:
     - typo3
 categories:
     - extensions
+permalink: /blog/2007/05/27/typo3/extensions/eigenes-stylesheet-css-im-backend-modul-der-eigenen-extension-in-typo3
 image:
     thumb: typo3.jpg
 ---

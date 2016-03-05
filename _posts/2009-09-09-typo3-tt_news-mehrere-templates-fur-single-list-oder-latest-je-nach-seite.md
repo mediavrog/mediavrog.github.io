@@ -10,6 +10,7 @@ tags:
 categories:
     - typo3
     - ts-snippets
+permalink: /blog/2009/09/09/typo3/typo3-tt_news-mehrere-templates-fur-single-list-oder-latest-je-nach-seite
 image:
     thumb: typo33.jpg
 ---

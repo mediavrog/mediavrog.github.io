@@ -10,6 +10,7 @@ tags:
     - webentwicklung
 categories:
     - safari
+permalink: /blog/2007/06/12/browser/safari/safari-3-fur-windows-jetzt-offiziell-von-apple-vorerst-beta
 image:
     thumb: safari.jpg
 ---

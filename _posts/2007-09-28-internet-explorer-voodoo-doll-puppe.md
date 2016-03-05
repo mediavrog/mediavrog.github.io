@@ -10,6 +10,7 @@ tags:
 categories:
     - internetexplorer
     - linktipps-spass
+permalink: /blog/2007/09/28/browser/internetexplorer/internet-explorer-voodoo-doll-puppe
 image:
     thumb: ie.jpg
 ---

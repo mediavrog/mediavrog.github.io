@@ -14,6 +14,7 @@ tags:
     - version
 categories:
     - mootools
+permalink: /blog/2007/05/29/mootools/javascript-framework-mootools-11-released-drausen
 image:
     thumb: mootools.jpg
 ---

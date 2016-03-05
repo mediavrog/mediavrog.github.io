@@ -39,7 +39,6 @@ page_layout: page
 # Format titles with titlecase?
 titlecase: true
 
-
 # Site owner
 owner:
   name: Maik Vlcek

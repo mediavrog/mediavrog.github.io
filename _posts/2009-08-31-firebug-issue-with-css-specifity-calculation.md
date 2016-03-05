@@ -9,6 +9,7 @@ tags:
     - firebug
 categories:
     - css
+permalink: /2009/08/31/css/firebug-issue-with-css-specifity-calculation
 image:
     thumb: firefox.jpg
 ---

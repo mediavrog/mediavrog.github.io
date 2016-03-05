@@ -9,7 +9,7 @@ tags:
     - update
 categories:
     - mootools
-permalink: /2008/08/10/mootools/mootools-12-cheat-sheet-updated
+permalink: /blog/2008/08/10/mootools/mootools-12-cheat-sheet-updated
 image:
     thumb: mt12cheat.jpg
 ---

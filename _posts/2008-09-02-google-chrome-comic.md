@@ -11,6 +11,7 @@ tags:
 categories:
     - browser
     - chrome-browser
+permalink: /2008/09/02/browser/google-chrome-comic
 image:
     thumb: chrome.jpg
 ---

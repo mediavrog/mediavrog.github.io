@@ -10,6 +10,7 @@ tags:
     - video
 categories:
     - linktipps-spass
+permalink: /blog/2007/05/29/weitere-themen/linktipps-spass/kappa-mikey-feat-the-internet-is-for-porn
 image:
     thumb: kappa.jpg
 ---

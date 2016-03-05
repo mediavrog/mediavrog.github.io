@@ -1,12 +1,13 @@
 ---
 layout: post
-title: 'Hilfe für Japan<!--:en-->Help for Japan'
+title: 'Hilfe für Japan'
 published: true
 comments: true
 date: 2011-03-17 11:03:49
 tags: [ ]
 categories:
     - weitere-themen
+permalink: /blog/2011/03/17/weitere-themen/hilfe-fur-japan
 image:
     thumb: love.png
 ---

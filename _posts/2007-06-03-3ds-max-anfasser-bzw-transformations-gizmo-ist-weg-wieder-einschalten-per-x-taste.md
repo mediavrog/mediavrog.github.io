@@ -11,6 +11,7 @@ tags:
     - transformation
 categories:
     - 3ds-max
+permalink: /blog/2007/06/03/weitere-themen/3ds-max/3ds-max-anfasser-bzw-transformations-gizmo-ist-weg-wieder-einschalten-per-x-taste
 image:
     thumb: gizmo.jpg
 ---

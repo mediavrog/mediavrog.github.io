@@ -10,6 +10,7 @@ tags:
     - digitales compositing
 categories:
     - 3ds-max
+permalink: /blog/2008/08/10/weitere-themen/3ds-max/belege-in-computeranimation-und-digitalem-compositing
 image:
     thumb: tickoflife.jpg
 ---

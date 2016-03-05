@@ -2,13 +2,13 @@
 layout: post
 title: 'Social SEO – Content Content Content'
 published: true
-author: Christina
+author: twago_christina
 comments: true
 date: 2011-09-22 04:09:13
 tags: [ ]
 categories:
     - seo
-permalink: /2011/09/22/seo/social-seo-roundup
+permalink: /blog/2011/09/22/seo/social-seo-roundup
 image:
     thumb: social-seo.jpg
 ---
@@ -16,10 +16,6 @@ image:
 
 Bis Dezember 2010 war der Einfluss von Social Media für die Suchmaschinenoptimierung sehr umstritten. Matt Cutts, Chefingenieur von Google, [bestätigte im Winter 2012 offiziell][1], dass **Social Media Beiträge nun im Suchalgorithmus berücksichtigt** werden. Ziel ist es, durch qualitativ gute SEO-Maßnahmen (Onpage / Offpage), interessante und lesenswerte Inhalte anzubieten und so eine natürliche Verbreitung zu fördern.
 
-
-
-
-  
 Die Buttons von Facebook, Twitter und Google+ sollten auf der Homepage in das Design integriert werden und so dem Leser schnell die Möglichkeit bieten, es mit seinen favorisierten Netzwerk zu teilen. Die Inhalte sollten gerade im Social SEO themenrelevant, richtig geschrieben, interessant oder auch lustig sein. Unter Einbindung von Grafiken, Bildern und Videos werden diese Beiträge mehr gelesen und auch mit anderen geteilt.
 
 ## Social Comments relevanter als &#8217;normale&#8216; Kommentare

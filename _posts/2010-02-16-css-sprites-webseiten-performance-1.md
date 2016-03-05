@@ -12,6 +12,7 @@ tags:
     - yslow
 categories:
     - css
+permalink: /2010/02/16/css/css-sprites-webseiten-performance-1
 image:
     thumb: thumb.png
 ---

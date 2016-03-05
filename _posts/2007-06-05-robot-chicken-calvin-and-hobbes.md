@@ -10,6 +10,7 @@ tags:
     - video
 categories:
     - linktipps-spass
+permalink: /blog/2007/06/05/weitere-themen/linktipps-spass/robot-chicken-calvin-and-hobbes
 image:
     thumb: calvinhobbes.jpg
 ---

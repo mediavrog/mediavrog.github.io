@@ -14,6 +14,7 @@ tags:
     - legend
 categories:
     - internetexplorer
+permalink: /blog/2007/10/29/browser/internetexplorer/ie-bugfix-hintergrundfarbe-auserhalb-fieldset-mit-legend
 image:
     thumb: ie.jpg
 ---

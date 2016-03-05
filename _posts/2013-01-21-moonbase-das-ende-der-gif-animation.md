@@ -2,7 +2,7 @@
 layout: post
 title: Moonbase – Das Ende der Gif-Animation?
 published: true
-author: Fabian Kaiser
+author: connex_kaiser
 comments: true
 date: 2013-01-21 01:01:49
 tags:
@@ -13,7 +13,7 @@ categories:
     - browser
     - html5
     - javascript
-permalink: /2013/01/21/browser/moonbase-das-ende-der-gif-animation
+permalink: /blog/2013/01/21/browser/moonbase-das-ende-der-gif-animation
 image:
     thumb: astronaut.png
 ---

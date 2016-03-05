@@ -12,6 +12,7 @@ tags:
 categories:
     - extensions
     - typo3
+permalink: /blog/2009/08/19/typo3/extension-backend-konfiguration-in-typo3-428-von-typ-file
 image:
     thumb: typo33.jpg
 ---

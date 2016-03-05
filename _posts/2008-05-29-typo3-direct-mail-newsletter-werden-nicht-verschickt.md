@@ -11,6 +11,7 @@ tags:
     - typo3
 categories:
     - typo3
+permalink: /blog/2008/05/29/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt
 image:
     thumb: typo33.jpg
 ---

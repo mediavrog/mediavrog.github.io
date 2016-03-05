@@ -9,6 +9,7 @@ tags:
     - touchscreen
 categories:
     - innovation
+permalink: /blog/2007/06/01/innovation/microsoft-surface-video-riesige-multi-touchscreens-gros-wie-ein-tisch
 image:
     thumb: surface.jpg
 ---

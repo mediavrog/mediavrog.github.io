@@ -14,6 +14,7 @@ tags:
     - useDomLoaded
 categories:
     - internetexplorer
+permalink: /blog/2008/04/09/browser/internetexplorer/probleme-mit-sifr-3-und-swfobject-auf-einer-seite-im-ie-6-und-7
 image:
     thumb: ie.jpg
 ---

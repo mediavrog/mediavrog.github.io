@@ -13,6 +13,7 @@ tags:
     - umfrage
 categories:
     - linktipps-spass
+permalink: /blog/2007/12/27/weitere-themen/linktipps-spass/umfrage-zum-thema-internetradio-radio-online
 image:
     thumb: umfrage.jpg
 ---

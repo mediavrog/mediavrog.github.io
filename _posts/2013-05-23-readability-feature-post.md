@@ -5,7 +5,7 @@ excerpt: "Custom written post descriptions are the way to go... if you're not la
 tags: [sample post, readability, test]
 comments: true
 image:
-  feature: sample-image-4.jpg
+  thumb: sample-image-4.jpg
   credit: WeGraphics
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---

@@ -1,0 +1,39 @@
+---
+layout: post
+title: Moonbase – Das Ende der Gif-Animation?
+published: true
+author: Fabian Kaiser
+comments: true
+date: 2013-01-21 01:01:49
+tags:
+    - animation
+    - html5
+    - wysiwyg
+categories:
+    - browser
+    - html5
+    - javascript
+permalink: /2013/01/21/browser/moonbase-das-ende-der-gif-animation
+image:
+    thumb: astronaut.png
+---
+> Jahrelang waren Gif-Animationen auf vielen Internetseiten fester gestalterischer Bestandteil. Dank der vielseitigen Einsetzbarkeit der Animationen überlebten die Bewegtbilder die letzten Jahrzehnte im sonst schnelllebigen Internet. Nun scheint das Programm [> Jahrelang waren Gif-Animationen auf vielen Internetseiten fester gestalterischer Bestandteil. Dank der vielseitigen Einsetzbarkeit der Animationen überlebten die Bewegtbilder die letzten Jahrzehnte im sonst schnelllebigen Internet. Nun scheint das Programm][1] das Ende dieser Ära einzuläuten.
+
+
+
+[Jake Lodwick][2], beteiligt an der Entwicklung von Vimeo, präsentiert mit Moonbase ein Programm, dass dem Anwender erlaubt komplexe Animationen auf HTML 5 Basis ohne Vorkenntnisse zu erstellen.
+
+## Die Arbeit mit Moonbase
+
+Grundlage des Tools ist eine grafische Benutzeroberfläche, die es dem Anwender erlaubt ohne Programmiererfahrung oder sonstige Vorkenntnisse bedient zu werden. An die Nutzung wird der User durch ein simples, aufgabenorientiertes Tutorial herangeführt. Farben, Gestaltung oder Texte werden einfach über die Oberfläche des Programms den eigenen Vorstellungen angepasst. Darüber hinaus können mit Moonbase erstellte Animationen wieder in ihre einzelnen Bestandteile zerlegt werden. So entsteht in kurzer Zeit eine einfache Konstruktion, die die Grundlage für eine komplexe Animation darstellen kann. 
+
+## Vorteile gegenüber Gif-Animationen
+
+Da mit Moonbase erstellte Animationen auf HTML 5 basieren, lassen sie sich ähnlich einfach wie Gifs in eine Homepage integrieren. Allerdings besteht keine Beschränkung auf nur 256 Farben, so dass die Grafik ohne größere Qualitätsverluste verwendet werden kann. Durch die Plug & Play Oberfläche können kreative Konzepte von Grafikern oder Homepagebetreibern unabhängig von Programmierkenntnissen oder den Rückgriff auf Fachkräfte konzipiert und umgesetzt werden. 
+
+Trotz der gesteigerten grafischen Ästhetik der Animationen ist nur eine geringe Prozessorleistung für die Darstellung erforderlich. Selbst auf portablen Endgeräten werden die Grafiken reibungslos angezeigt. Grenzwertig wird die Darstellung lediglich, wenn mehrere Animationen auf einer Seite eingebunden sind. Diese Problematik lässt sich allerdings durch geschickte Layoutkonzepte umgehen. 
+
+Die Macher von Moonbase erhoffen sich mit ihrem Programm eine neue Ära der Gestaltungsmöglichkeiten einzuleiten. Dank benutzerfreundlicher Oberfläche und HTML 5 Basis lassen sich kreative Konzepte nicht nur leichter umsetzen, sondern auch grafisch deutlich ansprechender als mit Gif-Animationen gestalten. Um sich von Moonbase selbst einen Eindruck verschaffen zu können besteht auf der Homepage des Projekts die Möglichkeit, das Programm kostenlos und ohne vorherige Registrierung zu testen. Allerdings existieren für die webbasierte Version von Moonbase noch keine Eigenschaften wie zum Beispiel eine Timeline. Da es sich bei der aktuellen Version des Programms jedoch nur um eine Testversion handelt und eine kostenpflichtige Variante von Moonbase absehbar zu sein scheint, könnten solche Features in Zukunft noch folgen.
+
+ [1]: http://moonbase.com/
+ [2]: http://jakelodwick.com/

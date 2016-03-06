@@ -64,6 +64,7 @@ Der zu überprüfende Wert des Inputfeldes ist über die Variable **$params[&#82
 ## 3) Die Validierungsfunktion schreiben
 
 class.user_myvalidation.php
+
 ```php
 class user_myvalidation {
 function user_validate(&$params, &$ref){

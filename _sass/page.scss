@@ -374,11 +374,11 @@ $button-size: 1.5rem;
 
 	img {
 		@include rounded(100px);
-		height: 3rem;
-		width: 3rem;
+		height: 4rem;
+		width: 4rem;
 		padding: 4px;
 		vertical-align: text-top;
-		margin-top: -2.5rem;
+		margin-top: -3rem;
 
 		&:hover {
 			transform: scale(2);

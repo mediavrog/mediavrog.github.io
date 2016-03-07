@@ -5,12 +5,9 @@ published: true
 comments: true
 date: 2007-05-30 01:05:09
 tags:
-    - isometrisch
     - pixelart
-    - pixeltown
-    - visualorgasm
 categories:
-    - linktipps-spass
+    - links
 permalink: /blog/2007/05/30/weitere-themen/linktipps-spass/visualorgasms-pixeltown-bekommt-einen-zoo
 image:
     thumb: pixeltown.jpg
@@ -19,5 +16,5 @@ image:
  gebastelt. Ich will unbedigt auch nen Steinkopffalkenbussard im Zoo entdecken :P Weiteres im
   [Artikel von Visualorgasm.][2]
 
- [1]: http://www.stronghold.at/ "stronghold.at besuchen"
- [2]: http://www.visualblog.de/?p=703 "Visualorgasm Blog lesen"
+ [1]: http://www.balum.at/ "balum.at besuchen"
+ [2]: http://www.visualblog.de/tag/vo-pixeltown/ "Visualorgasm Blog lesen"

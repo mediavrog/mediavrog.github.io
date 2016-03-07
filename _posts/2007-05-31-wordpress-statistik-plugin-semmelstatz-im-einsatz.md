@@ -8,6 +8,7 @@ tags:
     - plugin
     - statistiken
 categories:
+    - archive!
     - wordpress
 permalink: /blog/2007/05/31/wordpress/wordpress-statistik-plugin-semmelstatz-im-einsatz
 image:

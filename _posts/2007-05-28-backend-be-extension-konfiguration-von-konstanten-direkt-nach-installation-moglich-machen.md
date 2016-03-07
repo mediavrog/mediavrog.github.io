@@ -7,9 +7,8 @@ date: 2007-05-28 01:05:20
 tags:
     - extension
     - konfiguration
-    - typo3
 categories:
-    - extensions
+    - typo3
 permalink: /blog/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
 image:
     thumb: typo31.jpg
@@ -21,12 +20,17 @@ image:
 
 ## 1.) die Datei ext\_conf\_template.txt im Extensionverzeichnis anlegen
 
-In dieser können nun die verschiedenen Einstellmöglichkeiten eingetragen werden. Dabei werden verschiedene Variablentypen wie boolean oder string unterstützt. Der prinzipielle Aufbau einer Konfigurationszeile sieht folgendermaßen aus:
+In dieser können nun die verschiedenen Einstellmöglichkeiten eingetragen werden. Dabei werden verschiedene
+ Variablentypen wie boolean oder string unterstützt. Der prinzipielle Aufbau einer Konfigurationszeile sieht
+  folgendermaßen aus:
 
-# cat=CATEGORY/SUBCATEGORY/SORT; type=VAR_TYPE; label=HEADER:DESCRIPTION
+```typoscript
+cat=CATEGORY/SUBCATEGORY/SORT; type=VAR_TYPE; label=HEADER:DESCRIPTION
 var = DEFAULT
+```
 
-Die Doku der Teile folgt weiter unten. Alle die nicht lesen möchten, können sich eine [Beispielhafte Konfigurationsdatei herunterladen][1].
+Die Doku der Teile folgt weiter unten. Alle die nicht lesen möchten, können sich eine
+ [Beispielhafte Konfigurationsdatei herunterladen][1].
 
 ## 2.) die Werte in der Extension holen
 
@@ -79,5 +83,5 @@ Das label wird beim ersten Auftreten von &#8222;:&#8220; in die Teile Überschri
 
 Per DEFAULT kann man einen Wert voreintragen lassen (Standardwert). Über den angegebenen Variablennamen wird, ganz klar, später in der Extension zugegriffen.
 
- [1]: http://mediavrog.net/blog/wp-content/uploads/2007/05/ext_conf_template.txt "Beispielhafte Konfigurationsdatei als .txt-Datei herunterladen"
+ [1]: /uploads/ext_conf_template.txt "Beispielhafte Konfigurationsdatei als .txt-Datei herunterladen"
  [2]: http://typo3.org/documentation/document-library/core-documentation/doc_core_tstemplates/0.0.1/view/2/5/#id2843880 "Dokumentation zu Typoscript Templates auf typo3.org ansehen"

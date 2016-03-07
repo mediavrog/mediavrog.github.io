@@ -6,12 +6,9 @@ author: admin
 comments: true
 date: 2007-05-29 03:05:57
 tags:
-    - Ajax (AJ)
-    - DOM
+    - ajax
     - framework
     - javascript
-    - mootools
-    - version
 categories:
     - mootools
 permalink: /blog/2007/05/29/mootools/javascript-framework-mootools-11-released-drausen
@@ -26,17 +23,18 @@ Wie üblich haben die Entwickler wieder mächtig an der Performance-Schraube ged
 
 ## Nützliche Links: 
 
-[Roadmap zu mootools][1]
+Roadmap zu mootools (_Link entfernt_)
 
-[Dokumentation zur aktuellen mootools Version][2]
+[Dokumentation zur aktuellen mootools Version][1]
 
-[Was ist neu an mootools 1.1?][3]
+Was ist neu an mootools 1.1? (_Link entfernt_)
 
 
 
 ## Für die Hartgesottenen, der Changelog:
 
-`ADD: Added Number.js, with Number::times, ::limit, ::round and Number prototypes from String.js (jank, tomocchino, kamicane)
+```
+ADD: Added Number.js, with Number::times, ::limit, ::round and Number prototypes from String.js (jank, tomocchino, kamicane)
 ADD: Added generics for native objects, Element and Elements (digitarald)
 ADD: Added Element::cloneEvents to copy events from another element (digitarald)
 ADD: Dom.js Filters made Public, as Elements Methods (Elements::filterByTag, filterByClass, filterById, filterByAttribute) (kamicane)
@@ -78,9 +76,11 @@ ADD: f1-f12 keys for Event.key [#70] (Inviz)
 ADD: Added Element::set, Element constructor now takes this argument, an object for setting 'styles', 'properties' and 'events' (ibolmo)
 ADD: Added $merge, merging objects recursively (aaron)
 ADD: Added Element::getStyles() (aaron)
-ADD: $each iterates objects and arrays (aaron)`
+ADD: $each iterates objects and arrays (aaron)
+```
 
-`CHG: Fx.Scroll now stops if there's a scroll on the entire document, instead of the relevant element as before. (kamicane)
+```
+CHG: Fx.Scroll now stops if there's a scroll on the entire document, instead of the relevant element as before. (kamicane)
 CHG: Class::implement now takes multiple arguments. (kamicane)
 CHG: Merged Moo.js and Utility.js, now the file is Called Core.js, and does not contain Class. Class.js has now its own file, renamed Common.js in Class.Extras.js. (kamicane)
 CHG: Added Elements contstructor to avoid directly calling $extend. (kamicane)
@@ -128,9 +128,11 @@ CHG: Fx.Slide allows borders and margins. Positioning is now possible. (kamicane
 CHG: Ajax.request can take data as first argument to override options [#69] (Inviz)
 CHG: Element.adopt allows multiple arguments including element collections [#71] (Inviz)
 CHG: API CHANGE ? Removed new Element in adopt, inject and replaceWith, now only id's and element references are allowed (kamicane)
-CHG: Fixed Element.getValue/Element.toQueryString with support for multiple-selects (digitarald)`
+CHG: Fixed Element.getValue/Element.toQueryString with support for multiple-selects (digitarald)
+```
 
-`FIX: WONTFIX: The Event::wheel is inverted for all opera version prior to 9.20, blame opera for their crazy idea
+```
+FIX: WONTFIX: The Event::wheel is inverted for all opera version prior to 9.20, blame opera for their crazy idea
 FIX: Fixed event conditions for out cases in Drag::Move, now 'emptydrop' is also called for draggables dropped outside of the container (digitarald)
 FIX: Small fixes to Drag.Move, when position of element is absolute inside relative or absolutely relative. (kamicane)
 FIX: IE-fix for Element::getProperty, so it does not return properties instead of attributes anymore (digitarald)
@@ -170,8 +172,7 @@ FIX: Fixed object key names not encoded correctly if they contained the " or \ s
 FIX: PERL-Syntax for regexp in Json.toString for better perfomance (Chris)
 FIX: Fixed Array methods behaviour [#43] (Chris)
 FIX: Several minor documentation errors fixed and more examples
-FIX: Several missing dependancies fixed`
+FIX: Several missing dependancies fixed
+```
 
- [1]: http://dev.mootools.net/roadmap?show=all "Mootools Roadmap öffnen"
- [2]: http://docs.mootools.net/ "Dokumentation von mootools ansehen"
- [3]: http://dev.mootools.net/wiki/whatsNew "Infos zu mootools öffnen"
+ [1]: http://mootools.net/core/docs "Dokumentation von mootools ansehen"

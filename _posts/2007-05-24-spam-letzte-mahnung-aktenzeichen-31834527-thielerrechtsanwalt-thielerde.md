@@ -9,6 +9,7 @@ tags:
     - payforfun
     - spam
 categories:
+    - archive!
     - kurios-nervig
 permalink: /blog/2007/05/24/kurios-nervig/spam-letzte-mahnung-aktenzeichen-31834527-thielerrechtsanwalt-thielerde
 image:

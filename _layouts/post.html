@@ -73,7 +73,7 @@
 
 
 {% if site.related_posts.size > 0 %}
-  {% for post in site.related_posts limit:1 %}
+  {% assign post = site.related_posts | sample:1 %}
   <aside class="read-next">
     <a class="read-next-story prev " style="" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
       <section class="post">
@@ -82,7 +82,6 @@
       </section>
     </a>
   </aside>
-  {% endfor %}
 {% endif %}
 
 <div class="footer-wrap">

@@ -5,13 +5,12 @@ published: true
 comments: true
 date: 2007-06-21 03:06:19
 tags:
-    - entfernung
     - google
     - index
-    - redirect
     - spam
 categories:
     - kurios-nervig
+    - archive!
 permalink: /blog/2007/06/21/kurios-nervig/spam-entfernung-ihrer-webseite-aus-dem-google-index-von-donotreplygmailcom
 image:
     thumb: spam.jpg
@@ -31,41 +30,27 @@ Außerdem soll sich in neueren Mails ein Anhang mit den Google Webmastertools be
 > Sehr geehrter Seiteninhaber oder Webmaster der Domain www.domain.de,
 > 
 > bei der Indexierung Ihrer Webseiten mussten wir feststellen, dass auf
-  
 > Ihrer Seite Techniken angewendet werden, die gegen unsere Richtlinien
-  
 > verstossen. Sie finden diese Richtlinien unter folgender Webadresse:
 > 
 > http://www.google.de/webmasters/guidelines.html
 > 
 > Um die Qualitaet unserer Suchmaschine sicherzustellen, haben wir bestimmte
-  
 > Webseiten zeitlich befristet aus unseren Suchergebnissen entfernt. Zurzeit
-  
 > sind Seiten von www.domain.de fuer eine Entfernung ueber einen
-  
 > Zeitraum von wenigstens 30 Tagen vorgesehen.
 > 
-> Wir haben auf Ihren Seiten insbesondere die Verwendung folgender Techniken
-  
-> festgestellt:
+> Wir haben auf Ihren Seiten insbesondere die Verwendung folgender Techniken festgestellt:
 > 
 > *Seiten wie z. B. domain.de, die zu Seiten wie z. B.
-  
 > http://www.domain.de/index.htm mit Hilfe eines Redirects
-  
 > weiterleiten, der nicht mit unseren Richtlinien konform ist.
-> 
+>
 > Gerne wollen wir Ihre Seiten in unserem Index behalten. Wenn Sie wollen,
-  
 > dass Ihre Seiten wieder von uns akzeptiert werden, korrigieren oder
-  
 > entfernen Sie bitte alle Seiten, die gegen unsere Richtlinien
-  
 > verstossen. Wenn dies erfolgt ist, besuchen Sie bitte die folgende
-  
 > Webadresse, um weitere Informationen zu erhalten und einen Antrag auf
-  
 > Wiederaufnahme in unseren Suchindex zu stellen:
 > 
 > https://www.google.com/webmasters/sitemaps/reinclusion?hl=de

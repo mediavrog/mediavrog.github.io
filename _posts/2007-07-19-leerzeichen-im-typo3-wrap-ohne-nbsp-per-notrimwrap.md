@@ -8,12 +8,10 @@ tags:
     - konfiguration
     - leerzeichen
     - notrimwrap
-    - typo3
     - typoscript
     - wrap
 categories:
     - typo3
-    - ts-snippets
 permalink: /blog/2007/07/19/typo3/leerzeichen-im-typo3-wrap-ohne-nbsp-per-notrimwrap
 image:
     thumb: typo33.jpg
@@ -21,29 +19,25 @@ image:
 > Viele Fragen sich, wie man Leerzeichen ins Wrapping bei Typoscript bekommt.
 
 
-
 In folgendem Auszug einer Mailformplus-Konfiguration, wird beim wrappen kein Leerzeichen nach _Seite_ erzeugt.
 
+```typoscript
 email_subject = TEXT
-
 email_subject{
-
  data = leveltitle:-1
-
  wrap = Kontakt über Seite |
-
 }
+```
 
-Das Problem lässt sich an sich leicht lösen, wenn man noTrimWrap kennt. Es entfernt keine Whitespaces und der Leerzeichen Existenz bleibt gesichert.
+Das Problem lässt sich an sich leicht lösen, wenn man `noTrimWrap` kennt. 
+Es entfernt keine Whitespaces und der Leerzeichen Existenz bleibt gesichert.
   
-Folgendes Beispiel sorgt für das gewünschte Ergebnis (man beachte die Pipes (|) am Anfang und am Ende):
+Folgendes Beispiel sorgt für das gewünschte Ergebnis (man beachte die Pipes (\|) am Anfang und am Ende):
 
+```typoscript
 email_subject = TEXT
-
 email_subject{
-
  data = leveltitle:-1
-
  noTrimWrap = |Kontakt über Seite ||
-
 }
+```

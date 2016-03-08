@@ -9,6 +9,7 @@ tags:
     - server
 categories:
     - server
+    - archive!
 permalink: /blog/2007/07/26/weitere-themen/server/wieder-online
 image:
     thumb: server.jpg

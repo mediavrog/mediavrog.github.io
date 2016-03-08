@@ -5,11 +5,10 @@ published: true
 comments: true
 date: 2007-06-12 10:06:47
 tags:
-    - apple
-    - Safari (SFI)
-    - webentwicklung
-categories:
+    - windows
     - safari
+categories:
+    - browser
 permalink: /blog/2007/06/12/browser/safari/safari-3-fur-windows-jetzt-offiziell-von-apple-vorerst-beta
 image:
     thumb: safari.jpg

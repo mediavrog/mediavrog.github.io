@@ -28,12 +28,9 @@ Ich habe einen vServer v2 mit Suse 10
 
 ## Anleitung zum Aktivieren von mod_rewrite:
 
-  1. Wechseln in das Verzeichnis &#8222;etc/sysconfig&#8220;
-  
-    `cd etc/sysconfig`
+  1. Wechseln in das Verzeichnis `etc/sysconfig` > `cd etc/sysconfig`
   
     Hier liegen die Konfigurationsdateien, welche bei Neustarts zum Initialisieren der Dienste verwendet werden.
-    
   2. Bearbeiten der Datei &#8222;apache2&#8220;
   
     `vim apache2`
@@ -52,13 +49,8 @@ Ich habe einen vServer v2 mit Suse 10
       * Speichern und schließen
  
         Befehl `:wq!` (w - Speichern; q! - Schließen ohne nachfragen)
-        
-  3. Apache neu starten
-  
-    `rcapache2 restart`
-    
+  3. Apache neu starten per `rcapache2 restart`
   4. `phpinfo()` aufrufen und prüfen ob das Modul geladen ist
-  
   5. Spaß mit WordPress permalinks und Typo3 RealURL haben :)
 
 **Update:** Auf den meisten anderen Servern muss man glaube ich die Datei `etc/apache2/httpd.conf` editieren und das Modul hinzufügen._

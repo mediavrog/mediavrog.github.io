@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Formatting Post
-excerpt: "Demo post displaying the various ways of highlighting code in Markdown."
+title: My Jekyll Theme formatting demo
+excerpt: "Demos the formatting of mediavrog's Minimal Mistakes x Kaspar theme"
 tags: [sample post, code, highlighting]
 modified: 2016-02-01
 comments: true
 ---
+> My crossover of Minimal Mistakes and Kaspar:
 
 Below is just about everything you’ll need to style in the theme.
  Check the source code to see the many embedded elements within paragraphs.

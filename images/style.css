@@ -1,0 +1,7 @@
+#bd .moreLink{
+	color: red;
+}
+
+a, #bd a.moreLink{
+	color: green;
+}

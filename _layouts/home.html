@@ -37,10 +37,20 @@
     {% for post in site.posts limit:5 %}
     <article>
       {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+      <h2 class="link-post">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a>
+      </h2>
       {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+        <span class="title">{{ post.title }}</span>
+        {% if post.image.thumb %}
+        <img src="{{ site.url }}/images/{{ post.image.thumb }}" alt="{{ page.title }} thumb image" />
+        {% endif %}
+        {% if post.date %}
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        {% endif %}
+      </a></h2>
       {% endif %}
     </article>
     {% endfor %}

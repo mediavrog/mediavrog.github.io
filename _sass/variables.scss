@@ -6,11 +6,11 @@
    Typography
    ========================================================================== */
 
-$doc-font-size: 16;
-$doc-line-height: 26;
-$paragraph-indent: true !default;
-$base-font: 'PT Serif', serif;
-$heading-font: 'PT Sans Narrow', sans-serif;
+$doc-font-size: 10;
+$doc-line-height: 30;
+$paragraph-indent: false;
+$base-font: "Merriweather", serif;
+$heading-font: "Open Sans", sans-serif;
 $code-font: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 $alt-font: $base-font;
 
@@ -20,7 +20,7 @@ $alt-font: $base-font;
 
 $bodycolor      : #fff;
 $body-color     : $bodycolor;
-$textcolor      : #333332;
+$textcolor      : #3A4145;
 $text-color     : $textcolor;
 $border-color   : $text-color;
 $basecolor 		  : #343434;

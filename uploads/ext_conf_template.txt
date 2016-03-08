@@ -1,0 +1,11 @@
+# cat=basic; type=string; label=Title for configuration: Description
+separator = ;
+
+# cat=basic; type=int; label=PID der FE User: ID des Sysordners/der Seite in der die FE User abgelegt sind
+sysid_feuser =
+
+# cat=basic; type=int; label=PID der FE Usergroup: ID des Sysordners/der Seite in der die FE Usergroups abgelegt sind
+sysid_feusergroup =
+
+# cat=basic; type=boolean; label=Initialize with full features: Starts the extension using all features
+all_features = 0

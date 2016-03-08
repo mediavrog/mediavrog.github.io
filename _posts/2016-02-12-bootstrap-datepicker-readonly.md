@@ -1,10 +1,10 @@
 ---
-published: true
-title: "Read-only for bootstrap datepicker calendar popup"
 layout: post
+title: "Read-only for bootstrap datepicker calendar popup"
+excerpt: "Small js to simulate read only in the calendar popup."
 tags: 
-  - javascript
   - bootstrap
+  - datepicker
 categories: 
   - javascript
 ---
@@ -13,7 +13,7 @@ So if you ever came across the need to just show selected dates/date ranges in t
 
 The following code uses a date range to show some period in the calendar.
 
-{% highlight javascript %}
+```coffee
 var el = $('.input-daterange');
 el.datepicker(myOptions);
 if el.data('readonly') // use a data attribute
@@ -24,4 +24,4 @@ if el.data('readonly') // use a data attribute
       e.stopPropagation();
      });
   });
-{% endhighlight %}
+```

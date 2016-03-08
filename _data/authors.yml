@@ -1,20 +1,22 @@
 # Authors
 
-billy_rick:
-  name: Billy Rick
-  web: http://thewhip.com
-  email: billy@rick.com
-  bio: "What do you want, jewels? I am a very extravagant man."
-  avatar: bio-photo-2.jpg
-  twitter: extravagantman
-  google:
-    plus: BillyRick
+steve:
+  name: Steve R.
+#  email: elmo.dd@googlemail.com
+  bio: "Ich befasse mich seit mehreren Jahren mit den Vielschichtigkeiten des Webdevelopments, von der Planung über die Umsetzung bis zum Deployment. Als Front- und Backendentwickler sehe ich meine Stärken vor allem in den Bereichen (x)html, css und javascript sowie oop in php (symfony)."
+  avatar: author_steve.jpg
+  linkedin: Steve_Rohrlack
 
-cornelius_fiddlebone:
-  name: Cornelius Fiddlebone
-  email: cornelius@thewhip.com
-  bio: "I ordered what?"
+twago_christina:
+  name: Christina
+  web:
+  email: twago.christina@mediavrog.net
+  bio: "Gastartikel von Twago."
   avatar: bio-photo.jpg
-  twitter: rhymeswithsackit
-  google:
-    plus: CorneliusFiddlebone
+
+connex_kaiser:
+  name: Fabian Kaiser
+  web: http://www.connex-werbeagentur.de
+  email: info@connex-werbeagentur.de
+  bio: "Gastartikel von Connex Design - Werbeagentur für neue Medien"
+  avatar: bio-photo-2.jpg

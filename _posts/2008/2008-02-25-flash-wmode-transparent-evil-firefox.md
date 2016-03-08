@@ -5,15 +5,8 @@ published: true
 comments: true
 date: 2008-02-25 03:02:45
 tags:
-    - bug
-    - felder
-    - firefox-plugin
     - flash
-    - flv
     - opaque
-    - sonderzeichen
-    - stockt
-    - streaming
     - swf
     - transparent
     - wmode
@@ -49,29 +42,24 @@ Sollte ein Bug einen Browser außer Firefox betreffen, so wird er in eckigen Kla
 
 Die Anmerkung &#8222;Kein Workaround bekannt&#8220; meinst, dass außer wmode auf window zu setzen kein praktikabler Lösungsvorschlag gemacht werden könnte. **Mit wmode=window tauchen diese Bugs nicht auf.**
 
+## Liste der Probleme
+
   *  **kein @ in Formularfeldern**
-  
     Nicht nur das @, sondern alle möglichen nicht-Standard Zeichen werden in den Feldern nicht mehr angezeigt. [Dieser Post im 5 1/2 Blog][3] zeigt das Problem &#8211; inklusive Diskussion zum Thema in den Kommentaren.
-  
     _Kein Workaround bekannt._
-  * **kein blinkender Cursor in den Feldern
-  
-** Ebenfalls durch wmode transparent oder opaque hervorgerufen.
-  
+    
+  *  **kein blinkender Cursor in den Feldern**
+    Ebenfalls durch wmode transparent oder opaque hervorgerufen.
     _Kein Workaround bekannt._
-  * **hitarea von Schaltflächen bleibt bei gescrolltem Inhalt an der alten Stelle
-  
-** _Kein Workaround bekannt._
-  * **Performance-Probleme beim Abspielen von flv
-  
-** Gerade bei gekeyten Filmen (transparente flv&#8217;s) in Verbindung mit wmode=transparent kommt es zu herben Performanceeinbußen und die flv&#8217;s beginnen zu stocken oder werden nicht abgespielt, bis man mit der Maus über dem Flashfilm hin- und herfährt.
-  
+    
+  *  **hitarea von Schaltflächen bleibt bei gescrolltem Inhalt an der alten Stelle**
+    _Kein Workaround bekannt._
+    
+  *  **Performance-Probleme beim Abspielen von flv**
+    Gerade bei gekeyten Filmen (transparente flv&#8217;s) in Verbindung mit wmode=transparent kommt es zu herben Performanceeinbußen und die flv&#8217;s beginnen zu stocken oder werden nicht abgespielt, bis man mit der Maus über dem Flashfilm hin- und herfährt.
     Hier sollte man ernsthaft in Betracht ziehen, ob die Tranzparenz des swf unbedingt benötigt wird und diese ggf. abschalten (wmode auf window setzen).
-  
     Der Einbruch der Leistungsfähigkeit ist auch Adobe bekannt und wird oftmals bei der Erklärung zu wmode als Hinweis genannt:
-  
     **Note:** If windowless mode is used, performance can be affected to some degree. If fastest performance is a top priority, you may consider other design options.
-  
     _Kein Workaround bekannt._
 
 Sollten euch andere Bugs auffallen, könnt ihr sie gern hier diskutieren.

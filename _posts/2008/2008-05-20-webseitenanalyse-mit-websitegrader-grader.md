@@ -15,9 +15,7 @@ permalink: /blog/2008/05/20/seo/webseitenanalyse-mit-websitegrader-grader
 ---
 > Ich habe meine Webseite gerade mal dem Test mit dem kostenlosen SEO-Tool [websitegrader][1] unterzogen und bin reichlich erfreut über die Ergebnisse &#8211; keine gravierenden Mängel soweit und einen Score von 85 von 100.
 
-
-
-[Ergebnisse im Detail][2]
+Ergebnisse im Detail (nicht mehr verfuegbar).
 
 Nachdem sich mit dem Service von [seitwert][3] leider keine Verzeichnisse analysieren lassen (das /blog/ an meiner domain &#8211; meiner Meinung nach der gravierendste Mangel an seitwert), habe ich eben mal nach einer Alternative gesucht. Ich hatte auch noch eine andere deutsche Seite im Hinterkopf, dessen Name mir leider entfallen ist (so etwas wie amtfürwebdesign oder ähnlich &#8211; **vielleicht kann mir da nochmal jmd auf die Sprünge helfen**)
 

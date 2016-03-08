@@ -5,24 +5,17 @@ published: true
 comments: true
 date: 2008-04-01 06:04:52
 tags:
-    - 2.5
-    - bug
-    - firebug
-    - template_external_list_url
-    - template_templates
-    - template-plugin
     - tinymce
-    - u-has-no-properties
-    - Wordpress (WP)
+    - plugin
 categories:
     - wordpress
 permalink: /blog/2008/04/01/wordpress/wordpress-25-tinymce-306-template-plugin-zum-laufen-bekommen
 image:
     thumb: wordpress.jpg
 ---
-> WordPress 2.5 kommt nach dem großen Versionsprung nun auch endlich mit der Version 3 des tinyMCE Editors daher. Bei der Konfiguration des neuen tinyMCE ist mir aufgefallen, dass das Template-Plugin bei einer bestimmten Einstellung nicht mehr funktioniert. Die Lösung liegt in der Verwendung eines anderen Initialisierungsparameters.
-
-
+> WordPress 2.5 kommt nach dem großen Versionsprung nun auch endlich mit der Version 3 des tinyMCE Editors daher.
+> Bei der Konfiguration des neuen tinyMCE ist mir aufgefallen, dass das Template-Plugin bei einer bestimmten 
+> Einstellung nicht mehr funktioniert. Die Lösung liegt in der Verwendung eines anderen Initialisierungsparameters.
 
 ## Doch vorerst zur Installation.
 
@@ -30,55 +23,60 @@ tinyMCE im WordPress Bundle wird nämlich nur mit einer spärlichen Anzahl an Pl
 
 Aber zurück zum Template-Plugin. Nach Kopieren in den tinyMCE Plugin-Ordner und Anpassen der tiny\_mce\_config.php (wp-includes\js\tinymce) an folgenden Stellen erschien schonmal der Template Button wieder:
 
+```php
 $plugins = array( 'safari', 'inlinepopups', [...], 'template' );
 $mce_buttons = apply_filters('mce_buttons', array('bold', [...], 'template' ));
+```
 
-[Hinweis: Die manuelle Anpassung der tiny\_mce\_config.php empfelhe ich nicht. Diese und folgende Einstellungen können in ein WP Plugin ausgelagert werden was bedingungslos zu empfehlen ist, da sie bei einem Upgrade von WordPress ansonsten verloren gehen können; [WordPress bietet zur Konfiguration von tinyMCE (insbesondere Hinzufügen eigener Buttons) Filter][3] an!]
+[Hinweis: Die manuelle Anpassung der `tiny\mce\config.php` empfehle ich nicht. Diese und folgende Einstellungen können
+ in ein WP Plugin ausgelagert werden was bedingungslos zu empfehlen ist, da sie bei einem Upgrade von WordPress 
+ ansonsten verloren gehen können; [WordPress bietet zur Konfiguration von tinyMCE 
+ (insbesondere Hinzufügen eigener Buttons) Filter][3] an!]
 
 Die weitere (gewohnte) Definition der eigenen Templates im $initArray schlug dann aber fehl:
 
+```php
 'template_templates' => array(
 	array("TemplateName","TemplateURL","TemplateBeschreibung"),
 	array("TemplateName2","TemplateURL2","TemplateBeschreibung2")
 );
+```
 
 ## Die Ursache
 
 Nach langer Recherche und Debuggen (danke [Firebug][4]!) habe ich die Ursache gefunden:
 
-In der _tinymce\_plugin\_verzeichnis/template/js/template.js_ wird in der init-Funktion versucht den festgelegten Parameter _template_templates_ per
+In der `tinymce\plugin\verzeichnis/template/js/template.js_` wird in der init-Funktion versucht den festgelegten
+Parameter `template_templates` per `tsrc = ed.getParam("template_templates", false);`.
+auszulesen. Leider [liefert die Funktion ed.getParam aber nur Strings zurück][5], was bei einem Array in Javascript den 
+String &#8222;Array&#8220; zurückgibt. Klar dass die weitere Abarbeitung (insbesondere der Versuch diesen String zu
+ durchlaufen und URLs daraus zu ermitteln) fehl schlägt und mit folgendem Fehler abbricht (Stack aus Firebug):
 
-tsrc = ed.getParam("template_templates", false);
-
-auszulesen. Leider [liefert die Funktion ed.getParam aber nur Strings zurück][5], was bei einem Array in Javascript den String &#8222;Array&#8220; zurückgibt. Klar dass die weitere Abarbeitung (insbesondere der Versuch diesen String zu durchlaufen und URLs daraus zu ermitteln) fehl schlägt und mit folgendem Fehler abbricht (Stack aus Firebug):
-
+```
 u has no properties
-
 _init(undefined, Object base_uri=Object)tiny_mce_config.p... (line 39)
-
 _init(undefined, undefined)tiny_mce_config.p... (line 39)
-
 init()template.js (line 24)
-
 (no name)(Object scope=Object)tiny_mce_popup.js (line 204)
-
 _init([Object scope=Object], function(), [Object
-
 scope=Object])tiny_mce_config.p... (line 39)
-
 _onDOMLoaded()tiny_mce_popup.js (line 203)
-
 (no name)()
+```
 
 ## Die Lösung dazu
 
-Zumindest bis der Bug gefixt wurde, ist recht einfach. TinyMCE lässt die Definition der Templates auch in einem externen Javascript-File zu.
+Zumindest bis der Bug gefixt wurde, ist recht einfach. TinyMCE lässt die Definition der Templates auch in einem
+ externen Javascript-File zu.
 
-Dazu wird einfach im initArray der [Parameter _template\_external\_list_url_][6] genutzt. Gefüllt mit dem Pfad zu einem Javascript-Datei ([vgl. beispielhafter Aufbau][7]), welche dann das Array von Templates enthält funktioniert auch der Template-Button wieder wie gewünscht.
+Dazu wird einfach im initArray der [Parameter _template\_external\_list_url_][6] genutzt. Gefüllt mit dem Pfad zu einem
+ Javascript-Datei ([vgl. beispielhafter Aufbau][7]), welche dann das Array von Templates enthält funktioniert auch
+  der Template-Button wieder wie gewünscht.
 
 ## Ein letztes Problem
 
-Mein letztes Problem ist nur noch, dass aus unerfindlichen Gründen die Platzhalter für die Lokalisierung nicht ersetzt werden (vgl. Screenshot)
+Mein letztes Problem ist nur noch, dass aus unerfindlichen Gründen die Platzhalter für die Lokalisierung nicht ersetzt
+ werden (vgl. Screenshot)
 
 [![Keine Lokalisierung im Template Plugin][8]][9]
 

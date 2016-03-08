@@ -5,12 +5,10 @@ published: true
 comments: false
 date: 2008-04-09 10:04:07
 tags:
-    - bug
     - bugfix
     - ie-6
     - ie-7
     - sifr
-    - swfobject
     - useDomLoaded
 categories:
     - internetexplorer
@@ -20,11 +18,7 @@ image:
 ---
 > **Dieser Bugfix wird in neuen sIFR 3 builds nicht mehr benötigt: vgl. UPDATE 11.04.08 weiter unten und die Kommentare.**
 > 
-> &#8212;&#8212;&#8212;-
-> 
 > In einem Projekt bin ich vor Kurzem auf ein seltsames Verhalten von [sIFR 3][1] gestoßen.
-
-
 
 ## Problembeschreibung
 
@@ -32,7 +26,9 @@ Komischerweise zeigte meine Testseite im Internet Explorer 6 und 7 keinen Inhalt
 
 Alles was im Quelltext stand war
 
-&lt;script src="wp-content/themes/meinTheme/swf/meineFont.swf" type="sifr/prefetch"&gt;&lt;/script&gt;
+```html
+<script src="wp-content/themes/meinTheme/swf/meineFont.swf" type="sifr/prefetch"></script>
+```
 
 &#8230; ansonsten war die Seite weiß und leer.
 
@@ -40,7 +36,9 @@ Nach einer kurzen Recherche bin ich dann auf den [Beitrag von EightEightZero][2]
 
 Nach weiterem Stöbern in der [Dokumentation von sIFR 3 bezüglich der Javascript Konfiguration][4] und einigen [sIFR-Foren][5]-Beiträgen habe ich letzendlich die passende Lösung gefunden. Der Parameter hat in der von mir verwendeten Version von sIFR (version 3, revision 382) einfach einen anderen Namen bekommen:
 
+```javascript
 sIFR.useDomLoaded = !sIFR.ua.ie;
+```
 
 Dies teilt sIFR mit, dass es im IE (sIFR.ua.ie > true, wenn IE) die useDomLoaded-Funktionalität nicht anwenden soll. Nach dem Löschen des Cache sollte die Seite nun ohne Probleme im Internet Explorer 6 und auch in der 7er Version des IE angezeigt werden.
 
@@ -59,4 +57,4 @@ Leider taucht in dieser Version ein andere Bug auf: [Fehlerhaftes Scollverhalten
  [3]: http://blog.deconcept.com/swfobject/ "Seite von SWFObject öffnen"
  [4]: http://wiki.novemberborn.net/sifr3/JavaScript+Configuration "Dokumentation zur Javascript Konfiguration von sIFR ansehen"
  [5]: http://discuss.joyent.com/viewforum.php?id=20 "sIFR Forum besuchen"
- [6]: http://mediavrog.net/blog/2008/04/28/javascript/sifr-probleme-beim-scrollen-im-internet-explorer-6-und-7/ "Artikel zu fehlerhaftem Scollverhalten in diesem Fenster öffnen"
+ [6]: /blog/2008/04/28/javascript/sifr-probleme-beim-scrollen-im-internet-explorer-6-und-7/ "Artikel zu fehlerhaftem Scollverhalten in diesem Fenster öffnen"

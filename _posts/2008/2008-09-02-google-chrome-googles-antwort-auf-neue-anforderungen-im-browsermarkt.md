@@ -24,7 +24,8 @@ Was für die Webentwickler und Datenschützer zunächst wie ein Albtraum erschei
 
 Der Browser soll noch im Verlauf des heutigen Tages als [Testversion zum Download][1] erhältlich sein.
 
-Weitestgehend technische Erklärungen der Funktionen erhält man beim Lesen eines von [Scott McCloud][2] wunderschön gestalteten Comics (erhältlich bei [blogoscoped.com][3] oder **[hier im Blog][4]**).
+Weitestgehend technische Erklärungen der Funktionen erhält man beim Lesen eines von [Scott McCloud][2] wunderschön 
+gestalteten Comics (erhältlich bei [blogoscoped.com][3] oder **[hier im Blog][4]**).
 
 ## Eine Übersicht der Inhalte / Funktionen:
 
@@ -77,14 +78,9 @@ Mit dem neuen Browser könnte Google nun schon nicht mehr nur das Internet, sond
 
 Ich bin gespannt, ob alle Erwartungen und Versprechen gehalten werden können und freue mich darauf, den neuen Browser mal auf einer Testfahrt zu erproben.
 
-**Hier noch einmal der Link zu den Comics, falls‚ er oben überlesen wurde :)**
+**Hier noch einmal der [Link zu den Comics][4], falls‚ er oben überlesen wurde :)**
   
-[][5]
-  
-[Bild: Copyright by Google]
-
  [1]: http://www.google.com/chrome "Testversion des google Chrome Browsers von google.com/chrome herunterladen"
  [2]: http://www.scottmccloud.com/ "Portfolio von von Scott Mc Cloud auf scottmccloud.com besuchen"
  [3]: http://blogoscoped.com/google-chrome "funktionen des neuen Google Chrome Browsers im comic-format auf blogoscoped.com lesen"
- [4]: http://mediavrog.net/blog/2008/09/02/browser/google-chrome-comic/ "Google Chrome Comic auf mediavrog.net lesen"
- [5]: http://mediavrog.net/blog/2008/09/02/browser/google-chrome-comic/ "Comic zu Google Chrome auf mediavrog.net lesen"
+ [4]: /blog/2008/09/02/browser/google-chrome-comic/ "Google Chrome Comic auf mediavrog.net lesen"

@@ -47,19 +47,21 @@ Event handler which fires when an element has been replaced. It's argument is a 
 
 Anhand dieses Callback kann man pro ersetzter Überschrift JS Code ausführen. In **Pseudocode**:
 
+```javascript
 onReplacement: function(obj){
-if(ie){
-     var tmpSize = getSize(obj.ancestor);
-     var tmpPos = getPos(obj.ancestor);
-
-     //create Div with size/pos from above with position absolute
-     var bogusLayer = new Element("div").setPos(tmpPos).setSize(tmpSize).setPositionMode("static");
-     bogusLayer.setOpacity(0.001);
-
-     //insert div into dom, above the sifr-replaced object
-     bogusLayer.injectAsFirstElement(obj.ancestor);
+    if(ie){
+         var tmpSize = getSize(obj.ancestor);
+         var tmpPos = getPos(obj.ancestor);
+    
+         //create Div with size/pos from above with position absolute
+         var bogusLayer = new Element("div").setPos(tmpPos).setSize(tmpSize).setPositionMode("static");
+         bogusLayer.setOpacity(0.001);
+    
+         //insert div into dom, above the sifr-replaced object
+         bogusLayer.injectAsFirstElement(obj.ancestor);
+    }
 }
-}
+```
 
 Bis Mark Wubben einen wirklichen Workaround gefunden hat, ist dies eine Möglichkeit den Bug zu umgehen.
 

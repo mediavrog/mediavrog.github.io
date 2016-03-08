@@ -5,9 +5,7 @@ published: true
 comments: true
 date: 2007-06-08 03:06:39
 tags:
-    - duplicate
-    - duplikat
-    - javascript
+    - duplikate
 categories:
     - javascript
 permalink: /blog/2007/06/08/javascript/javascript-duplikate-entfernen-remove-duplicates
@@ -16,17 +14,16 @@ image:
 ---
 > Dieses Script entfernt Duplikate sowohl aus Strings, als auch aus Arrays.
 
-
-
 Sie ist einfach und schnell.
   
 Getestet unter IE6/7, Firefox 2, Opera 9.02, Netscape 7
 
+```javascript
 function removeDuplicates(hasDup){
 	
 	var noDup = new hasDup.constructor;
 	
-	if(noDup.push){
+	if(noDup.push) {
 		noDup[0] = hasDup[0];
 	
 		for(i=1;i&lt;hasDup.length;i++){
@@ -37,8 +34,7 @@ function removeDuplicates(hasDup){
 			
 			noDup.push(hasDup[i]);
 		}
-	}
-	else{
+	} else {
 		noDup = hasDup.charAt(0);
 			
 		for(i=1;i&lt;hasDup.length;i++){
@@ -53,9 +49,8 @@ function removeDuplicates(hasDup){
 	
 	return noDup;
 }
+```
 
 ### Download
 
-[removeDuplicates in Javascript [*.js-File]][1]
-
- [1]: http://mediavrog.net/blog/wp-content/uploads/2007/06/duplicate2.js "removeDuplicates in Javascript [*.js-File]"
+<a href="/uploads/duplicate2.js" class="btn btn-success">Download removeDuplicates.js</a>

@@ -24,6 +24,6 @@ Per Hand kann man alles per Drag &#8217;n Drop verschieben und z.B. Bilder vergr
 Aber die Zukunft der PC&#8217;s soll das laut Microsoft nicht sein, vielmehr soll die Technick für 
 Promotion und in Casinos eingesetzt werden.
 
-Die ganze Story gibts unter [http://www.popularmechanics.com/technology/industry/4217348.html][1].
+Die ganze Story gibts unter [popularmechanics.com][1].
 
  [1]: http://www.popularmechanics.com/technology/gadgets/a1690/4217348/ "Popularmechanics.com besuchen"

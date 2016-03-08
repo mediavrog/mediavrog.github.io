@@ -5,30 +5,24 @@ published: true
 comments: true
 date: 2007-06-06 07:06:29
 tags:
-    - css,
-    - checkbox
     - custom form elements
-    - element
-    - file input
-    - fileupload
-    - formular
-    - javascript
-    - mootools
-    - radiobutton
     - style
-    - styles
-    - stylesheet
+    - forms
 categories:
     - mootools
 permalink: /blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten
 image:
     thumb: cfe.jpg
 ---
-> **Update 08.01.10: Custom Form Elements hat sich weiterentwickelt und ist nun unter  zu finden.** Ein kleines Stück Code, welches Checkboxen und Radiobuttons (und jetzt auch viele andere Formularelemente) per Javascript durch kleine DIV-Container ersetzt, welche man dann selbst per CSS gestalten kann.
+> **Update 08.01.10: Custom Form Elements hat sich weiterentwickelt und ist nun unter 
+> [http://customformelements.net](http://customformelements.net) zu finden.**
+>
+> Ein kleines Stück Code, welches Checkboxen und Radiobuttons (und jetzt auch viele andere Formularelemente)
+>per Javascript durch kleine DIV-Container ersetzt, welche man dann selbst per CSS gestalten kann.
 
-
-
-An der Funktionalität jeder Checkbox und der Radiobuttons im Formular ändert sich nichts :) . Auch Labels werden unterstützt. Es ist damit also möglich, per CSS die Styles der Elemente eines Formulars anzupassen > siehe [Demoseite][1].
+An der Funktionalität jeder Checkbox und der Radiobuttons im Formular ändert sich nichts :)
+Auch Labels werden unterstützt. Es ist damit also möglich, per CSS die Styles der Elemente eines Formulars anzupassen 
+> siehe [Demoseite][1].
 
 ## Kurzinfo: 
 
@@ -57,7 +51,7 @@ An der Funktionalität jeder Checkbox und der Radiobuttons im Formular ändert s
 
 ## Download:
 
-  * [http://sourceforge.net/projects/cfe/files/][2]
+  * [https://github.com/mediavrog/cfe][2]
 
 ## Demo:
 
@@ -65,8 +59,10 @@ An der Funktionalität jeder Checkbox und der Radiobuttons im Formular ändert s
 
 ## Donate / Spenden
 
-**Verbesserungsvorschläge und Kommentare sind immer willkommen!**
+This library helped you building great things? Buy me a beer :)
+
+{% include _donate.html %}
 
  [1]: http://customformelements.net/demopage.php
- [2]: http://sourceforge.net/projects/cfe/files/ "Demopage zu customFormElements öffnen"
+ [2]: https://github.com/mediavrog/cfe "Demopage zu customFormElements öffnen"
  [3]: http://customformelements.net/demopage.php "Demopage zu customFormElements öffnen"

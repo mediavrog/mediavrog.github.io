@@ -10,6 +10,7 @@ tags:
     - permalinks
 categories:
     - server
+    - archive!
 permalink: /blog/2007/07/26/weitere-themen/server/mod_rewrite-aktivieren-auf-vserver-von-netclusive-fur-permalinks-und-realurl
 image:
     thumb: server.jpg

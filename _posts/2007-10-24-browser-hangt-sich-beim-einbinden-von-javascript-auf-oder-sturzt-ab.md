@@ -5,9 +5,6 @@ published: true
 comments: true
 date: 2007-10-24 07:10:25
 tags:
-    - absturz
-    - browser
-    - javascript
     - jsmin
     - kompression
     - obfuscation
@@ -28,20 +25,20 @@ Das Script wird dann beim Aufruf in einigen Fällen (z.B. Dean Edwards Packer) m
 ## Meine Empfehlungen:
 
   * eine etwas geringere Komprimierungsstufe (welche kein eval benutzt) wählen, z.B. [**jsMin**][1] 
-      * + kann on-the-fly komprimiert werden, da relativ schnell
-      * + keine Browserabstürze da ohne eval
-      * + Implementierung in diversen Programmiersprachen verfügbar
-      * &#8211; keine Optimale Komprimierung, da nur Leerzeichen, Kommentare und Zeilenumbrüche entfernt werden
-      * &#8211; das Javascript bleibt danach immer noch lesbar
+      * \+ kann on-the-fly komprimiert werden, da relativ schnell
+      * \+ keine Browserabstürze da ohne eval
+      * \+ Implementierung in diversen Programmiersprachen verfügbar
+      * \- keine Optimale Komprimierung, da nur Leerzeichen, Kommentare und Zeilenumbrüche entfernt werden
+      * \- das Javascript bleibt danach immer noch lesbar
   * der neue [**YUI-Kompressor**][2] aus dem Hause Yahoo 
-      * + ein Mix aus überflüssigen Zeichen entfernen und Verschleierung (obfuscation) sorgt für sehr hohe Kompressionsraten
-      * + die Scripte sind nicht mehr lesbar und somit besser geschützt
-      * + keine Browserabstürze da ohne eval
-      * + auf jedem System einsetzbar &#8211; basiert auf Java Technologie
-      * &#8211; nicht on-the-fly nutzbar, weil es langsamer ist als z.B. jsmin oder dojo compressor
+      * \+ ein Mix aus überflüssigen Zeichen entfernen und Verschleierung (obfuscation) sorgt für sehr hohe Kompressionsraten
+      * \+ die Scripte sind nicht mehr lesbar und somit besser geschützt
+      * \+ keine Browserabstürze da ohne eval
+      * \+ auf jedem System einsetzbar &#8211; basiert auf Java Technologie
+      * \- nicht on-the-fly nutzbar, weil es langsamer ist als z.B. jsmin oder dojo compressor
 
-Letztere Variante ist mir sehr sympathisch und ich werde den Kompressor die Tage mal testen. Die Sourcen hab
- ich schon gezogen :) Ergebnisse gibts dann in einem neuen Artikel.
+Letztere Variante ist mir sehr sympathisch und ich werde den Kompressor die Tage mal testen. 
+Die Sourcen hab ich schon gezogen :)
 
  [1]: http://www.crockford.com/javascript/jsmin.html "Weitere Infos zu JSMin öffnen"
  [2]: http://www.julienlecomte.net/blog/2007/08/13/introducing-the-yui-compressor/ "Weitere Infos zu, YUI Kompressor öffnen"

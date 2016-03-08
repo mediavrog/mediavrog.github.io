@@ -9,21 +9,26 @@ tags:
     - caption
     - imagelightbox
     - lightbox
-    - typo3
-categories:
     - extensions
+categories:
+    - typo3
 permalink: /blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen
 image:
     thumb: typo33.jpg
 ---
-> In der **KJ: Image Lightbox v2** (Version 1.4.2) gibt es einen Bug der dafür sorgt, dass beim Verwenden der Lightbox in mehreren Content-Elementen einer Seite die Bildunterschriften / Captions ab dem zweiten Content Element nicht mehr angezeigt werden.
-
+> **Update 31.08.07**: Habe eine E-Mail von einem Entwickler der Extension bekommen, dass der Bugfix integriert ist.
+> Er wird dann bestimmt mit dem nächsten Update der Extension im TER kommen.
+>
+> In der **KJ: Image Lightbox v2** (Version 1.4.2) gibt es einen Bug der dafür sorgt, dass beim Verwenden der Lightbox
+> in mehreren Content-Elementen einer Seite die Bildunterschriften / Captions ab dem zweiten Content Element
+> nicht mehr angezeigt werden.
 
 
 Ich habe den Bugfix dafür bereits im Mantis des Projekts gemeldet, bis er umgesetzt ist hier meine Änderungen:
 
 ## Sie betreffen durchgehend die Datei _class.ux\_tslib\_content.php_
 
+```
 //Zeile 35:(insert)
 // global var for counting items on page
 var $itemCount = 0;
@@ -44,12 +49,9 @@ id="imageLightbox'.$this->itemCount.'
 //Zeile 190: (add)
 $this->itemCount++;
 //(Danke an T0m für den Hinweis :) )
+```
 
 Viel Spaß damit
-
-## UPDATE 31.08.07:
-
-Habe eine E-Mail von einem Entwickler der Extension bekommen, dass der Bugfix integriert ist. Er wird dann bestimmt mit dem nächsten Update der Extension im TER kommen.
 
 ## Datei inklusive Bugfix (aber ohne Garantie) 
 
@@ -63,5 +65,5 @@ Ich habe schonmal die kj_imagelightbox2 so umgeschrieben, dass anstatt der Light
 
 Wenn Interesse besteht, kann ich die Datei zuschicken. [In meinem Artikel dazu gibts die Extension als t3x.][2]
 
- [1]: http://mediavrog.net/blog/wp-content/uploads/2008/03/classux_tslib_contentphp.txt "class.ux_tslib_content.php inklusive Bugfix"
- [2]: http://mediavrog.net/blog/2008/05/23/typo3/extensions/kj_imagelightbox-2-fur-mootools-slimbox/ "Erweiterte Extension kj_imagelightbox in diesem Blog herunterladen"
+ [1]: /uploads/classux_tslib_contentphp.txt "class.ux_tslib_content.php inklusive Bugfix"
+ [2]: /blog/2008/05/23/typo3/extensions/kj_imagelightbox-2-fur-mootools-slimbox/ "Erweiterte Extension kj_imagelightbox in diesem Blog herunterladen"

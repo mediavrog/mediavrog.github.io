@@ -18,56 +18,46 @@ image:
 
 
 
-In der [tt_news Dokumentation][1] wird dies nur beiläufig erwähnt. In meinem konkreten Fall wollte ich mehrere Templates für die SINGLE-View verwenden, um in einem den kompletten Artikel darzustellen, und in einer Multibox auf einer anderen Seite dann nur die NEWS_IMAGEs anzuzeigen.
+In der [tt_news Dokumentation][1] wird dies nur beiläufig erwähnt. In meinem konkreten Fall wollte ich mehrere 
+Templates für die SINGLE-View verwenden, um in einem den kompletten Artikel darzustellen, und in einer Multibox 
+auf einer anderen Seite dann nur die NEWS_IMAGEs anzuzeigen.
 
-# Change single template for "Galerie" to fetch another template than standard single
+**Change single template for "Galerie" to fetch another template than standard single**
+
+```typoscript
 [PIDinRootline = {$galleryPageId}]
 plugin.tt_news {
   altMainMarkers.TEMPLATE_SINGLE = TEMPLATE_SINGLE_GALLERY
   altMainMarkers.TEMPLATE_SINGLE.wrap = ###|###
 }
 [global]
-
-
-
-
-
+```
   
-Im news-HTML-Template muss dazu ein neues Subpart namens TEMPLATE\_SINGLE\_GALLERY angelegt und befüllt werden. In meinem konkreten Beispiel schaut das dann so aus:
+Im news-HTML-Template muss dazu ein neues Subpart namens TEMPLATE\_SINGLE\_GALLERY angelegt und befüllt werden.
+ In meinem konkreten Beispiel schaut das dann so aus:
 
+```html
+<!-- ###TEMPLATE_SINGLE_GALLERY### begin
+	This subpart is used to display only the gallery in single news items
+-->
+<script type="text/javascript" src="fileadmin/templates/media/js/imagegallery.js"></script>
 
+<h3>###NEWS_TITLE###</h3>
 
+<div class="article">
+    <div class="mainArticle">
+        <div class="images">
+            ###NEWS_IMAGE_BOX###
+            ###NEWS_IMAGE###
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
 
-
-
-
-  ###NEWS_TITLE###
-
-
-
-
-
-  
+<!-- ###TEMPLATE_SINGLE_GALLERY### end -->
+```
     
-      ###NEWS_IMAGE_BOX###
-                  ###NEWS_IMAGE###
-              
-    
-        
-  
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-Auf der entsprechenden Seite mit der uid {$galleryPageId} muss in diesem Beispiel natürlich ebenfalls ein tt_news Plugin hinzugefügt werden und mit dem code &#8222;SINGLE&#8220; konfiguriert werden.
+Auf der entsprechenden Seite mit der uid `{$galleryPageId}` muss in diesem Beispiel natürlich ebenfalls ein tt_news 
+Plugin hinzugefügt werden und mit dem code &#8222;SINGLE&#8220; konfiguriert werden.
 
  [1]: http://typo3.org/documentation/document-library/extension-manuals/tt_news/2.4.0/view/1/4/ "TT_NEWS Dokumantation auf typo3.org besuchen"

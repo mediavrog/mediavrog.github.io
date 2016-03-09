@@ -24,43 +24,25 @@ Nach kurzer Recherche stellte sich heraus, dass Typo3 immer wieder versucht hat,
 
 Ein Hilferuf von 2006 in der Typo3 Mailingliste beschreibt das Problem ebenfalls sehr gut:
   
-#Auszug#
-  
 > hab vor ein paar tagen eine fertiges typo3 system von meinen
-  
 > testserver exportiert und auf einen neuen server importiert.
-  
 > verlief soweit fast alles problemlos, probleme gibt es nur wenn ich
-  
 > versuche im rechten menu &#8222;anzeigen&#8220; oder bei der seitenerstellung die
-  
 > funktion &#8222;vorschau (lupe)&#8220; nutzen möchte das dann immer wieder meine
+> alte serverurl aufgerufen wird. 
+> <cite>Michael Hoffmann michael at steinefrenz.net - Fri Oct 13 13:18:08 CEST 2006</cite>
   
-> alte serverurl aufgerufen wird.
-
-Michael Hoffmann michael at steinefrenz.net
-  
-Fri Oct 13 13:18:08 CEST 2006
-  
-#Auszug Ende#
-
 #### Lösung
 
-In meinem Fall lag das Problem an der Domainkonfiguration im Typo3. Wie im Bild zu erkennen, stand die alte Domain an erster Stelle in der Konfiguration.
+In meinem Fall lag das Problem an der Domainkonfiguration im Typo3. Wie im Bild zu erkennen, stand die alte Domain an 
+erster Stelle in der Konfiguration.
 
+![Falsche Domainkonfiguration][1]
 
-  
-  
-  
-    Falsche Domainkonfiguration
-  
+Nachdem sie mit den Schaltflächen (grün markiert) in der Liste nach unten verschoben wurde, 
+funktionierte auch die Vorschau-Ansicht wieder problemlos und zeigt nun auf den aktuellen Server.
 
-
-Nachdem sie mit den Schaltflächen (grün markiert) in der Liste nach unten verschoben wurde, funktionierte auch die Vorschau-Ansicht wieder problemlos und zeigt nun auf den aktuellen Server.
-
-
+![Richtige Domainkonfiguration][2]
   
-  
-  
-    Richtige Domainkonfiguration
-  
+ [1]: /images/falschedomain.gif
+ [2]: /images/korrektedomain.gif

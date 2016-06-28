@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'GPUImage dreht Portrait-Bild nach Fotografieren mit Kamera<!--:en-->GPUImage rotates an image shot in portrait mode by 90 degrees'
 published: true
 comments: true

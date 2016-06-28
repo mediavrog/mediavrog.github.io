@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Spam: Entfernung Ihrer Webseite aus dem Google Index von DONOTREPLY@gmail.com'
 published: true
 comments: true

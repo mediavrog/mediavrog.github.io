@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Mobile Widgets - Eine Einführung'
 published: true
 comments: true

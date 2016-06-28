@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'TYPO3 - Direct Mail Newsletter werden nicht verschickt'
 published: true
 comments: true

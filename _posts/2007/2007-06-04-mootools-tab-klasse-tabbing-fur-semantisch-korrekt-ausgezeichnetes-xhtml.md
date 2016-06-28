@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'mootools - "SmartTabs" : Tab-Klasse / Tabbing für semantisch korrekt ausgezeichnetes XHTML'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'After Effects stürzt beim Rendern ab'
 published: true
 comments: true

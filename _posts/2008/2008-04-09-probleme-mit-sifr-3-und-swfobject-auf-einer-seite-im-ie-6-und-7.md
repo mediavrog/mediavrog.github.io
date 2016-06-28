@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Probleme mit sIFR 3 und SWFObject auf einer Seite im IE 6 und 7'
 published: true
 comments: false

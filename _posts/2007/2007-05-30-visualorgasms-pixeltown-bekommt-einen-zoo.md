@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Visualorgasms Pixeltown bekommt einen Zoo!'
 published: true
 comments: true

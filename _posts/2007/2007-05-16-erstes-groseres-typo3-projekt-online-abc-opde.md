@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Typo3 Kundenprojekt online: abc-op.de'
 published: true
 comments: true

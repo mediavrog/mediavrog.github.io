@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Internet Explorer Voodoo Doll / Puppe'
 published: true
 comments: true

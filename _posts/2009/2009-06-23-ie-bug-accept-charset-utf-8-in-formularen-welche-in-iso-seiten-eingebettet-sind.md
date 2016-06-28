@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'IE Bug: Accept-charset UTF-8 in Formularen, welche in ISO Seiten eingebettet sind'
 published: true
 comments: true

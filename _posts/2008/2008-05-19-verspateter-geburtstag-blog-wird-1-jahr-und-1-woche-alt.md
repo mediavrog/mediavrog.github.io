@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'verspäteter Geburtstag - Blog wird 1 Jahr und 1 Woche alt'
 published: true
 comments: true

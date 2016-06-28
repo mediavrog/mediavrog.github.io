@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Typo3 nach Umzug auf neuen Server: "Anzeigen / Vorschauoption" springt auf alten Server'
 published: true
 comments: true

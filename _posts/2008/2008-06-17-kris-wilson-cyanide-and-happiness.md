@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Kris Wilson - Cyanide and Happiness'
 published: true
 comments: true

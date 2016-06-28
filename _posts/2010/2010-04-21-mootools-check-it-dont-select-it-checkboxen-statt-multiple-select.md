@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: |
     Mootools "Check it, don't select it" - Checkboxen statt multiple Select<!--:en-->Mootools "Check it, don't select it" - checkboxes instead of multiple select
 published: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Direct Mail Newsletter Anmeldung über Mailformplus oder ein anderes Kontaktformular'
 published: true
 comments: true

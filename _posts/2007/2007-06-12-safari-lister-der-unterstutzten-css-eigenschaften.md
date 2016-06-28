@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Safari - Liste der unterstützten CSS Eigenschaften'
 published: true
 comments: true

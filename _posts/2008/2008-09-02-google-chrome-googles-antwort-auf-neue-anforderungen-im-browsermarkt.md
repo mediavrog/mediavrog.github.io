@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Google Chrome - Googles Antwort auf neue Anforderungen im Browsermarkt'
 published: true
 comments: true

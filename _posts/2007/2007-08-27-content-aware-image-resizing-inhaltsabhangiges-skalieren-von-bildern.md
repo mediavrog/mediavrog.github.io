@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Content aware image resizing / Inhaltsabhängiges Skalieren von Bildern'
 published: true
 comments: true

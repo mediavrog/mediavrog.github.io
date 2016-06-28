@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Kappa Mikey feat. "The Internet is for porn"'
 published: true
 comments: true

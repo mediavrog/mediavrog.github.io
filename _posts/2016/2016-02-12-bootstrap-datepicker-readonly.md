@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Read-only for bootstrap datepicker calendar popup"
 excerpt: "Small js to simulate read only in the calendar popup."
 tags: 

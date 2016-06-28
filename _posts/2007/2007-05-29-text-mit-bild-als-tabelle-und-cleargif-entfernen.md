@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Text mit Bild als Tabelle (statt Definitionsliste) rendern / clear.gif entfernen'
 published: true
 comments: true

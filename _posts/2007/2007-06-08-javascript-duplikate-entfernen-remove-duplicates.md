@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Javascript: Duplikate entfernen / remove duplicates'
 published: true
 comments: true

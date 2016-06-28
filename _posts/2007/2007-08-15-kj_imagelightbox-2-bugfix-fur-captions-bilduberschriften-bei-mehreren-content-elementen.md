@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'kj_imagelightbox 2 - Bugfix für Captions / Bildüberschriften bei mehreren Content Elementen'
 published: true
 comments: true

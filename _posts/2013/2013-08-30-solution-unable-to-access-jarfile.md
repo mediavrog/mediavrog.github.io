@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Unable to access jarfile /Applications/Android solution"
-layout: post
+layout: single
 tags: 
   - android studio
   - proguard

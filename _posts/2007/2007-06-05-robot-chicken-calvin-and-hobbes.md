@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Robot Chicken - Calvin and Hobbes'
 published: true
 comments: true

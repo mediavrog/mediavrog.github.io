@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Browser hängt sich beim Einbinden von Javascript auf oder stürzt ab'
 published: true
 comments: true

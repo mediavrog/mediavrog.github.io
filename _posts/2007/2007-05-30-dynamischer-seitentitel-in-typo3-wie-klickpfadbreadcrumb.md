@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Breadcrumbs in Typo3'
 published: true
 comments: true

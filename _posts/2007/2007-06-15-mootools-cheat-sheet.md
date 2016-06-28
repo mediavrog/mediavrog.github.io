@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'mootools 1.1 cheat sheet'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Parse string to dom and dom to string'
 published: true
 comments: true

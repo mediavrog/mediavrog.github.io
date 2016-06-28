@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Wordpress 2.5 > tinyMCE 3.0.6 > Template Plugin zum Laufen bekommen'
 published: true
 comments: true

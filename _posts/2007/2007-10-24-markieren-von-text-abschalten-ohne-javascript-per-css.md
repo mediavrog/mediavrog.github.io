@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Markieren von Text abschalten ohne Javascript per CSS'
 published: true
 comments: true

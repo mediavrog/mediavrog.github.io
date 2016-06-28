@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Droht der Firefox Download-Day zu floppen?'
 published: true
 comments: true

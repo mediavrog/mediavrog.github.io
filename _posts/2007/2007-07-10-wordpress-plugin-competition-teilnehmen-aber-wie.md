@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'WordPress Plugin Competition - Teilnehmen aber wie!?'
 published: true
 comments: true

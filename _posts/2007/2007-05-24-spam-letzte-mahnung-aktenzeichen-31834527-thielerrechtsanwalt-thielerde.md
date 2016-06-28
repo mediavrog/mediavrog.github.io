@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Spam "Herr Olaf Tank": Letzte Mahnung, Aktenzeichen: 318345/27 : Thieler@Rechtsanwalt-Thieler.de'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'mootools - custom Form Elements 1.8beta: Checkboxen und Radiobuttons selbst per CSS gestalten'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Der gläserne Mensch - auf dem Weg in den Überwachungsstaat'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'kj_imagelightbox 2 für mootools slimbox'
 published: true
 comments: true

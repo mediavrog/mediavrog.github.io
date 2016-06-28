@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Safari 3 für Windows jetzt offiziell von Apple - vorerst beta'
 published: true
 comments: true

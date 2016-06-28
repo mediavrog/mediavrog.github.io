@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'kj_imagelightbox 2 - Seiten Bilderset'
 published: true
 comments: true

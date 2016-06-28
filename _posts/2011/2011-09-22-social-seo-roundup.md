@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Social SEO – Content Content Content'
 published: true
 author: twago_christina

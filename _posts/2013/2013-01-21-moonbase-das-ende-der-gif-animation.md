@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Moonbase – Das Ende der Gif-Animation?
 published: true
 author: connex_kaiser

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Wieder online :)'
 published: true
 comments: true

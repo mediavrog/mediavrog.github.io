@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Hilfe für Japan'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Kropki - ein Sudoku-ähnliches Puzzle mit Punkten'
 published: true
 comments: true

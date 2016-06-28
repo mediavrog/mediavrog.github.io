@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Mailformplus 4.0 - Die flexible Typo3 Mailformular Extension geht mit mir in die vierte Runde'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: '3ds max - Anfasser bzw. Transformations-Gizmo ist weg - wieder einschalten per x-Taste'
 published: true
 comments: true

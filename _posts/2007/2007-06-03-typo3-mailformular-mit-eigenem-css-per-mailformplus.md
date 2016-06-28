@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Typo3 - Mailformular mit eigenem CSS (per Mailformplus)'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Spam: Wichtig: 90 Tage Entfernung Ihrer Webseite www.domain.de aus dem Google Index'
 published: true
 comments: true

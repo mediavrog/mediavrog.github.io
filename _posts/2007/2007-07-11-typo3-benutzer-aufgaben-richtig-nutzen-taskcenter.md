@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Typo3 - Benutzer > Aufgaben richtig nutzen (Taskcenter)'
 published: true
 comments: true

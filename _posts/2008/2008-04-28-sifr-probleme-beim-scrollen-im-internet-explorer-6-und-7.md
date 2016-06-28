@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'sIFR Probleme beim Scrollen im Internet Explorer 6 und 7'
 published: true
 comments: true

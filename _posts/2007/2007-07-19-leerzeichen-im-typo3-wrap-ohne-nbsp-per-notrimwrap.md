@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Leerzeichen im Typo3 wrap ohne &amp;nbsp; per noTrimWrap'
 published: true
 comments: true

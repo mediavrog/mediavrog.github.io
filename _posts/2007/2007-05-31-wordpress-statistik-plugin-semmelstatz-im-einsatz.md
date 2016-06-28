@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Wordpress Statistik Plugin "semmelstatz" im Einsatz'
 published: true
 comments: true

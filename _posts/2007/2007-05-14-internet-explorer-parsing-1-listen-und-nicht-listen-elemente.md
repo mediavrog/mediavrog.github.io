@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Internet Explorer parsing: Listen und nicht-listen-Elemente'
 published: true
 comments: true

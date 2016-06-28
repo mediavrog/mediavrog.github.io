@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Extension Backend Konfiguration in Typo3 4.2.8 von Typ file'
 published: true
 comments: true

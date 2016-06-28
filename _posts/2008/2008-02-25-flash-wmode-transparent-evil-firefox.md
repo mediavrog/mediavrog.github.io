@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Flash: wmode = transparent = evil (Firefox)'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Boules spielen bei Nacht - mit leuchtenden Boule-Kugeln'
 published: true
 comments: true

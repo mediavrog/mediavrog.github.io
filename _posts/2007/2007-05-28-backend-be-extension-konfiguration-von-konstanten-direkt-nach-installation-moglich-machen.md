@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen'
 published: true
 comments: true

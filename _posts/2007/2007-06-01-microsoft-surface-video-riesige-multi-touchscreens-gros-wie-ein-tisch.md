@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Microsoft Surface Video - Riesige Multi-Touchscreens, groß wie ein Tisch'
 published: true
 comments: true

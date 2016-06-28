@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Eigenes Stylesheet im Backend Modul einer Extension in Typo3'
 published: true
 comments: true

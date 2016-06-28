@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: '<!--:en-->kompare widget for price comparison releasedkompare - ein Widget zum einfachen vergleichen von Preisen released'
 published: true
 comments: true

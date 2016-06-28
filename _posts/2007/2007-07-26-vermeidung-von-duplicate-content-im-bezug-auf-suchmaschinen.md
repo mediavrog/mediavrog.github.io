@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Vermeidung von duplicate content im Bezug auf Suchmaschinen'
 published: true
 comments: true

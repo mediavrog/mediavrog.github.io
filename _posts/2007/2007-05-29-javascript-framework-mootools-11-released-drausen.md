@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Javascript Framework mootools 1.1 released / draußen'
 published: true
 author: admin

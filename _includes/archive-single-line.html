@@ -1,0 +1,28 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% capture teaser %}{{ site.teaser }}{% endcapture %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if post.link %}
+    <h2 class="archive__item-title link-post">
+      <a href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a>
+    </h2>
+    {% else %}
+    <h2 class="archive__item-title"><a href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
+      <span class="title">{{ post.title }}</span>
+      {% if post.image.thumb %}
+      <img src="{{ site.url }}/images/{{ post.image.thumb }}" alt="{{ page.title }} thumb image" />
+      {% endif %}
+      {% if post.date %}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      {% endif %}
+    </a></h2>
+    {% endif %}
+  </article>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Typo3 tt_news - Mehrere Templates für SINGLE, LIST oder LATEST je nach Seite'
 published: true
 comments: true

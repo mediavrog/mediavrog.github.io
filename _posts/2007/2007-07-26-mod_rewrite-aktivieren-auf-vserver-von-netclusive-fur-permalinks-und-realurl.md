@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'mod_rewrite aktivieren auf vServer von netclusive (für permalinks und RealURL)'
 published: true
 comments: true

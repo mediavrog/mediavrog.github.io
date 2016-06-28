@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Belege in Computeranimation und Digitalem Compositing'
 published: true
 comments: true

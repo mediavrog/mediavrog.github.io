@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Firebug Issue with CSS Specifity calculation'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'mysql lastet vServer aus'
 published: true
 comments: true

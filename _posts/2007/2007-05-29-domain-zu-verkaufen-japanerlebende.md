@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Domain zu verkaufen: japanerleben.de'
 published: true
 comments: true

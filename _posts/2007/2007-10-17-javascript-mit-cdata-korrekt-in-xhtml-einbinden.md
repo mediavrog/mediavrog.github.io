@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Javascript mit CDATA korrekt in XHTML einbinden'
 published: true
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Factory method - design patterns in Mootools 1'
 published: true
 author: steve

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 'Wordpress 2.5 - Bilder größer als 500 Pixel Breite in Beiträge einfügen'
 published: true
 comments: true

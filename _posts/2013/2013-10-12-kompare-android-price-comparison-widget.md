@@ -1,7 +1,7 @@
 ---
 published: true
 title: "kompare - Android widget for price comparison released"
-layout: post
+layout: single
 tags: 
   - android
   - widget

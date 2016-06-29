@@ -5,31 +5,19 @@ published: true
 comments: true
 date: 2007-05-14 06:05:33
 tags:
-    - don
+    - dom
     - parsing
     - xhtml
 categories:
-    - ie
+    - internetexplorer
 permalink: /blog/2007/05/14/browser/internetexplorer/internet-explorer-parsing-1-listen-und-nicht-listen-elemente
 image: 
     thumb: ie.jpg
-comments:
-    - timstamp: 4
-      name: "Maik 4"
-      message: "Hskdljl"
-      url: "http://mypage.com"
-    - timstamp: 3
-      name: "Maik 3"
-      message: "Hskdlj"
-      url: "http://mypage.com"
-    - timstamp: 1
-      name: "Maik 1"
-      message: "Hskd"
-      url: "http://mypage.com"
-    - timstamp: 2
-      name: "Maik 2"
-      message: "Hs"
-      url: "http://mypage.com"
+comment_list:
+  - date: 2016-06-30 00:51:00
+    name: "Maik"
+    message: "First!"
+    url: "http://mediavrog.net"
 ---
 > In einem kleinen Ajax-Projekt mit dyn. Nachladen von Komboboxen sorgte ein unerklärlicher Fehler dafür, dass im IE 
 > (6.0 und 7) ab einem bestimmten Schritt der Wert eines hidden-Fields nicht mehr mit übergeben wurde.

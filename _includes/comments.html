@@ -11,5 +11,7 @@
     <section class="g-comments" data-href="{{ base_path }}{{ page.url }}" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</section>
   {% when "custom" %}
     <section id="comments"></section>
+  {% when "static" %}
+    <section id="comments">{% include comments-static.html %}</section>
   {% endcase %}
 </div>

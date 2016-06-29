@@ -1,0 +1,24 @@
+<!-- start custom comments snippet -->
+{% include comment-write.html %}
+
+{% assign comments_length = page.comment_list | size %}
+
+{% if comments_length > 0 %}
+  {% assign sorted_comments = page.comment_list | sort: 'date' %}
+
+  {% for comment in sorted_comments %}
+  <p class="comment notice--primary">
+    <a href="{{ comment.url }}" rel="nofollow">{{ comment.name }}</a>
+    {% if comment.date %}
+    <time datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: "%B %d, %Y %H:%m" }}</time>
+    {% endif %}
+    <br>
+    {{ comment.message }}
+  </p>
+  {% endfor %}
+
+  {% if comments_length >= 10 %}
+  {% include comment-write.html %}
+  {% endif %}
+{% endif %}
+<!-- end custom comments snippet -->

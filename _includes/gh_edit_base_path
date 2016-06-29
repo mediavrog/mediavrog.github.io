@@ -1,0 +1,1 @@
+{% capture gh_edit_base_path %}{{ site.gh_repo }}/edit/master/{% endcapture %}

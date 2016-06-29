@@ -13,12 +13,12 @@ name                     : "Maik Vlcek"
 description              : "An amazing website."
 url                      : "http://www.mediavrog.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-gh_repo                  :
+gh_repo                  : "https://github.com/mediavrog/mediavrog.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", custom"
+  provider               : static # false (default), "disqus", "discourse", "facebook", "google-plus", custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -41,6 +41,7 @@ defaults:
       share: true
       related: true
       author_profile: true
+      fixable: true
   # _pages
   - scope:
       path: ""

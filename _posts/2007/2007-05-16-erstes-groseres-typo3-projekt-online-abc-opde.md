@@ -6,7 +6,7 @@ comments: true
 date: 2007-05-16 02:05:29
 tags:
     - abc-op
-    - css,
+    - css
     - launch
     - relaunch
     - typo3

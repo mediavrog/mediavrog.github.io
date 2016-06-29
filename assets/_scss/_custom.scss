@@ -250,6 +250,11 @@
 }
 
 /* Stuff */
+.page__comments .comment time {
+  font-size: $type-size-7;
+  float: right;
+}
+
 .page__title {
   font-size: $type-size-1;
 }
@@ -292,4 +297,8 @@
     padding: 3px 10px;
     background-color: $shim-color;
   }
+}
+
+.page__meta .page__fix {
+  margin-top: 10px;
 }

@@ -1,4 +1,107 @@
 /*
+   Kudos please
+   ========================================================================== */
+$kudos_duration: 1.5s;
+$kudos_duration_finish: .45s;
+$kudos_width: 79px;
+$kudos_height: $kudos_width;
+$kudos_width_small: 36px;
+$kudos_height_small: $kudos_width_small;
+$kudos_color_alpha: #fff; // default
+$kudos_color_beta: $text-color; // active
+$kudos_color_gamma: $text-color; // default border
+
+.kudos {
+  position: relative;
+  float: right;
+  width: $kudos_width_small;
+  height: $kudos_height_small;
+  margin: 0 auto;
+  background: $kudos_color_alpha;
+  box-shadow:
+    inset 0 0 0 .25em $kudos_color_gamma,
+    inset 0 0 0 $kudos_width / 3 $kudos_color_alpha,
+    inset 0 0 0 $kudos_width $text-color
+;
+  line-height: $kudos_height;
+  text-align: center;
+  border-radius: 50%;
+  transition: box-shadow $kudos_duration_finish * 2 ease-in-out $kudos_duration_finish / 4;
+
+  @include breakpoint($large) {
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    left: $kudos_width - 15;
+    width: $kudos_width;
+    height: $kudos_height;
+  }
+
+  &:before {
+    transition: font-size $kudos_duration_finish ease-in;
+    font-size: 1.75em;
+    color: $kudos_color_alpha;
+    line-height: $kudos_height / 1.725;
+  }
+
+  &.active {
+    transition: box-shadow $kudos_duration linear;
+    box-shadow:
+      inset 0 0 0 .25em $kudos_color_gamma,
+      inset 0 0 0 0 $kudos_color_alpha,
+      inset 0 0 0 .75em rgba($kudos_color_beta, .75),
+      inset 0 0 0 $kudos_width $kudos_color_beta
+  ;
+
+    &:before {
+      transition: color $kudos_duration linear;
+      color: $kudos-color-beta;
+    }
+
+    &:after {
+      content: 'Hold!';
+      color: $text-color;
+    }
+  }
+
+  &.finish {
+    transition: box-shadow $kudos_duration_finish linear, transform $kudos_duration_finish * 1.25 ease-in-out;
+    box-shadow: inset 0 0 0 $kudos_width $kudos_color_beta;
+
+    &:before {
+      font-size: 1.25em;
+      line-height: $kudos_height_small / 1.05;
+      color: $kudos_color_alpha;
+
+      @include breakpoint($large) {
+        font-size: 2.25em;
+        line-height: $kudos_height / 1.05;
+      }
+    }
+  }
+
+  &:after {
+    position: absolute;
+    content: attr(data-amount) "●";
+    bottom: -1.2em;
+    left: 0;
+    font-weight: bold;
+    width: $kudos_width_small;
+    text-align: center;
+    line-height: 1em;
+    font-family: $global-font-family;
+    font-size: $type-size-7;
+
+    @include breakpoint($large) {
+      content: attr(data-amount);
+      bottom: .5em;
+      color: white;
+      width: $kudos_width;
+    }
+  }
+}
+
+/*
    Archive list
    ========================================================================== */
 
@@ -152,6 +255,7 @@
 
 /** Thumb for single **/
 .page .thumb {
+  clear: both;
   text-align: center;
   border-top: 1px solid #f8f8f8;
   margin-top: 2.5em;
@@ -163,9 +267,6 @@
     vertical-align: text-top;
     margin-top: -2rem;
 
-    &:hover {
-      transform: scale(2);
-    }
     @include breakpoint($medium) {
       height: 4rem;
       width: 4rem;
@@ -178,6 +279,10 @@
     height: 5rem;
     width: 5rem;
   }
+}
+
+.page__content ~ .thumb {
+  margin-top: 5em;
 }
 
 /** Highlight **/
@@ -308,4 +413,23 @@
 
 figcaption {
   width: 100%;
+}
+
+.author__content {
+  @include breakpoint($large) {
+    clear: both;
+  }
+}
+.author__avatar {
+
+  @include breakpoint($large) {
+    position: relative;
+    z-index: 2;
+    float: left;
+  }
+
+  img {
+    border: none;
+    max-width: 90px;
+  }
 }

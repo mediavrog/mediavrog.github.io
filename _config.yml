@@ -42,6 +42,7 @@ defaults:
       related: true
       author_profile: true
       fixable: true
+      kudos: true
   # _pages
   - scope:
       path: ""
@@ -62,6 +63,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
+      kudos: true
       header:
         cta_label: "Get it"
 

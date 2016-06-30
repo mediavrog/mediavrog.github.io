@@ -24,6 +24,18 @@ $(document).ready(function(){
   //  });
   //});
 
+  // Kudos
+  new KudosPlease({
+    el : '.kudos',
+    duration : 1500,
+    persistent : true,
+    status : {
+      alpha: '',
+      beta: '',
+      gamma: 'fa fa-hand-peace-o'
+    }
+  });
+
   // FitVids init
   $("#main").fitVids();
 

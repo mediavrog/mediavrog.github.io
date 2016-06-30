@@ -6,6 +6,10 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
+  {% if page.kudos %}
+    <div class="kudos" data-amount="0" data-url="{{ base_path }}{{ page.url }}"></div>
+  {% endif %}
+
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}">

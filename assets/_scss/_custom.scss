@@ -157,7 +157,6 @@
   margin-top: 2.5em;
 
   img {
-    border-radius: 10rem;
     height: 3rem;
     width: 3rem;
     padding: 4px;
@@ -305,4 +304,8 @@
 
 #projects .grid__item .archive__item-excerpt {
   display: block;
+}
+
+figcaption {
+  width: 100%;
 }

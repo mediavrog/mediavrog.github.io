@@ -78,6 +78,10 @@ $kudos_color_gamma: $text-color; // default border
         line-height: $kudos_height / 1.05;
       }
     }
+
+    &:after {
+      color: white;
+    }
   }
 
   &:after {
@@ -95,7 +99,6 @@ $kudos_color_gamma: $text-color; // default border
     @include breakpoint($large) {
       content: attr(data-amount);
       bottom: .5em;
-      color: white;
       width: $kudos_width;
     }
   }

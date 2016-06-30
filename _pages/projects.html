@@ -10,8 +10,10 @@ share: false
 ---
 {% include base_path %}
 
-<div class="grid__wrapper">
-  {% for post in site.projects %}
+{% assign projects_sorted = site.projects | sort: 'timeframe' | reverse %}
+
+<div id="projects" class="grid__wrapper">
+  {% for post in projects_sorted %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
 </div>

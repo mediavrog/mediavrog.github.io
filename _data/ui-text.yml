@@ -17,6 +17,7 @@ en: &DEFAULT_EN
   tags_label            : "Tags:"
   categories_label      : "Categories:"
   date_label            : "Published on "
+  timeframe_label        : "Published "
   comments_label        : "Comments"
   more_label            : "Learn More"
   related_label         : "You May Also Enjoy"

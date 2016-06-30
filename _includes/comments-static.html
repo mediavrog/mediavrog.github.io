@@ -1,4 +1,5 @@
 <!-- start custom comments snippet -->
+{% include base_path %}
 {% include comment-write.html %}
 
 {% assign comments_length = page.comment_list | size %}
@@ -21,4 +22,6 @@
   {% include comment-write.html %}
   {% endif %}
 {% endif %}
+
+<!--<p><small><span data-webmention-count data-url="{{ base_path }}{{ page.url }}">0</span> mentions</small></p>-->
 <!-- end custom comments snippet -->

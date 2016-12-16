@@ -7,7 +7,7 @@ tags: team slack nlp morale
 header:
  teaser: project-vibe-teaser.jpg
  overlay_image: project-vibe-cover.jpg
- cta_url: "http://vibe.air.global/"
+ cta_url: "https://vibe.work/"
 gallery:
  - url: project-vibe-screen.png
    image_path: project-vibe-screen-th.jpg
@@ -19,7 +19,7 @@ gallery:
    title: "The landing page"
 ---
 
-> We started Vibe at [AIR](https://air.global) because we believe that good work happens with a good team. But like in any team, there are ups and downs.
+> We started Vibe at [AIR](https://air.en-japan.io) because we believe that good work happens with a good team. But like in any team, there are ups and downs.
  Vibe is a simple tool which allows managers and team members to monitor the mood across several metrics like Happiness, Excitement, Hostility, Withdrawal, or Engagement. 
  Your team can now try to overcome problems before they arise, and celebrate the highs.
  &mdash; <a href="http://vibe.air.global/" class="btn btn-success">Vibe - your team's morale meter</a>

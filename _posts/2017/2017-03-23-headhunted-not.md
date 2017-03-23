@@ -8,6 +8,9 @@ tags:
   - shady
 categories: 
   - career
+header:
+  image: rant.jpg
+  caption: "Photo credit: Nicolas Raymond"
 ---
 
 So I haven't posted in a while, not because there is nothing to write about, 

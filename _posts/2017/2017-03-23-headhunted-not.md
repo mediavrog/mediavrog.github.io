@@ -33,8 +33,9 @@ sounded game changing.
 After a bit forth and back a meeting was arranged and the instructions led me to an office in Ebisu, Tokyo.
 Being early I had a look at the company list next to the elevator, but Digital Systems Japan was nowhere to be found.
 Arriving at the place from the description, I found myself in the offices of Apex KK, a recruitment company in Tokyo, 
-to meet the (polite and friendly) people from Apex. Claiming they had performed background check made me 
-wonder why the initial interview was not well prepared (seemed they didn't know anything about me or my background really) 
+to meet the (polite and friendly) people from Apex and of course not the person who contacted me - 
+was it an AI maybe? Claiming they had performed background check made me wonder why the initial interview 
+was not well prepared (seemed they didn't know anything about me or my background really) 
 and the position proposed wasn't really suiting my background. Together with what seemed to be some mixup with meeting
 rooms the interview was short and left me with the feeling of being scammed into handing over my information under
 the premise of being headhunted. After asking about the different company names and how they got my mail 

@@ -9,9 +9,9 @@
 locale                   : "en-US"
 title                    : "mediavrog"
 title_separator          : "-"
-name                     : "Maik Vlcek"
+name                     : "Maik Buchmeyer"
 description              : "An amazing website."
-url                      : "http://www.mediavrog.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://mediavrog.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  : "https://github.com/mediavrog/mediavrog.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -106,8 +106,8 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Maik Vlcek"
-  avatar           : "bio-photo.png"
+  name             : "Maik Buchmeyer"
+  avatar           : "bio-photo.jpg"
   bio              : "Full stack & mobile engineer. CTO at AIR at en-japan"
   location         : "Tokyo"
   email            :

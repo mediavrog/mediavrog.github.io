@@ -1,0 +1,601 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>kj_imagelightbox 2 - Bugfix für Captions / Bildüberschriften bei mehreren Content Elementen - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="kj_imagelightbox 2 - Bugfix für Captions / Bildüberschriften bei mehreren Content Elementen">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen">
+  <meta property="og:url" content="http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen">
+
+
+
+  <meta property="og:description" content="  Update 31.08.07: Habe eine E-Mail von einem Entwickler der Extension bekommen, dass der Bugfix integriert ist.Er wird dann bestimmt mit dem nächsten Update der Extension im TER kommen.  In der KJ: Image Lightbox v2 (Version 1.4.2) gibt es einen Bug der dafür sorgt, dass beim Verwenden der Lightboxin mehreren Content-Elementen einer Seite die Bildunterschriften / Captions ab dem zweiten Content Elementnicht mehr angezeigt werden.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2007-08-15T11:08:42+09:00">
+  
+    <link rel="next" href="http://localhost:4000/blog/2007/08/27/innovation/content-aware-image-resizing-inhaltsabhangiges-skalieren-von-bildern" title="Content aware image resizing / Inhaltsabhängiges Skalieren von Bildern">
+  
+  
+    <link rel="prev" href="http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-seiten-bilderset" title="kj_imagelightbox 2 - Seiten Bilderset">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="kj_imagelightbox 2 - Bugfix für Captions / Bildüberschriften bei mehreren Content Elementen">
+    <meta itemprop="description" content="  Update 31.08.07: Habe eine E-Mail von einem Entwickler der Extension bekommen, dass der Bugfix integriert ist.Er wird dann bestimmt mit dem nächsten Update der Extension im TER kommen.  In der KJ: Image Lightbox v2 (Version 1.4.2) gibt es einen Bug der dafür sorgt, dass beim Verwenden der Lightboxin mehreren Content-Elementen einer Seite die Bildunterschriften / Captions ab dem zweiten Content Elementnicht mehr angezeigt werden.">
+    <meta itemprop="datePublished" content="August 15, 2007">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">kj_imagelightbox 2 - Bugfix für Captions / Bildüberschriften bei mehreren Content Elementen
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/typo33.jpg" alt="kj_imagelightbox 2 - Bugfix für Captions / Bildüberschriften bei mehreren Content Elementen thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <blockquote>
+  <p><strong>Update 31.08.07</strong>: Habe eine E-Mail von einem Entwickler der Extension bekommen, dass der Bugfix integriert ist.
+Er wird dann bestimmt mit dem nächsten Update der Extension im TER kommen.</p>
+
+  <p>In der <strong>KJ: Image Lightbox v2</strong> (Version 1.4.2) gibt es einen Bug der dafür sorgt, dass beim Verwenden der Lightbox
+in mehreren Content-Elementen einer Seite die Bildunterschriften / Captions ab dem zweiten Content Element
+nicht mehr angezeigt werden.</p>
+</blockquote>
+
+<p>Ich habe den Bugfix dafür bereits im Mantis des Projekts gemeldet, bis er umgesetzt ist hier meine Änderungen:</p>
+
+<h2 id="sie-betreffen-durchgehend-die-datei-classuxtslibcontentphp">Sie betreffen durchgehend die Datei <em>class.ux_tslib_content.php</em></h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//Zeile 35:(insert)
+// global var for counting items on page
+var $itemCount = 0;
+
+//Zeile 65:(insert)
+// check if last uid matches current uid;
+//if test fails -&gt; set singleCaption to 0 (for this-&gt;data[imageCaption] Array)
+if($this-&gt;uid != $this-&gt;data['uid'] &amp;&amp; $this-&gt;uid){$this-&gt;singleCaption = 0;}
+
+// set this-&gt;id to current uid
+$this-&gt;uid = $this-&gt;data['uid'];
+
+//Zeile 187:(update)
+id="'.$this-&gt;singleCaption.'
+//ersetzen durch
+id="imageLightbox'.$this-&gt;itemCount.'
+
+//Zeile 190: (add)
+$this-&gt;itemCount++;
+//(Danke an T0m für den Hinweis :) )
+</code></pre>
+</div>
+
+<p>Viel Spaß damit</p>
+
+<h2 id="datei-inklusive-bugfix-aber-ohne-garantie">Datei inklusive Bugfix (aber ohne Garantie)</h2>
+
+<p><a href="/uploads/classux_tslib_contentphp.txt" title="class.ux_tslib_content.php inklusive Bugfix">class.ux_tslib_content.php inklusive Bugfix</a></p>
+
+<p>(nach dem Download einfach umbenennen in class.ux_tslib_content.php und in das Verzeichnis der Extension legen)</p>
+
+<h4 id="auszug-aus-einem-kommentar-bezglich-mootools-und-kj-image-lightbox-v2">Auszug aus einem Kommentar bezüglich Mootools und <strong>KJ: Image Lightbox v2</strong>:</h4>
+
+<p>Ich habe schonmal die kj_imagelightbox2 so umgeschrieben, dass anstatt der Lightbox/Prototype-Combo die Mootools/Slimbox verwendet wird. Außerdem habe ich den Parameter ’Deactivate inclusion of JSFramework’ hinzugefügt, was die Einbindung des JS-Frameworks verhindert. Somit kann z.B. per t3mootools das Mootools Framework eingebunden werden und von der kj imagelightbox nur das Slimbox Script.</p>
+
+<p>Wenn Interesse besteht, kann ich die Datei zuschicken. <a href="/blog/2008/05/23/typo3/extensions/kj_imagelightbox-2-fur-mootools-slimbox/" title="Erweiterte Extension kj_imagelightbox in diesem Blog herunterladen">In meinem Artikel dazu gibts die Extension als t3x.</a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#bugfix" class="page__taxonomy-item" rel="tag">bugfix</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#caption" class="page__taxonomy-item" rel="tag">caption</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#extensions" class="page__taxonomy-item" rel="tag">extensions</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#imagelightbox" class="page__taxonomy-item" rel="tag">imagelightbox</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#lightbox" class="page__taxonomy-item" rel="tag">lightbox</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#typo3" class="page__taxonomy-item" rel="tag">typo3</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2007-08-15T11:08:42+09:00">August 15, 2007</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-08-15-kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-seiten-bilderset" class="pagination--pager" title="kj_imagelightbox 2 - Seiten Bilderset
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/blog/2007/08/27/innovation/content-aware-image-resizing-inhaltsabhangiges-skalieren-von-bildern" class="pagination--pager" title="Content aware image resizing / Inhaltsabhängiges Skalieren von Bildern
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-08-15-kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2007/08/15/typo3/extensions/kj_imagelightbox-2-bugfix-fur-captions-bilduberschriften-bei-mehreren-content-elementen">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

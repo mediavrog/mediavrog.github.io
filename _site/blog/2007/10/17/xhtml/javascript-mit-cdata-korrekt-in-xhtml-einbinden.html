@@ -1,0 +1,617 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Javascript mit CDATA korrekt in XHTML einbinden - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="Javascript mit CDATA korrekt in XHTML einbinden">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden">
+  <meta property="og:url" content="http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden">
+
+
+
+  <meta property="og:description" content="  In dem Artikel [Javascript and XHTML][1] beschreibt [Stephen Chapman][2] moderne Möglichkeiten, inline-Javascript korrekt einzubinden. Hier eine kurze Zusammenfassung seines Artikels.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2007-10-17T11:10:46+09:00">
+  
+    <link rel="next" href="http://localhost:4000/blog/2007/10/24/browser/browser-hangt-sich-beim-einbinden-von-javascript-auf-oder-sturzt-ab" title="Browser hängt sich beim Einbinden von Javascript auf oder stürzt ab">
+  
+  
+    <link rel="prev" href="http://localhost:4000/blog/2007/09/28/browser/internetexplorer/internet-explorer-voodoo-doll-puppe" title="Internet Explorer Voodoo Doll / Puppe">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Javascript mit CDATA korrekt in XHTML einbinden">
+    <meta itemprop="description" content="  In dem Artikel [Javascript and XHTML][1] beschreibt [Stephen Chapman][2] moderne Möglichkeiten, inline-Javascript korrekt einzubinden. Hier eine kurze Zusammenfassung seines Artikels.">
+    <meta itemprop="datePublished" content="October 17, 2007">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Javascript mit CDATA korrekt in XHTML einbinden
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/javascript.jpg" alt="Javascript mit CDATA korrekt in XHTML einbinden thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <blockquote>
+  <p>In dem Artikel <a href="http://javascript.about.com/library/blxhtml.htm" title="Artikel in neuem Fenster öffnen">Javascript and XHTML</a> beschreibt <a href="http://javascripts.about.com/mbiopage.htm">Stephen Chapman</a> moderne Möglichkeiten, 
+inline-Javascript korrekt einzubinden. Hier eine kurze Zusammenfassung seines Artikels.</p>
+</blockquote>
+
+<p>Er fängt beim modernsten und eben auch korrekten Weg an, <strong>Javascript in XHTML Dokumenten als CDATA</strong> einzubinden:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="o">&lt;!</span><span class="p">[</span><span class="nx">CDATA</span><span class="p">[</span>
+  <span class="c1">//content of your Javascript goes here</span>
+<span class="p">]]</span><span class="o">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>Dem Validator wird mitgeteilt, dass es sich im CDATA-Tag um Text (Character Data) handelt welcher nicht als XHTML
+ anzusehen ist. Laut DTD wird ohne diese Angabe nämlich standardmäßig PCData angewandt,
+  was für Parsed Character Data steht. Der Nachteil von PCDATA besteht nun darin, dass XHTML-Tags im Kontext validiert 
+  werden und man dadurch genötigt ist jedes Tag zu escapen (z.B. per Umschreibung als <code class="highlighter-rouge">&amp;lt;</code> für <code class="highlighter-rouge">&lt;</code> oder per Escapen
+   der Zeichen mit einem Backslash (\). Diese Entwertung entfällt bei der Angabe als CDATA und validiert einwandfrei.</p>
+
+<h2 id="da-nun-aber-einige-ltere-browser-dieses-tag-nicht-verstehen-und-javascript-fehler-werfen-wird-es-fr-sie-einfach-auskommentiert">Da nun aber einige ältere Browser dieses Tag nicht verstehen (und Javascript-Fehler werfen) wird es für sie einfach auskommentiert:</h2>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="cm">/* &lt;![CDATA[ */</span>
+  <span class="c1">// content of your Javascript goes here</span>
+<span class="cm">/* ]]&gt; */</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>Das Dokument validiert wie gehabt, da die Kommentarzeichen für den Validator keine Bedeutung haben, 
+und auch ältere Browser die XHTML nicht verstehen und alles als HTML parsen, interpretieren das Javascript korrekt.</p>
+
+<h2 id="zur-veranschaulichung-der-besprochenen-thematik-noch-ein-kleines-beispiel">Zur Veranschaulichung der besprochenen Thematik noch ein kleines Beispiel:</h2>
+
+<p>Wir wollen einem Element mit der id „myText“ html-Code zuweisen.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"myText"</span><span class="p">).</span><span class="nx">setHTML</span><span class="p">(</span><span class="s2">"&lt;p&gt;Hallo&lt;/p&gt;"</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>Mit dem oben genannten Codebeispiel ohne die explizite Angabe des script-Inhalts als CDATA wird ein XHTML-Dokument
+ <strong>nicht validieren</strong> (siehe Bild):</p>
+
+<p><img src="/images/jspcdata.gif" alt="XHTML Elemente in einem Script-Tag sind nicht valide" title="XHTML Elemente in einem Script-Tag sind nicht valide" /></p>
+
+<p>Nach dem Deklarieren als CDATA validiert das Dokument.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="cm">/* &lt;![CDATA[ */</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"myText"</span><span class="p">).</span><span class="nx">setHTML</span><span class="p">(</span><span class="s2">"&lt;p&gt;Hallo&lt;/p&gt;"</span><span class="p">);</span>
+<span class="cm">/* ]]&gt; */</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>Zuletzt führt <a href="http://javascripts.about.com/mbiopage.htm">Stephen Chapman</a> noch einen <strong>oft begangenen Fehler</strong> beim Einbinden von Javascript an:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="c">&lt;!--</span> <span class="c1">// hide from really old browsers that noone uses anymore</span>
+  <span class="c1">// also hide from browsers that use the XHTML DTD</span>
+  <span class="c1">// content of your Javascript goes here</span>
+<span class="c1">// --&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>Für moderne Browser und den Validator (und eben auch uralt-Browser) wird dadurch das Javascript komplett auskommentiert.
+ Somit wird es wahrscheinlich bei einer neuen Generatoin Browser, welche sich strikt an XHTML Richtlinien hält, 
+ nicht mehr ausgeführt und sollte daher vermieden werden.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#javascript" class="page__taxonomy-item" rel="tag">javascript</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#xhtml" class="page__taxonomy-item" rel="tag">xhtml</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#javascript" class="page__taxonomy-item" rel="tag">javascript</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/categories/#xhtml" class="page__taxonomy-item" rel="tag">xhtml</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2007-10-17T11:10:46+09:00">October 17, 2007</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-10-17-javascript-mit-cdata-korrekt-in-xhtml-einbinden.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/blog/2007/09/28/browser/internetexplorer/internet-explorer-voodoo-doll-puppe" class="pagination--pager" title="Internet Explorer Voodoo Doll / Puppe
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/blog/2007/10/24/browser/browser-hangt-sich-beim-einbinden-von-javascript-auf-oder-sturzt-ab" class="pagination--pager" title="Browser hängt sich beim Einbinden von Javascript auf oder stürzt ab
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-10-17-javascript-mit-cdata-korrekt-in-xhtml-einbinden.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2007/10/17/xhtml/javascript-mit-cdata-korrekt-in-xhtml-einbinden">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,64 @@
+<p>layout: post
+title: ‘sIFR Probleme beim Scrollen im Internet Explorer 6 und 7’
+published: true
+author: mediavrog
+comments: true
+date: 2008-04-28 01:04:19
+tags:
+    - bugfix
+    - Internet Explorer (IE)
+    - scrollen
+    - scrolling
+    - sifr
+categories:
+    - javascript
+permalink: &gt;
+    /2008/04/28/javascript/sifr-probleme-beim-scrollen-im-internet-explorer-6-und-7
+image:
+    thumb: javascript.jpg
+—
+&gt; Wie schon in einem vergangenen Artikel bemerkt, gibt es immer noch Probleme im Einsatz mit <a href="http://novemberborn.net/sifr3" title="sIFR Homepage öffnen">sIFR</a> – ein hartnäckiges Problem und ein absoluter Blocker im IE ist das Verhalten von <a href="http://novemberborn.net/sifr3" title="sIFR Homepage öffnen">sIFR</a>-Überschriften mit transparentem Hintergrund.</p>
+
+<p>Eine kurze Erklärung: [der Sachverhalt bezieht sich auf sIFR 3 Revisionen bis 405]</p>
+
+<h2 id="beschreibung-des-fehlverhaltens--voraussetzungen">Beschreibung des Fehlverhaltens / Voraussetzungen</h2>
+
+<p>Nutzt man den transparenten Hintergrund von <a href="http://novemberborn.net/sifr3" title="sIFR Homepage  öffnen">sIFR</a>-Überschriften (in der replace-Methode wmode: „transparent“ übergeben) so kann man im Internet Explorer, sobald sich der Mauszeiger über einer der per <a href="http://novemberborn.net/sifr3" title="sIFR Homepage öffnen">sIFR</a> ersetzten Überschriften befindet, <a href="http://discuss.joyent.com/viewtopic.php?pid=177300" title="Diskussion über den Bug im Joyent-Forum öffnen">die Seite nicht mehr scrollen</a>. Der Flash-Film entzieht dem document irgendwie den Fokus, welcher sich dann im Flash-Film selbst befindet – alle Events kommen somit nicht mehr im document der Seite an.</p>
+
+<p>Dieses Problem tritt nur im Internet Explorer (6/7) auf. In anderen Browsern wie Firefox, Safari, Opera gibt es damit keine Probleme.</p>
+
+<p><strong>Wichtig</strong>: Setzt man den wmode-Parameter auf window (oder eben gar nicht), so tritt der Bug nicht auf, aber der Hintergrund der Überschriften wird mit einer Farbe gefüllt. Man sollte sich vorher überlegen, ob die Transparenz unbedingt nötig ist, da auch einige <a href="http://mediavrog.net/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox/" title="Artikel zu Performanceproblemen von Flash-Filmen (besonders im Firefox)">Performanceprobleme mit transparenten Flash-Filmen</a> auftreten können – insbesondere wenn viele Überschriften mit <a href="http://novemberborn.net/sifr3" title="sIFR Homepage öffnen">sIFR</a> ersetzt werden.</p>
+
+<h2 id="dirty-workaround">Dirty Workaround</h2>
+
+<p>Sofern sich die Überschriften immer am selben Platz befinden und nicht durch DHTML verschoben werden (z.B. durch ein Akkordeon-Effekt) und die Überschriften nicht klickbar sein müssen, gibt es einen Weg um Scrollen auf der Seite zu ermöglichen.</p>
+
+<h3 id="die-idee">Die Idee</h3>
+
+<p>Lege über jede ersetzte Überschrift einen DIV-Layer, mit statischer Position und Breite/Höhe der <a href="http://novemberborn.net/sifr3" title="sIFR Homepage öffnen">sIFR</a>-Überschrift. Somit kann das Flash-Objekt den Fokus nicht mehr stehlen.</p>
+
+<h3 id="umsetzung">Umsetzung</h3>
+
+<p>Dazu nutzt man den onReplacement-Callback der als Parameter an die replace-Methode übergeben werden kann (siehe <a href="http://wiki.novemberborn.net/sifr3/JavaScript+Methods" title="Dokumentation zu sIFR Javascript Methoden und Parameter öffnen.">Dokumentation</a>).</p>
+
+<p>onReplacement (Function)
+Event handler which fires when an element has been replaced. It’s argument is a FlashInteractor object</p>
+
+<p>Anhand dieses Callback kann man pro ersetzter Überschrift JS Code ausführen. In <strong>Pseudocode</strong>:</p>
+
+<p>onReplacement: function(obj){
+if(ie){
+     var tmpSize = getSize(obj.ancestor);
+     var tmpPos = getPos(obj.ancestor);</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> //create Div with size/pos from above with position absolute
+ var bogusLayer = new Element("div").setPos(tmpPos).setSize(tmpSize).setPositionMode("static");
+ bogusLayer.setOpacity(0.001);
+
+ //insert div into dom, above the sifr-replaced object
+ bogusLayer.injectAsFirstElement(obj.ancestor); } }
+</code></pre>
+</div>
+
+<p>Bis Mark Wubben einen wirklichen Workaround gefunden hat, ist dies eine Möglichkeit den Bug zu umgehen.</p>
+

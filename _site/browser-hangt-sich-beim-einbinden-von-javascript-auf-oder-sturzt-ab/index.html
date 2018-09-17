@@ -1,0 +1,82 @@
+<p>layout: post
+title: ‘Browser hängt sich beim Einbinden von Javascript auf oder stürzt ab’
+published: true
+author: mediavrog
+comments: true
+date: 2007-10-24 07:10:25
+tags:
+    - absturz
+    - browser
+    - javascript
+    - jsmin
+    - kompression
+    - obfuscation
+    - yui-compressor
+categories:
+    - browser
+    - javascript
+permalink: &gt;
+    /2007/10/24/browser/browser-hangt-sich-beim-einbinden-von-javascript-auf-oder-sturzt-ab
+image:
+    thumb: javascript.jpg
+—
+&gt; Viele Probleme beim Einbinden von Javascript Bibliotheken oder Frameworks (z.B. mootools, dojo,..) rühren aus einer
+ starken Komprimierung, welche das Script zugleich „verschleiert“ (obfuscate).</p>
+
+<p>Das Script wird dann beim Aufruf in einigen Fällen (z.B. Dean Edwards Packer) mit einer <strong>eval()</strong> Funktion wieder
+ aufbereitet (quasi entpackt) und für den Browser nutzbar gemacht. Diese starke Form der Komprimierung unter Zuhilfenahme von eval() zum Entpacken führt ab und zu zum Absturz des Browsers (sowohl IE 6 / IE 7 als auch Firefox und weitere) bzw. das Script läuft sich fest. Um das zu verhindern sollte man auf eine andere Kompressionsmethode zurückgreifen.</p>
+
+<h2 id="meine-empfehlungen">Meine Empfehlungen:</h2>
+
+<ul>
+  <li>eine etwas geringere Komprimierungsstufe (welche kein eval benutzt) wählen, z.B. <a href="http://www.crockford.com/javascript/jsmin.html" title="Weitere Infos zu JSMin öffnen"><strong>jsMin</strong></a>
+    <ul>
+      <li>
+        <ul>
+          <li>kann on-the-fly komprimiert werden, da relativ schnell</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>keine Browserabstürze da ohne eval</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>Implementierung in diversen Programmiersprachen verfügbar</li>
+        </ul>
+      </li>
+      <li>– keine Optimale Komprimierung, da nur Leerzeichen, Kommentare und Zeilenumbrüche entfernt werden</li>
+      <li>– das Javascript bleibt danach immer noch lesbar</li>
+    </ul>
+  </li>
+  <li>der neue <a href="http://www.julienlecomte.net/blog/2007/08/13/introducing-the-yui-compressor/" title="Weitere Infos zu, YUI Kompressor öffnen"><strong>YUI-Kompressor</strong></a> aus dem Hause Yahoo
+    <ul>
+      <li>
+        <ul>
+          <li>ein Mix aus überflüssigen Zeichen entfernen und Verschleierung (obfuscation) sorgt für sehr hohe Kompressionsraten</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>die Scripte sind nicht mehr lesbar und somit besser geschützt</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>keine Browserabstürze da ohne eval</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>auf jedem System einsetzbar – basiert auf Java Technologie</li>
+        </ul>
+      </li>
+      <li>– nicht on-the-fly nutzbar, weil es langsamer ist als z.B. jsmin oder dojo compressor</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Letztere Variante ist mir sehr sympathisch und ich werde den Kompressor die Tage mal testen. Die Sourcen hab
+ ich schon gezogen :) Ergebnisse gibts dann in einem neuen Artikel.</p>
+

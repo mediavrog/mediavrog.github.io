@@ -1,0 +1,88 @@
+<p>layout: post
+title: ‘Typo3 - Benutzer &gt; Aufgaben richtig nutzen (Taskcenter)’
+published: true
+author: mediavrog
+comments: true
+date: 2007-07-11 11:07:16
+tags:
+    - kommunikation
+    - messaging
+    - taskcenter
+    - typo3
+categories:
+    - extensions
+    - typo3
+permalink: &gt;
+    /2007/07/11/typo3/typo3-benutzer-aufgaben-richtig-nutzen-taskcenter
+image:
+    thumb: typo31.jpg
+—
+&gt; In vielen frischen Typo3-Installationen findet sich unter Benutzer &gt; Aufgaben nur ein „Voreinstellungen für Export“-Button, welcher keine Funktion hat.
+&gt; 
+&gt; Um in den Genuss von eines internen Messaging- oder Workflow-Systems zu kommen muss man einfach die entsprechenden Extension installieren.</p>
+
+<h2 id="eine-kurze-bersicht">Eine kurze Übersicht:</h2>
+
+<p><em>(mit einem * versehene Ext habe ich nicht zum Laufen gebracht)</em></p>
+
+<ul>
+  <li>
+    <p>UserTask Center, <strong>Quick note</strong> (sys_notepad)</p>
+
+    <p>Fügt dem Taskcenter des Nutzers ein kleines Feld zum Editieren hinzu, wo er wie auf einem Zettel ein paar Notizen verfassen und ablegen kann<br />
+ </p>
+  </li>
+  <li>
+    <p>UserTask Center, <strong>Messaging</strong> (sys_messages)</p>
+
+    <p>Erlaubt es den Typo3-Nutzern Nachrichten untereinander schnell auszutauschen. Enthält einen Posteingang/-ausgang, Archiv und startet bei Antworten auf eine Nachricht automatisch einen Thread<br />
+ </p>
+  </li>
+  <li>
+    <p>UserTask Center, <strong>Recent</strong> (sys_recent)</p>
+
+    <p>Listet die zuletzt angelegten/bearbeiteten Seiten inklusive Datum auf. Hat ein Nutzer keine Rechte die Seiten zu bearbeiten, so werden sie ihm auch nicht angezeigt.<br />
+ </p>
+  </li>
+  <li>
+    <ul>
+      <li>UserTask Center, <strong>Workflow and Tasks</strong> (sys_workflows)</li>
+    </ul>
+
+    <p>Diese Extension sollte ein Workflow System und basierend auf sys_todos auch eine Aufgabenverwaltung (ToDo’s) ermöglichen. Leider scheinen diese beiden Extensions in der aktuellen Typo3 Version (4.1.1) nicht zu funktionieren. Nach der Installation erscheint ein Punkt „Aufgaben“, hinter dem sich aber nichts verbirgt. Schade!</p>
+
+    <p><em>Eventuell kann eine Konfiguration Bestandteil der Installation sein – habe hiervon aber keine Kenntnis.</em><br />
+ </p>
+  </li>
+  <li>
+    <p>UserTask Center, <strong>Backend News</strong> ( vd_backendnews )</p>
+
+    <p>Über diese Extension kann man News im Taskcenter verfassen und in Kategorien ordnen. Sehr feine Extension!.</p>
+
+    <p>Nicht wundern wenn diese Extension nach der Installation nicht funktioniert, sie muss noch konfiguriert werden: 
+  * Sysfolder anlegen
+  * Benutzergruppe mit Taskcenter News-Rechten ausstatten 
+      * Taskcenter news categories
+      * Taskcenter news posts, sowie unter <em>Allowed exlude fields:</em>
+      * Taskcenter news categories: Category name
+      * Taskcenter news posts: News title
+      * Taskcenter news posts: Publication time
+      * Taskcenter news posts: Text
+      * Taskcenter news posts: Category
+  * TSConfig für Nutzergruppe: 
+      * VD_BACKENDNEWS.edit = 1
+      * VD_BACKENDNEWS.pid = pid des Sys-Ordners</p>
+
+    <p> </p>
+
+    <ul>
+      <li>
+        <ul>
+          <li>UserTask Center, <strong>Plugin list</strong> ( taskcenter_modules )</li>
+        </ul>
+
+        <p>Sollte alle Seiten auflisten, die mit einem Plugin versehen sind. Leider erscheint kein neuer Punkt im Taskcenter nach der Installation.</p>
+      </li>
+    </ul>
+  </li>
+</ul>

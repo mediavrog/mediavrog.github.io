@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vodafone_app>
+  <picture_1>http://www.mindbox.de/wp-content/themes/mindbox/images/linkEmail.gif</picture_1>
+  <picture_2>http://www.mindbox.de/wp-content/themes/mindbox/images/linkEmail.gif</picture_2>
+  <text>Der Text ist wunderbar</text>
+  <price>45,90</price>
+  <stylenumber>X12345</stylenumber>
+  <date>10-12-2009</date>
+</vodafone_app>

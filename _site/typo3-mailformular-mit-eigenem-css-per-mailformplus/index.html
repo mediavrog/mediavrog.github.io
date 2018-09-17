@@ -1,0 +1,35 @@
+<p>layout: post
+title: ‘Typo3 - Mailformular mit eigenem CSS (per Mailformplus)’
+published: true
+author: mediavrog
+comments: true
+date: 2007-06-03 12:06:10
+tags:
+    - css,
+    - formular
+    - konfiguration
+    - mailformplus
+    - mailformular
+    - stylesheet
+    - typo3
+categories:
+    - ts-snippets
+permalink: &gt;
+    /2007/06/03/typo3/ts-snippets/typo3-mailformular-mit-eigenem-css-per-mailformplus
+image:
+    thumb: typo33.jpg
+—
+&gt; Ich empfehle die Nutzung von Mailformplus (aktuell in der Version 4) für Formulare mit Typo3, da man in dieser Extension das Formular mit einem eigenen Template aufbaut und somit die CSS-Klassen und -IDs einfach selbst bestimmt (und es außerdem noch sehr viele Vorteile bietet).</p>
+
+<p>Hat man diese Klassen fest gelegt, so kann man diese nun im Main Stylesheet der Typo3 Seite formatieren.</p>
+
+<p>Um die Übersicht zu gewährleisten bietet Mailformplus noch eine andere Möglichkeit:</p>
+
+<h3 id="ein-css-fr-das-formular-kann-dynamisch-nachgeladen-werden">ein CSS für das Formular kann dynamisch nachgeladen werden.</h3>
+
+<p>Dies erreicht man einfach durch folgendes Typoscript:</p>
+
+<p>plugin.tx_thmailformplus_pi1.stylesheetFile = fileadmin/mailformplus/styles.css</p>
+
+<p>Die ganze <a href="http://typo3.org/documentation/document-library/extension-manuals/th_mailformplus/4.0.0/view/" title="Mailformplus Doku öffnen">Dokumentation gibts auf der Seite von typo3.org</a>.</p>
+

@@ -1,0 +1,23 @@
+<blockquote>
+  <p>In einem kleinen Ajax-Projekt mit dyn. Nachladen von Komboboxen sorgte ein unerklärlicher Fehler dafür, dass im IE 
+(6.0 und 7) ab einem bestimmten Schritt der Wert eines hidden-Fields nicht mehr mit übergeben wurde.</p>
+</blockquote>
+
+<p>Nach einigem Stöbern und Kontrolle meiner Anwendung per MS Script Debugger stellte ich fest, dass das hidden-Field ab einem bestimmten Schritt aus der DOM verschwand. Auslöser dieses Problems war fehlerhaftes XHTML-Markup. Anscheinend parst der IE ein Element, welches sich in einer Liste befindet, aber selbst von keinem Listenelement umgeben wird in das vorhergehende Listenelement.</p>
+
+<h2 id="ein-beispiel">Ein Beispiel</h2>
+
+<p>```html</p>
+<ul>
+    <li></li>
+    <input />
+</ul>
+<p>```</p>
+
+<h2 id="das-resultat">Das Resultat</h2>
+
+<p>```html</p>
+<ul>
+    <li><div><input /></div></li>
+</ul>
+<p>```</p>

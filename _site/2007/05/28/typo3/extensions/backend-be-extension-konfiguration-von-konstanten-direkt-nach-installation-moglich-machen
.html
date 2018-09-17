@@ -1,0 +1,341 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen &#8211; mediavrog</title>
+<meta name="description" content="
+  Jeder kennt es: nach der Installation einer Extension bietet diese noch im Extension Manager die Möglichkeit, verschiedene Konstanten zu definieren.
+
+
+">
+<meta name="keywords" content="extension, konfiguration, typo3">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen">
+<meta name="twitter:description" content="
+  Jeder kennt es: nach der Installation einer Extension bietet diese noch im Extension Manager die Möglichkeit, verschiedene Konstanten zu definieren.
+
+
+">
+<meta name="twitter:site" content="@mediavrog">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://127.0.0.1:4000/images/typo31.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen">
+<meta property="og:description" content="
+  Jeder kennt es: nach der Installation einer Extension bietet diese noch im Extension Manager die Möglichkeit, verschiedene Konstanten zu definieren.
+
+
+">
+<meta property="og:url" content="http://127.0.0.1:4000/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
+">
+<meta property="og:site_name" content="mediavrog">
+
+<meta property="og:image" content="http://127.0.0.1:4000/images/typo31.jpg">
+
+
+
+
+
+
+<link rel="canonical" href="http://127.0.0.1:4000/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
+">
+<link href="http://127.0.0.1:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://127.0.0.1:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://127.0.0.1:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://127.0.0.1:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://127.0.0.1:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400,300" />
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://127.0.0.1:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://127.0.0.1:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://127.0.0.1:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://127.0.0.1:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://127.0.0.1:4000/">mediavrog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+				    <li><a href="http://127.0.0.1:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://127.0.0.1:4000/blog/" >Blog</a></li>
+				
+				    
+				    <li><a href="http://127.0.0.1:4000/projects/" >Projects</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "http://127.0.0.1:4000/images/typo31.jpg"
+    
+  alt="Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen feature image">
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://127.0.0.1:4000/images/" class="bio-photo" alt=" bio photo">
+
+
+  <h4 itemprop="name"></h4>
+  <p></p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://127.0.0.1:4000/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
+" rel="bookmark" title="Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen">Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <blockquote>
+  <p>Jeder kennt es: nach der Installation einer Extension bietet diese noch im Extension Manager die Möglichkeit, verschiedene Konstanten zu definieren.</p>
+</blockquote>
+
+<blockquote>
+  <p>Damit die eigene Extension ebenfalls so direkt konfiguriert werden kann (z.B. wenn es sich um eine reine Backend Extension handelt) muss man</p>
+</blockquote>
+
+<h2 id="die-datei-extconftemplatetxt-im-extensionverzeichnis-anlegen">1.) die Datei ext_conf_template.txt im Extensionverzeichnis anlegen</h2>
+
+<p>In dieser können nun die verschiedenen Einstellmöglichkeiten eingetragen werden. Dabei werden verschiedene Variablentypen wie boolean oder string unterstützt. Der prinzipielle Aufbau einer Konfigurationszeile sieht folgendermaßen aus:</p>
+
+<h1 id="catcategorysubcategorysort-typevartype-labelheaderdescription">cat=CATEGORY/SUBCATEGORY/SORT; type=VAR_TYPE; label=HEADER:DESCRIPTION</h1>
+<p>var = DEFAULT</p>
+
+<p>Die Doku der Teile folgt weiter unten. Alle die nicht lesen möchten, können sich eine <a href="http://mediavrog.net/blog/wp-content/uploads/2007/05/ext_conf_template.txt" title="Beispielhafte Konfigurationsdatei als .txt-Datei herunterladen">Beispielhafte Konfigurationsdatei herunterladen</a>.</p>
+
+<h2 id="die-werte-in-der-extension-holen">2.) die Werte in der Extension holen</h2>
+
+<p><code class="highlighter-rouge">php
+$this-&gt;extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['der_extension_key']);
+$var1 = $this-&gt;extConf['name_der_variable'];
+</code></p>
+
+<p>Hiermit kann man sich die Konstanten in die eigene Extension holen.</p>
+
+<h2 id="es-folgt-eine-kurzdoku-der-einzelnen-teile-der-konfigurationszeile">Es folgt eine Kurzdoku der einzelnen Teile der Konfigurationszeile</h2>
+
+<p>(analog <a href="http://typo3.org/documentation/document-library/core-documentation/doc_core_tstemplates/0.0.1/view/2/5/#id2843880" title="Dokumentation zu Typoscript Templates auf typo3.org ansehen">Typo3.org Introduction to Typoscript Templates</a> )</p>
+
+<h3 id="category-8211-kategorieangabe-fr-die-konstante">CATEGORY – Kategorieangabe für die Konstante</h3>
+
+<ul>
+  <li>basic – Konstanten, welche wichtig für die Extension sind; wird meist genutzt um bestimmte Funktionen ein- oder auszuschalten oder z.B. IDs von Seiten anzugeben</li>
+</ul>
+
+<p>Die Anderen werden eher selten für diesen Zweck benutzt; wer will kann sie sich unter dem oben stehendem Link nachlesen. Die Angabe der Kategorie ist für reine Backend Extensions (und die Angabe in der ext_conf_template.txt) meines Erachtens nicht sehr interessant (würde bei basic bleiben), wogegen bei Extensions welche man als Typ in eine Seite einfügt (meist ja Frontent Ext.) die Angabe von Kategorien ganz nützlich sein kann, da man diese im Constant-Editor wiederfindet :).</p>
+
+<h5 id="subcategories-8211-unterkategorie-section-fr-die-konstante">SUBCATEGORIES – Unterkategorie (section) für die Konstante</h5>
+
+<ul>
+  <li>enable,dims,file,typo,color,links,language</li>
+</ul>
+
+<p>Diese Angaben sind für Backend Extensions auch eher irrelevant.</p>
+
+<h3 id="sort-8211-wichtungsortierung-der-konstante-in-der-kategorie">SORT – Wichtung/Sortierung der Konstante in der Kategorie</h3>
+
+<ul>
+  <li>a bis z – damit kann man die Reihenfolge der Konstanten beeinflussen</li>
+</ul>
+
+<p>Diese Angaben sind für Backend Extensions auch eher irrelevant.</p>
+
+<h3 id="vartype-8211-typangabe-der-konstante">VAR_TYPE – Typangabe der Konstante</h3>
+
+<ul>
+  <li>int[uGrenze-oGrenze] – Integer in den optionalen Grenzen uGrenze bis oGrenze</li>
+  <li>int+ – Integer (positiv)</li>
+  <li>color – HTML Farbe (#FFFFFF)</li>
+  <li>options [item1,item2,…] – Auswahlbox mit label=wert der items; [label1=wert1,label2=wert2,…]</li>
+  <li>boolean [truevalue] – boolscher Wert; per truevalue (opt.) kann man den Wert setzen, welcher wahr entspricht (std: 1)</li>
+  <li>file [ext-list/IMAGE_EXT] – Auswahl von Ressourcen; ext-list gibt die erlaubten Dateitypen an z.B. [txt,html,htm]; mit der Konstante IMAGE_EXT werden Standard Bildtypen angegeben</li>
+  <li>string – String-Wert (Standard wenn nichts angegeben ist)</li>
+</ul>
+
+<p>Durch Angabe eines dieser Werte erzeugt Typo3 automatisch das passende Eingabefeld dazu (Checkbox bei boolean…). Weitere Werte siehe Doku.</p>
+
+<h3 id="headerdescription-8211-berschrift-und-kurzbeschreibung-der-konstante">HEADER:DESCRIPTION – Überschrift und Kurzbeschreibung der Konstante</h3>
+
+<p>Das label wird beim ersten Auftreten von „:“ in die Teile Überschrift und Beschreibung aufgeteilt. Die Überschrift wird dabei fett in einer extra Zeile angezeigt.</p>
+
+<h3 id="var--default-8211-variablenname-und-defaultwert">var = DEFAULT – Variablenname und Defaultwert</h3>
+
+<p>Per DEFAULT kann man einen Wert voreintragen lassen (Standardwert). Über den angegebenen Variablennamen wird, ganz klar, später in der Extension zugegriffen.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://127.0.0.1:4000/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
+" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:4000/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
+" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://127.0.0.1:4000/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen
+" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Backend / BE Extension - Konfiguration von Konstanten direkt nach Installation möglich machen</strong> was published on <time datetime="2007-05-28T10:05:20+09:00">May 28, 2007</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+
+  
+  <aside class="read-next">
+    <a class="read-next-story prev " style="" href="http://127.0.0.1:4000/wordpress-statistik-plugin-semmelstatz-im-einsatz/" title="Wordpress Statistik Plugin Semmelstatz Im Einsatz">
+      <section class="post">
+        <h2>Wordpress Statistik Plugin Semmelstatz Im Einsatz</h2>
+        layout: post
+title: ‘Wordpress Statistik Plugin “semmelstatz” im Einsatz’
+published: true
+author: mediavrog
+comments: true
+date: 2007-05-31 04:05:26
+tags:
+    - plugin
+    - statistiken
+categories:
+    - wordpress
+permalink: &gt;
+image:
+    thumb: wordpress.jpg
+—
+&gt; Habe gerade ein schönes WordPress Plugin installiert, um Statistiken zu tracken. Die Einstellungen und die Daten, welche getrackt werden sind meines Erachtens für einen Blog völlig ausreichend und die Darstellung ist gut gelungen.
+
+
+      </section>
+    </a>
+  </aside>
+  
+
+
+<div class="footer-wrap">
+  <footer>
+    
+
+<section class="copyright"><a href="http://127.0.0.1:4000">Maik Vlcek</a> &copy; 2016</section>
+<section class="poweredby">Proudly published with <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a></section>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://127.0.0.1:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://127.0.0.1:4000/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-1304393-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+
+
+
+</body>
+</html>

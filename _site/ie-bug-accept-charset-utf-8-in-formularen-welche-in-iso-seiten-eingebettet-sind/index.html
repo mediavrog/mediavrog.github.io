@@ -1,0 +1,47 @@
+<p>layout: post
+title: ‘IE Bug: Accept-charset UTF-8 in Formularen, welche in ISO Seiten eingebettet sind’
+published: true
+author: mediavrog
+comments: true
+date: 2009-06-23 01:06:51
+tags:
+    - bugfix
+    - ie
+categories:
+    - internetexplorer
+    - xhtml
+permalink: &gt;
+    /2009/06/23/xhtml/ie-bug-accept-charset-utf-8-in-formularen-welche-in-iso-seiten-eingebettet-sind
+image:
+    thumb: ie.jpg
+—
+&gt; Der <strong>Internet Explorer</strong> verhält sich mal wieder ausnahmslos inkonsistent. Gibt man einem form-Element das Attribut <strong>accept-charset=“UTF-8″</strong> und ist dieses Formular in einer ISO-kodierten (oder auch andere) Seite eingebettet, so verschickt der IE (alle Versionen) die Inhalte nur in UTF-8 wenn folgende Bedingung erfüllt ist:</p>
+
+<h2 id="die-lsung-fr-das-utf-8-charset-problem">Die Lösung für das UTF-8 charset Problem</h2>
+
+<p>Die Eingabe muss ein UTF-8 Zeichen enthalten, welches NICHT in der umgebenden Kodierung (bspw. ISO) abgebildet werden kann. Andernfalls behält der IE die umgebende Kodierung und ignoriert damit das accept-charset.</p>
+
+<p>Abhilfe schafft das Einfügen eines hidden-Fields, welches ein UTF-8 Zeichen enthält. Beispielsweise:</p>
+
+<p>&lt;input type=”hidden” name=”dummyChar” value=”♥” /&gt;</p>
+
+<p>Ausführliche Informationen finden sich unter:</p>
+
+<p><strong>Meinen besten Dank an Michi von Knallgrau, you made my day!</strong></p>
+
+<p>Da kram ich mir doch meine [&gt; Der <strong>Internet Explorer</strong> verhält sich mal wieder ausnahmslos inkonsistent. Gibt man einem form-Element das Attribut <strong>accept-charset=“UTF-8″</strong> und ist dieses Formular in einer ISO-kodierten (oder auch andere) Seite eingebettet, so verschickt der IE (alle Versionen) die Inhalte nur in UTF-8 wenn folgende Bedingung erfüllt ist:</p>
+
+<h2 id="die-lsung-fr-das-utf-8-charset-problem-1">Die Lösung für das UTF-8 charset Problem</h2>
+
+<p>Die Eingabe muss ein UTF-8 Zeichen enthalten, welches NICHT in der umgebenden Kodierung (bspw. ISO) abgebildet werden kann. Andernfalls behält der IE die umgebende Kodierung und ignoriert damit das accept-charset.</p>
+
+<p>Abhilfe schafft das Einfügen eines hidden-Fields, welches ein UTF-8 Zeichen enthält. Beispielsweise:</p>
+
+<p>&lt;input type=”hidden” name=”dummyChar” value=”♥” /&gt;</p>
+
+<p>Ausführliche Informationen finden sich unter:</p>
+
+<p><strong>Meinen besten Dank an Michi von Knallgrau, you made my day!</strong></p>
+
+<p>Da kram ich mir doch meine]<a href="http://mediavrog.net/blog/2007/09/28/browser/internetexplorer/internet-explorer-voodoo-doll-puppe/">1</a> wieder raus !!</p>
+

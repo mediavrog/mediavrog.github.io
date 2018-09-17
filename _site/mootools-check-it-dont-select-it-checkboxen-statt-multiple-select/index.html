@@ -1,0 +1,78 @@
+<p>layout: post
+title: |
+    Mootools “Check it, don’t select it” - Checkboxen statt multiple Select<!--:en-->Mootools “Check it, don’t select it” - checkboxes instead of multiple select
+published: true
+author: mediavrog
+comments: true
+date: 2010-04-21 12:04:37
+tags:
+    - checkbox
+    - mehrfachauswahl
+    - plugin
+    - select
+    - usability
+categories:
+    - mootools
+permalink: &gt;
+    /2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select
+image:
+    thumb: Check-it-dont-select-it.gif
+—
+&gt; Bereits vor einigen Jahren habe ich das <a href="http://c82.net/posts.php?id=25" title="Beitrag auf c82.net in englischer Sprache lesen">Statement von Nicholas Rougeux bezüglich der Nutzerfreundlichkeit von Mehrfachauswahlfeldern</a> (select[multiple]) gelesen. Er stellt als Alternative dazu eine CheckedListBox vor. Diese habe ich zur freien Verwendung in eine Mootools-Klasse gepackt.</p>
+
+<h2 id="selectmultiple-ist-nicht-sehr-benutzerfreundlich">Select[multiple] ist nicht sehr benutzerfreundlich</h2>
+
+<p>Um den Artikel kurz aufzugreifen: Auswahlfelder mit Mehrfachauswahl sind nicht sehr benutzerfreundlich. Der Nutzer muss zum Selektieren mehrerer Werte die Strg-Taste gedrückt halten – lässt er einmal aus Versehen los (z.B. beim Scrollen durch die Liste) und markiert nun einen Wert, so ist nur noch dieser allein ausgewählt. Das Gleiche Problem zeigt sich beim Benutzen der Hoch und Runter-Tasten zum Navigieren der Optionen.</p>
+
+<h2 id="eine-liste-von-checkboxen-als-alternative">Eine Liste von Checkboxen als Alternative</h2>
+
+<p>Checkboxen sind hingegen einfacher in der Bedienung: Ein Klick aktiviert sie, ein weiterer deselektiert sie wieder. Der Nutzer kann sich so leichter auf seine primäre Aufgabe (das Selektieren von Optionen) konzentrieren, als darauf zu achten, bestimmte Tasten zu drücken.</p>
+
+<h2 id="checkedlistbox-fr-mootools">CheckedListBox für Mootools</h2>
+
+<p>Zur Wiederverwendung und schnellen Verbesserung der Benutzerfreundlichkeit auch in bestehenden Systemen (wo z.B. die HTML-Templates nicht geändert werden sollen) habe ich eine Mootools-Klasse geschrieben, welche select[multiple]-Elemente in ungeordnete Listen von input[type=checkbox] überführt. Dabei übernimmt es die Dimensionen des select-Feldes, damit das Layout nicht springt.</p>
+
+<p>In dieser Implementierung steht es frei, eine Mehrfachauswahl vollständig durch eine Liste von Checkboxen zu ersetzen oder die Mehrfachauswahl nur auszublenden. Letzteres kann vor allem sinnvoll sein, um bereits bestehende Javascripte, welche das select-Element in seiner Funktion erweitern (z.B. Filter) nicht anpassen zu müssen. Um das select zu komplett zu ersetzen, kann dem Konstruktor die Option replaceOriginal übergeben werden.</p>
+
+<p>window.addEvent(“domready”, (function($){
+   new CheckedListBox($(“mySelect”));
+   new CheckedListBox($(“mySelect2”), {replaceOriginal: true} )
+}).pass(document.id) );</p>
+
+<h2 id="download">Download</h2>
+
+<p>Es ist natürlich noch viel Raum für Verbesserungen. Vorschläge/Patches sind willkommen :):</p>
+
+<p>Bis ich das Plugin für die Mootools Forge aufbereitet habe, kann folgender Download Link genutzt werden:</p>
+
+<p><a href="http://mediavrog.net/blog/wp-content/uploads/2010/03/CheckedListBox.js">CheckedListBox.js (2,88 kB)</a>{.download}</p>
+
+<p>Das minimal benötigte CSS (vgl. auch die Demo weiter unten für ein vollständiges Beispiel):</p>
+
+<p>.cidsi{
+   border: 1px solid #ccc;
+}</p>
+
+<p>.cidsi li label:hover, .cidsi label.cidsi-checked{
+   background-color: #EFFF79;
+}</p>
+
+<p>.cidsi li label{
+   cursor: pointer;
+   border-bottom: 1px dotted #ccc;
+   text-indent: -35px;
+   display: block;
+   padding: 10px 10px 10px 35px;
+}</p>
+
+<p>.cidsi li label input{
+   vertical-align: top;
+   margin:0 10px;
+}</p>
+
+<ul>
+  <li>html .checklist label { height: 1%; }</li>
+</ul>
+
+<h2 id="demo">Demo</h2>
+

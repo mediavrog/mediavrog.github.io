@@ -1,0 +1,46 @@
+<p>layout: post
+title: ‘TYPO3 - Direct Mail Newsletter werden nicht verschickt’
+published: true
+author: mediavrog
+comments: true
+date: 2008-05-29 02:05:21
+tags:
+    - direct-mail
+    - htaccess
+    - newsletter
+    - typo3
+categories:
+    - typo3
+permalink: &gt;
+    /2008/05/29/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt
+image:
+    thumb: typo33.jpg
+—
+&gt; Das solide Newslettersystem Direct Mail bereitet besonders Einsteigern immer wieder Kopfschmerzen: Oftmals werden Newsletter aus unerklärlichen Gründen nicht verschickt und die Nutzerführung war für die Redakteure, welche letztenendes den Newsletter aufbereiten und verschicken sollen bis vor Kurzem recht umständlich.</p>
+
+<p>Dieser Beitrag soll die wichtigsten Probleme behandeln und mit Hilfe der Kommentare ständig erweitert werden.</p>
+
+<h2 id="html-newsletter-werden-nicht-verschickt">HTML-Newsletter werden nicht verschickt</h2>
+
+<p>Dieses Problem lässt sich zum Glück in den meisten Fällen einfach und schnell regeln. Die häufigste Ursache liegt in der Liste der Abonnements – sind diese händisch eingepflegt oder per direct_mail_subscription nicht komplett in die Datenbank geschrieben, so fehlt der <strong>Haken im Feld</strong> „<strong>Newsletter im HTML-Format empfangen</strong>“ bei den Abonnementen. Damit dieses automatisch gesetzt wird, sollte man im Template für das Anmeldeformular ein hidden-Feld einfügen:</p>
+
+<p>Somit wird für jeden neuen Abonnementen der Wert gleich auf 1 gesetzt.</p>
+
+<p><a href="#commentform" title="Schreibe einen Kommetar dazu">Welche Gründe gibt es noch? Schreib nen Kommentar.</a></p>
+
+<h2 id="massenversand-startet-verarbeitet-abonnenten-aber-es-werden-keine-mails-verschickt">Massenversand startet, verarbeitet Abonnenten aber es werden keine Mails verschickt</h2>
+
+<p>Für dieses Problem kann es mehrere Ursachen geben, das Resultat ist immer das selbe: Der Versand wird angestoßen, aber in der Versand-Statistik steht keine Anzahl der Versendeten Mails.</p>
+
+<ul>
+  <li>
+    <h3 id="in-vebindung-mit-htaccess">In Vebindung mit htaccess</h3>
+
+    <p>In einem meiner Projekte habe ich zur <a href="http://mediavrog.net/blog/2007/07/26/seo/vermeidung-von-duplicate-content-im-bezug-auf-suchmaschinen/" title="Artikel zum Thema Duplicate Content und Suchmaschinen in diesem Blog lesen">Vermeidung von duplicate Content</a> per htaccess die Anfragen an die Domain domainname.tld auf www.domainname.tld umgeleitet. Nun habe ich mich trotzdem unter domainname.tld/typo3 eingeloggt und wollte einen Newsletter versenden. Es lief soweit alles normal und auch die Vorschau sah gut aus. Leider wurden die E-Mails per Massenversand nicht verschickt (vgl. Bild oben). Eine Testmail ergab außerdem, dass nicht der Inhalt des Newsletters, sondern die <strong>gesamte Seite als Newsletter verschickt</strong> wurde. Nach eingehender Prüfung musste ich feststellen, dass direct_mail nicht die per baseURL gesetzte URI als Ausgangsbasis zum Rendern/Erstellen des Inhalts des Newsletters verwendet, sondern den Pfad des eingeloggten Nutzers. In meinem Fall habe ich mich noch einmal ausgeloggt und unter www.domainname.tld/typo3 wieder eingeloggt – der Newsletter konnte problemlos verschickt werden.</p>
+
+    <p>Fazit: Ich werde die htaccess-Konfiguration wohl noch einmal überprüfen, so dass alle Parameter beim Umleiten ohne www zu www mitgenommen werden.</p>
+
+    <p>Welche Probleme habt ihr erfahren und wie gelöst? Hinterlasst einen Komentar oder einen Trackback. Ich möchte hier gern eine Problemlöse-Sammlung rund um direct_mail enstehen lassen.</p>
+  </li>
+</ul>
+

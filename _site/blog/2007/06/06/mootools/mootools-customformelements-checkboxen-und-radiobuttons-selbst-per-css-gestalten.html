@@ -1,0 +1,613 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>mootools - custom Form Elements 1.8beta: Checkboxen und Radiobuttons selbst per CSS gestalten - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="mootools - custom Form Elements 1.8beta: Checkboxen und Radiobuttons selbst per CSS gestalten">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten">
+  <meta property="og:url" content="http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten">
+
+
+
+  <meta property="og:description" content="  Update 08.01.10: Custom Form Elements hat sich weiterentwickelt und ist nun unter http://customformelements.net zu finden.  Ein kleines Stück Code, welches Checkboxen und Radiobuttons (und jetzt auch viele andere Formularelemente)per Javascript durch kleine DIV-Container ersetzt, welche man dann selbst per CSS gestalten kann.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2007-06-06T16:06:29+09:00">
+  
+    <link rel="next" href="http://localhost:4000/blog/2007/06/08/javascript/javascript-duplikate-entfernen-remove-duplicates" title="Javascript: Duplikate entfernen / remove duplicates">
+  
+  
+    <link rel="prev" href="http://localhost:4000/blog/2007/06/05/weitere-themen/linktipps-spass/robot-chicken-calvin-and-hobbes" title="Robot Chicken - Calvin and Hobbes">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="mootools - custom Form Elements 1.8beta: Checkboxen und Radiobuttons selbst per CSS gestalten">
+    <meta itemprop="description" content="  Update 08.01.10: Custom Form Elements hat sich weiterentwickelt und ist nun unter http://customformelements.net zu finden.  Ein kleines Stück Code, welches Checkboxen und Radiobuttons (und jetzt auch viele andere Formularelemente)per Javascript durch kleine DIV-Container ersetzt, welche man dann selbst per CSS gestalten kann.">
+    <meta itemprop="datePublished" content="June 06, 2007">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">mootools - custom Form Elements 1.8beta: Checkboxen und Radiobuttons selbst per CSS gestalten
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/cfe.jpg" alt="mootools - custom Form Elements 1.8beta: Checkboxen und Radiobuttons selbst per CSS gestalten thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <blockquote>
+  <p><strong>Update 08.01.10: Custom Form Elements hat sich weiterentwickelt und ist nun unter 
+<a href="http://customformelements.net">http://customformelements.net</a> zu finden.</strong></p>
+
+  <p>Ein kleines Stück Code, welches Checkboxen und Radiobuttons (und jetzt auch viele andere Formularelemente)
+per Javascript durch kleine DIV-Container ersetzt, welche man dann selbst per CSS gestalten kann.</p>
+</blockquote>
+
+<p>An der Funktionalität jeder Checkbox und der Radiobuttons im Formular ändert sich nichts :)
+Auch Labels werden unterstützt. Es ist damit also möglich, per CSS die Styles der Elemente eines Formulars anzupassen 
+&gt; siehe <a href="http://customformelements.net/demopage.php">Demoseite</a>.</p>
+
+<h2 id="kurzinfo">Kurzinfo:</h2>
+
+<ul>
+  <li>custom Form Elements 1.8beta – Checkboxen und Radiobuttons selbst per CSS stylen</li>
+  <li>Größe ca. 17 kB (komprimiert; inkl. aller Module)</li>
+  <li><strong>basiert auf mootools ab v1.1</strong></li>
+  <li>benötigt folgende mootools Module
+    <ul>
+      <li>Core, Class,Class.Extras, Array, String, Function, Number, Element, Element.Event, Element.Filters, Element.Selectors, Window.DomReady</li>
+    </ul>
+  </li>
+  <li>Lizenz: MIT</li>
+  <li>erfolgreich getestet unter: IE7+, Firefox 2+, Opera 9.02+, Chrome 3+</li>
+</ul>
+
+<h2 id="features">Features:</h2>
+
+<ul>
+  <li>ersetzt
+    <ul>
+      <li>Checkboxes</li>
+      <li>Radiobuttons</li>
+      <li>Fileupload</li>
+      <li>Textinput (inkl. Password) und Textarea</li>
+      <li>Select</li>
+      <li>Submit/Reset/Image</li>
+    </ul>
+  </li>
+  <li>… auf der gesamten Seite oder in einem bestimmen Element (z.B. Formular) mit einer angegebenen ID durch kleine DIV-Container</li>
+  <li>generiert auf Wunsch Tooltips anhand der title-Attribute</li>
+  <li>unterstützt Tabbing / Fokussierung</li>
+  <li>„unobstrusive“ – ohne Javascript werden die normalen Formularfelder gezeigt</li>
+  <li>weiteres auf der <a href="http://customformelements.net/demopage.php">Demoseite</a></li>
+</ul>
+
+<h2 id="download">Download:</h2>
+
+<ul>
+  <li><a href="https://github.com/mediavrog/cfe" title="Demopage zu customFormElements öffnen">https://github.com/mediavrog/cfe</a></li>
+</ul>
+
+<h2 id="demo">Demo:</h2>
+
+<ul>
+  <li>unter <a href="http://customformelements.net/demopage.php" title="Demopage zu customFormElements öffnen">http://customformelements.net/demopage.php</a></li>
+</ul>
+
+<h2 id="donate--spenden">Donate / Spenden</h2>
+
+<p>This library helped you building great things? Buy me a beer :)</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick" />
+    <input type="hidden" name="hosted_button_id" value="3CZ77GZXEMX22" />
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#custom-form-elements" class="page__taxonomy-item" rel="tag">custom form elements</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#forms" class="page__taxonomy-item" rel="tag">forms</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#style" class="page__taxonomy-item" rel="tag">style</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#mootools" class="page__taxonomy-item" rel="tag">mootools</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2007-06-06T16:06:29+09:00">June 06, 2007</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-06-06-mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/blog/2007/06/05/weitere-themen/linktipps-spass/robot-chicken-calvin-and-hobbes" class="pagination--pager" title="Robot Chicken - Calvin and Hobbes
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/blog/2007/06/08/javascript/javascript-duplikate-entfernen-remove-duplicates" class="pagination--pager" title="Javascript: Duplikate entfernen / remove duplicates
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-06-06-mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2007/06/06/mootools/mootools-customformelements-checkboxen-und-radiobuttons-selbst-per-css-gestalten">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

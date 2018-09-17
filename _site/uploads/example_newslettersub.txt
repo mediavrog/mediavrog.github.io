@@ -1,0 +1,23 @@
+// wenn "Ja ich will den Newsletter" ausgewaehlt wurde
+
+// Benoetigte Klassen einbinden
+require_once("typo3/sysext/cms/tslib/media/scripts/fe_adminLib.inc");
+require_once(t3lib_extMgm::extPath('direct_mail_subscription').'pi/class.dmailsubscribe.php');
+
+// Konfiguration laden        
+$conf = $GLOBALS['TSFE']->tmpl->setup['plugin.']['feadmin.']['dmailsubscription.'];
+
+// Template relativ zur aufrufenden Extension setzen wenn noetig
+//$conf['templateFile'] = "../../../".$conf['templateFile'];
+
+// Post vars fuer die Anmeldung setzen
+// etwas unschoen, aber in meinem speziellen Fall angebracht
+// (Alternative -> Formularfelder direkt Attribut name mit [FE][tt_address][name] usw. zuweisen
+$_POST['FE']['tt_address']['name'] = $name;
+$_POST['FE']['tt_address']['email'] = $params['data']['kemail'];
+$_POST['FE']['tt_address']['module_sys_dmail_html'] = 1;
+
+// Initialisierung feAdmin Objekt               
+$ua = new user_feAdmin();
+$ua->cObj = t3lib_div::makeInstance('tslib_cObj');
+$ua->init($content,$conf);

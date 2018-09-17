@@ -1,0 +1,22 @@
+<p>layout: post
+title: ‘After Effects stürzt beim Rendern ab’
+published: true
+comments: true
+date: 2008-08-10 05:08:09
+tags:
+    - after effects
+    - bugfix
+    - rendern
+    - speicherproblem
+categories:
+    - after-effects-ae
+—
+&gt; Hier ein kleiner Life-Saver. Wenn beim Rendern eines Films After Effects CS2 oder CS3 immer wieder aus scheinbar unerfindlichen Gründen abstürzt, dann kann die Ursache in einem Problem der Speicherverwaltung bezüglich des Ebenencaches in After Effects liegen.</p>
+
+<p>AE bricht dann während des Renderns mit einer Fehlermeldung ab, welche in etwa besagt dass nicht genügend Speicher vorhanden wäre.</p>
+
+<p>Abhilfe schafft hier ein kleiner Trick:</p>
+
+<h2 id="die-versteckten-optionen">Die versteckten Optionen.</h2>
+
+<p>Einfach die <strong>SHIFT-Taste gedrückt halten</strong> und <em>Bearbeiten &gt; Voreinstellungen &gt; Allgemein</em> wählen. Nun erscheint in der Dropdown-Box der Optionen eine neue Auswahl „<strong>Versteckt</strong>„. Um den Speicherüberlauf (?) zu beheben, wählt man <strong>Ebenencache deaktivieren</strong> und ca. alle <strong>50 Frames entleeren</strong>. Das Rendern dauert nun zwar ein wenig länger, läuft dafür aber durch.</p>

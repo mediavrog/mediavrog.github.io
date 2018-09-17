@@ -1,0 +1,637 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>GPUImage dreht Portrait-Bild nach Fotografieren mit KameraGPUImage rotates an image shot in portrait mode by 90 degrees - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="GPUImage dreht Portrait-Bild nach Fotografieren mit KameraGPUImage rotates an image shot in portrait mode by 90 degrees">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees">
+  <meta property="og:url" content="http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees">
+
+
+
+  <meta property="og:description" content="The other day I came across a small issue, while using the [Android port of GPUImage][1]. On some devices (mainly Samsung), an image captured in portrait by the camera intent and then fed to GPUImageView would be rotated by 90 degrees. On other devices, this would work perfectly. Also, selecting an already captured image from the gallery worked just fine.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2013-08-27T12:08:09+09:00">
+  
+    <link rel="next" href="http://localhost:4000/android/solution-unable-to-access-jarfile/" title="Unable to access jarfile /Applications/Android solution">
+  
+  
+    <link rel="prev" href="http://localhost:4000/readability-feature-post/" title="Post with Large Feature Image and Text">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="GPUImage dreht Portrait-Bild nach Fotografieren mit KameraGPUImage rotates an image shot in portrait mode by 90 degrees">
+    <meta itemprop="description" content="The other day I came across a small issue, while using the [Android port of GPUImage][1]. On some devices (mainly Samsung), an image captured in portrait by the camera intent and then fed to GPUImageView would be rotated by 90 degrees. On other devices, this would work perfectly. Also, selecting an already captured image from the gallery worked just fine.">
+    <meta itemprop="datePublished" content="August 27, 2013">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">GPUImage dreht Portrait-Bild nach Fotografieren mit Kamera<!--:en-->GPUImage rotates an image shot in portrait mode by 90 degrees
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/device-2013-08-27-104732preview.png" alt="GPUImage dreht Portrait-Bild nach Fotografieren mit Kamera<!--:en-->GPUImage rotates an image shot in portrait mode by 90 degrees thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>The other day I came across a small issue, while using the <a href="https://github.com/CyberAgent/android-gpuimage">Android port of GPUImage</a>. On some devices (mainly Samsung), an image captured in portrait by the camera intent and then fed to GPUImageView would be rotated by 90 degrees. On other devices, this would work perfectly. Also, selecting an already captured image from the gallery worked just fine.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Despite being captured in portrait mode, the resulting image will be rotated when loaded in GPUImageView
+</code></pre>
+</div>
+
+<p>I first noticed that the problematic devices were all setting the device orientation to landscape when opening up the camera mode. There were a few noticeable rotations during the process of capturing and reviewing an image. I thought they would somehow write wrong Exif data into the image, but I soon was proved wrong.</p>
+
+<p>The real issue lied within my way of loading the image to GPUImageView:</p>
+
+<p>I grabbed the Uri, once the user supplied a picture via camera, gallery or share with my app function in my <code class="highlighter-rouge">onActivityResult</code> method:</p>
+
+<p>[…]
+case R.string.choose_photo:
+case R.string.take_photo:
+case R.string.share:
+	if (resultCode == RESULT_OK) {
+		final Uri uri;
+		switch (requestCode) {
+			case R.string.take_photo:
+				// same as I configured via intent.putExtra(MediaStore.EXTRA_OUTPUT, mTempFileUri); in the photo intent
+				uri = mTempFileUri;
+				break;
+			case R.string.share:
+				uri = data.getParcelableExtra(Intent.EXTRA_STREAM);
+				break;
+			default:
+				// some fixes for url-encoded paths like DropBox returns; and paths without “file://” scheme
+				uri = Utils.extractProperFileUri(data.getData());
+				break;
+		}
+		// now feed the image to GPUImageView
+		mGPUImageView.setImage(uri);
+	}
+[…]</p>
+
+<p>Setting the image by passing an Uri object, leads to this internal flow in GPUImage:</p>
+
+<ol>
+  <li>delegate loading to GPUImage, which will start a <code class="highlighter-rouge">LoadImageUriTask</code></li>
+  <li>the above task will either load the image from web (uri starts with http or https) or using a <a href="http://developer.android.com/reference/android/content/ContentResolver.html">ContentResolver</a></li>
+  <li>then, it will determine a proper size and <strong>rotation</strong> for the image, using a media query to <code class="highlighter-rouge">MediaStore.Images.ImageColumns.ORIENTATION</code></li>
+  <li>.. and finally return the image resized and rotated to be displayed within the GPUImageView (involves calls to setRenderer and so forth)</li>
+</ol>
+
+<p>The problem lies within step 3, if the given Uri’s scheme is not <code class="highlighter-rouge">content</code> but <code class="highlighter-rouge">file</code>. Media queries work on proper content Uris, so Android can look into the meta data associated with the image from a <a href="http://developer.android.com/reference/android/provider/MediaStore.html">media collection</a>. On the other side, when passing an Uri with a <code class="highlighter-rouge">file</code>-scheme, the ContentResolver will find no additional meta data for a „generic file“ which resides on a given path. To get ahold of any additional image information, one should use the <a href="http://developer.android.com/reference/android/media/ExifInterface.html">ExifInterface</a> and read the <code class="highlighter-rouge">ExifInterface.TAG_ORIENTATION</code> from the file.</p>
+
+<p>Fortunately, after a quick digging into the GPUImage code, I found that the method <code class="highlighter-rouge">mGPUImageView.setImage();</code> actually supports various types of parameters and then uses slightly different ways to load and interpret them:</p>
+
+<p>// load the image directly from bitmap data
+setImage(Bitmap bmp);</p>
+
+<p>// load a file from the file system, interpreting exif data for proper rotation
+setImage(File file);</p>
+
+<p>// load a file from the internet or media store, using media query for proper rotation
+setImage(Uri uri);</p>
+
+<p>Since I also passed an Uri object when I referenced a file, GPUImage could not determine the proper rotation in the -non existing- media store data. Eventually, fixing this was as easy as that:</p>
+
+<p>[…]
+// now feed the image to GPUImageView
+// either by File or other ContentResolver
+// important for correct usage of detecting image rotation (File: ExifInterface; ContentResolver: MediaStore &gt; ImageColumns)
+if (“file”.equals(uri.getScheme())) {
+	mGPUImageView.setImage(new File(uri.getPath()));
+} else {
+	mGPUImageView.setImage(uri);
+}</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Providing GPUImageView with the proper parameters in setImage() leads to correct rotation
+</code></pre>
+</div>
+
+<p>I hope it helps someone facing the same issues. It is not specifically related to GPUImage, but to capturing an photo with Android and processing it in general, as you can see at <a href="http://stackoverflow.com/search?q=android+portrait+camera+90">stackoverflow</a>. GPUImage employs best practices to load an image properly, if provided with the correct parameters.</p>
+
+<p>Big thanks to <a href="https://github.com/CyberAgent">CyberAgent</a> and <a href="https://github.com/pboos">pboos</a> for proding us with that port of the <a href="https://github.com/BradLarson/GPUImage">original GPUImage library for iOS</a>.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#android" class="page__taxonomy-item" rel="tag">android</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#app" class="page__taxonomy-item" rel="tag">app</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#camera" class="page__taxonomy-item" rel="tag">camera</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#gpuimage" class="page__taxonomy-item" rel="tag">gpuimage</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#orientation" class="page__taxonomy-item" rel="tag">orientation</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#photo" class="page__taxonomy-item" rel="tag">photo</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#rotation" class="page__taxonomy-item" rel="tag">rotation</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#android" class="page__taxonomy-item" rel="tag">android</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2013-08-27T12:08:09+09:00">August 27, 2013</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2013/2013-08-27-gpuimage-rotates-portrait-image-90-degrees.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/readability-feature-post/" class="pagination--pager" title="Post with Large Feature Image and Text
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/android/solution-unable-to-access-jarfile/" class="pagination--pager" title="Unable to access jarfile /Applications/Android solution
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2013/2013-08-27-gpuimage-rotates-portrait-image-90-degrees.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,55 @@
+<p>layout: post
+title: ‘Probleme mit sIFR 3 und SWFObject auf einer Seite im IE 6 und 7’
+published: true
+author: mediavrog
+comments: false
+date: 2008-04-09 10:04:07
+tags:
+    - bug
+    - bugfix
+    - ie-6
+    - ie-7
+    - sifr
+    - swfobject
+    - useDomLoaded
+categories:
+    - internetexplorer
+permalink: &gt;
+    /2008/04/09/browser/internetexplorer/probleme-mit-sifr-3-und-swfobject-auf-einer-seite-im-ie-6-und-7
+image:
+    thumb: ie.jpg
+—
+&gt; <strong>Dieser Bugfix wird in neuen sIFR 3 builds nicht mehr benötigt: vgl. UPDATE 11.04.08 weiter unten und die Kommentare.</strong>
+&gt; 
+&gt; ———-
+&gt; 
+&gt; In einem Projekt bin ich vor Kurzem auf ein seltsames Verhalten von <a href="http://wiki.novemberborn.net/sifr3/JavaScript+Configuration" title="Seite von sIFR 3 öffnen">sIFR 3</a> gestoßen.</p>
+
+<h2 id="problembeschreibung">Problembeschreibung</h2>
+
+<p>Komischerweise zeigte meine Testseite im Internet Explorer 6 und 7 keinen Inhalt an. Der XHTML Quelltext blieb (fast) leer.</p>
+
+<p>Alles was im Quelltext stand war</p>
+
+<p>&lt;script src=”wp-content/themes/meinTheme/swf/meineFont.swf” type=”sifr/prefetch”&gt;&lt;/script&gt;</p>
+
+<p>… ansonsten war die Seite weiß und leer.</p>
+
+<p>Nach einer kurzen Recherche bin ich dann auf den <a href="http://eighteightzero.net/blog/?p=24" title="Bugfix sIFR/SWFObject für alte Version von sIFR ">Beitrag von EightEightZero</a> gestoßen, welcher auch mit dem Problem zu kämpfen hatte, aber einen Bugfix anbietet. Das Problem taucht bei Verwendung von <a href="http://wiki.novemberborn.net/sifr3/JavaScript+Configuration" title="Seite von sIFR 3 öffnen">sIFR 3</a> und <a href="http://blog.deconcept.com/swfobject/" title="Seite von SWFObject öffnen">SWFObject 1.5</a> auf ein und derselben Seite auf. Leider hat das Setzen des im Bugfix beschriebenen Parameters keine Wirkung in meiner Testumgebung gezeigt.</p>
+
+<p>Nach weiterem Stöbern in der <a href="http://wiki.novemberborn.net/sifr3/JavaScript+Configuration" title="Dokumentation zur Javascript Konfiguration von sIFR ansehen">Dokumentation von sIFR 3 bezüglich der Javascript Konfiguration</a> und einigen <a href="http://discuss.joyent.com/viewforum.php?id=20" title="sIFR Forum besuchen">sIFR-Foren</a>-Beiträgen habe ich letzendlich die passende Lösung gefunden. Der Parameter hat in der von mir verwendeten Version von sIFR (version 3, revision 382) einfach einen anderen Namen bekommen:</p>
+
+<p>sIFR.useDomLoaded = !sIFR.ua.ie;</p>
+
+<p>Dies teilt sIFR mit, dass es im IE (sIFR.ua.ie &gt; true, wenn IE) die useDomLoaded-Funktionalität nicht anwenden soll. Nach dem Löschen des Cache sollte die Seite nun ohne Probleme im Internet Explorer 6 und auch in der 7er Version des IE angezeigt werden.</p>
+
+<p><strong>Wichtig</strong>: Dieser Parameter muss <strong>nach</strong> sIFR.prefetch und <strong>vor</strong> sIFR.activate gesetzt werden</p>
+
+<h3 id="update-110408">UPDATE 11.04.08:</h3>
+
+<p>Ich bin jetzt auf die sIFR Version 3 r395 umgestiegen und der oben beschriebene Bugfix ist nicht mehr nötig.</p>
+
+<p>Dabei ist mir noch eins aufgefallen: Wer Probleme mit sIFR und mootools hat, sollte sicherstellen, dass der sIFR Code (sIFR.replace usw) nicht in einem onDomReady-Event eines Javascript-Frameworks wie z.B. mootools steht, da sonst Fehler im IE entstehen. sIFR nutzt eine eigene domReady-Methode.</p>
+
+<p>Leider taucht in dieser Version ein andere Bug auf: <a href="http://mediavrog.net/blog/2008/04/28/javascript/sifr-probleme-beim-scrollen-im-internet-explorer-6-und-7/" title="Artikel zu fehlerhaftem Scollverhalten in diesem Fenster öffnen">Fehlerhaftes Scollverhalten im Internet Explorer</a>. Wenn die Maus über einem Flash-Element steht, kann man die Seite im Internet Explorer nicht mehr scrollen.</p>
+

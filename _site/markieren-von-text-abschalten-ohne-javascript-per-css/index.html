@@ -1,0 +1,46 @@
+<p>layout: post
+title: ‘Markieren von Text abschalten ohne Javascript per CSS’
+published: true
+author: mediavrog
+comments: true
+date: 2007-10-24 12:10:49
+tags:
+    - browser
+    - css,
+    - selection
+categories:
+    - browser
+permalink: &gt;
+    /2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css
+image:
+    thumb: css.jpg
+—
+&gt; Ganz ohne Javascript und das überall verbreitete onselectstart bzw. onselect lässt sich das Selektieren von Text per CSS (bzw. über das Setzen eines Attributes für den Internet Explorer und Opera) verhindern.</p>
+
+<p>Dazu sei als Allererstes erwähnt, dass ich diese Möglichkeit <strong>NIE</strong> auf normalen Text einer Webseite anwenden würde, da so die Usability <strong>EXTREM</strong> eingeschränkt wird und der Besucher verwirrt die Seite verlässt. Außerdem kann sich der findige Besucher auch über den Quelltext der Seite entsprechende Textpassagen kopieren – als Kopierschutz sollte diese Methode also nicht erwägt werden!</p>
+
+<h2 id="wozu-das-ganze-also-berhaupt">Wozu das ganze also überhaupt?</h2>
+
+<p>Ich bin vor kurzem bei der Weiterentwicklung der <a href="http://customformelements.net/" title="Custom form elements - Seite in neuem Fenster öffnen">custom Form Elements</a> auf ein Problem gestossen, als ich ein Text-Label einer Schaltfläche (dynamisch generiert) vor versehentlichem Markieren schützen wollte. Schaltflächen lassen wie gewohnt ein Markieren ihres Label eh nicht zu und dieses Verhalten musste ich imitieren. Die Lösung habe ich nach einiger Recherche zusammengetragen und sie funktioniert bei mir für IE 6/7, Opera 9, Netscape, Firefox 2, Safari:</p>
+
+<h2 id="mootools-code-eigenschaften-per-js-setzen">Mootools code (Eigenschaften per JS setzen):</h2>
+
+<p>if(window.ie || window.opera){this.lab.setProperty(“unselectable”,”on”);}
+if(window.gecko){this.lab.setStyle(“MozUserSelect”,”none”);}
+if(window.webkit){this.lab.setStyle(“KhtmlUserSelect”,”none”);}</p>
+
+<h2 id="css--attribut">CSS / Attribut</h2>
+
+<p>.myUnselectableText{
+/* Gecko-based, Mozilla <em>/
+-moz-user-select:none;
+/</em> Safari */
+-khtml-user-select: none;
+}</p>
+
+<p>Für Opera und IE 6/7 wird die Eigenschaft unselectable gesetzt.</p>
+
+<p><strong>Anmerkung</strong>: ein XHTML Dokument validiert nicht mehr, wird diese Eigenschaft in den Quelltext geschrieben, also sollte man dieses Attribut lieber per JS setzen :)</p>
+
+<p>&lt;p class=”myUnselectableText” unselectable=”on”/&gt;Absatz&lt;/p&gt;</p>
+

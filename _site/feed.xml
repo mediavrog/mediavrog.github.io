@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-17T19:39:07+09:00</updated><id>http://localhost:4000/</id><title>mediavrog</title><subtitle>An amazing website.</subtitle><author><name>Maik Buchmeyer</name></author><entry><title>Headhunted - Not</title><link href="http://localhost:4000/career/headhunted-not/" rel="alternate" type="text/html" title="Headhunted - Not" /><published>2017-03-23T00:00:00+09:00</published><updated>2017-03-23T00:00:00+09:00</updated><id>http://localhost:4000/career/headhunted-not</id><content type="html" xml:base="http://localhost:4000/career/headhunted-not/">&lt;p&gt;So I haven’t posted in a while, not because there is nothing to write about, 
+but more that I have been busy with starting side projects like &lt;a href=&quot;http://slinkybot.com&quot;&gt;Slinkybot&lt;/a&gt;,
+ taking considerable amounts of work next to my actual work.&lt;/p&gt;
+
+&lt;p&gt;Yet today I want to take the time to tell you how to save your time. Around 3 hours in total I estimate. So let’s go!&lt;/p&gt;
+
+&lt;p&gt;It started when I received an email from &lt;code class=&quot;highlighter-rouge&quot;&gt;@digital-systems.net&lt;/code&gt;, writing me that they were apparently 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;given your name as an excellent software engineer&lt;/code&gt; and they would be 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;happy to meet, exchange business cards, and build a long-term relationship&lt;/code&gt;. The mail was signed by 
+&lt;em&gt;name ommitted&lt;/em&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;Digital Systems Japan&lt;/code&gt;. Checking the interwebs, it turns out that there is no 
+information to be found other than a small website on the domain of their emails. On the website it reads:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We are a Tokyo-based boutique headhunting agency that helps connect you with the top new jobs in Japan.
+   We only contact you when you are recommended to us as a great candidate for a specific job.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So you might think the same I thought: &lt;code class=&quot;highlighter-rouge&quot;&gt;Cool, I&#39;m being headhunted.&lt;/code&gt; The fact that they
+pose as a tiny boutique headhunting agency and are nowhere to be found raised my interest
+and led me to follow up on the mails. Also the position description and possible employer 
+sounded game changing.&lt;/p&gt;
+
+&lt;p&gt;After a bit forth and back a meeting was arranged and the instructions led me to an office in Ebisu, Tokyo.
+Being early I had a look at the company list next to the elevator, but Digital Systems Japan was nowhere to be found.
+Arriving at the place from the description, I found myself in the offices of Apex KK, a recruitment company in Tokyo, 
+to meet the (polite and friendly) people from Apex and of course not the person who contacted me - 
+was it an AI maybe? Claiming they had performed background check made me wonder why the initial interview 
+was not well prepared (seemed they didn’t know anything about me or my background really) 
+and the position proposed wasn’t really suiting my background. Together with what seemed to be some mixup with meeting
+rooms the interview was short and left me with the feeling of being scammed into handing over my information under
+the premise of being headhunted. After asking about the different company names and how they got my mail 
+I was being told that &lt;code class=&quot;highlighter-rouge&quot;&gt;Digital Systems&lt;/code&gt; were their &lt;code class=&quot;highlighter-rouge&quot;&gt;research division&lt;/code&gt; and they actually didn’t really know 
+how anybody found me/my mail. In fact, they weren’t even sure about the contents of the mail I was initially 
+contacted with. &lt;code class=&quot;highlighter-rouge&quot;&gt;We only contact you when you are recommended to us as a great candidate for a specific job.&lt;/code&gt;… hmmmm.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Headhunted. Not.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;.. I thought to myself after the meeting when I reflected on all the red flags raised in my head. 
+After talking to a good friend of mine who knows the industry I just got an 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;You fell for the oldest trick in the recruitment book!&lt;/code&gt;. Well I can see it now too, but it was new to me. :)&lt;/p&gt;
+
+&lt;p&gt;Anyway, I would recommend anybody to save yourself some time and stay clear from that company as they 
+won’t treat you with honesty from the start. And you deserve honesty! I have no idea how they can 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;build a long-term relationship&lt;/code&gt;s this way, but frankly am not interested anymore.&lt;/p&gt;
+
+&lt;p&gt;/end rant&lt;/p&gt;</content><author><name>Maik Buchmeyer</name></author><category term="recruitment" /><category term="headhunting" /><category term="shady" /><summary>When to be careful to not just pass on your data to any recruiter.</summary></entry><entry><title>Read-only for bootstrap datepicker calendar popup</title><link href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/" rel="alternate" type="text/html" title="Read-only for bootstrap datepicker calendar popup" /><published>2016-02-12T00:00:00+09:00</published><updated>2016-02-12T00:00:00+09:00</updated><id>http://localhost:4000/javascript/bootstrap-datepicker-readonly</id><content type="html" xml:base="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">&lt;p&gt;So if you ever came across the need to just show selected dates/date ranges in the bootstrap datepicker, use the following code to prevent date selection by the user.&lt;/p&gt;
+
+&lt;p&gt;The following code uses a date range to show some period in the calendar.&lt;/p&gt;
+
+&lt;div class=&quot;language-coffee highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;.input-daterange&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;readonly&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;attribute&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;input&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;show&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;.datepicker&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;readonly&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;.datepicker .datepicker-days tbody&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;click&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stopPropagation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Maik Buchmeyer</name></author><category term="bootstrap" /><category term="datepicker" /><summary>Small js to simulate read only in the calendar popup.</summary></entry><entry><title>kompare - ein Widget zum einfachen vergleichen von Preisen released</title><link href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released" rel="alternate" type="text/html" title="kompare - ein Widget zum einfachen vergleichen von Preisen released" /><published>2013-10-12T16:10:13+09:00</published><updated>2013-10-12T16:10:13+09:00</updated><id>http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released</id><content type="html" xml:base="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">&lt;p&gt;Vor ein paar Tagen ging das kompare Widget nun endlich im &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.mediavrog.kompare&quot;&gt;Play Store&lt;/a&gt; live.&lt;/p&gt;
+
+&lt;p&gt;Ich habe das Widget ueber den Zeitraum von ungefaehr 2 Monaten an freien Abenden umgesetzt um zu erfahren,
+wie Widgets auf Android funktionieren und wo ihre Limitationen liegen. Nun, nach dieser Erfahrung moechte ich gern
+eine „richtige“ App beginnen, da Widgets teilweise schwer zu testen und in der Funktionalitaet 
+stark eingeschraenkt sind. Mit ein bisschen Kreativitaet kann man aber viele dieser Beschraenkungen umgehen
+(zum Beispiel werden keine Eingabefelder unterstuetzt)&lt;/p&gt;
+
+&lt;p&gt;Mehr ueber kompare auf der &lt;a href=&quot;http://www.mediavrog.net/projects/kompare/&quot;&gt;Projektseite&lt;/a&gt; lesen.&lt;/p&gt;</content><author><name>Maik Buchmeyer</name></author><category term="android" /><category term="release" /><category term="widget" /><summary>Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000{&quot;thumb&quot;=&gt;&quot;ic_launcher-web.png&quot;}" /></entry><entry><title>kompare - Android widget for price comparison released</title><link href="http://localhost:4000/apps/kompare-android-price-comparison-widget/" rel="alternate" type="text/html" title="kompare - Android widget for price comparison released" /><published>2013-10-12T00:00:00+09:00</published><updated>2013-10-12T00:00:00+09:00</updated><id>http://localhost:4000/apps/kompare-android-price-comparison-widget</id><content type="html" xml:base="http://localhost:4000/apps/kompare-android-price-comparison-widget/">&lt;p&gt;The kompare price comparison widget was released to the &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.mediavrog.kompare&quot;&gt;Play Store&lt;/a&gt; just a few days ago.&lt;/p&gt;
+
+&lt;p&gt;I created this widget within 2 months of programming after work as a small project to get to know how widgets work on android. I really want to move on to build a real app, as widgets can be a real pain in the a** :) Anyway I think the result is find - it’s working and looks nice. Give it a try and save some money while grocery shopping.&lt;/p&gt;
+
+&lt;p&gt;Find all the details at &lt;a href=&quot;http://mediavrog.net/blog/project/kompare/&quot;&gt;the project page&lt;/a&gt;.&lt;/p&gt;</content><author><name>Maik Buchmeyer</name></author><category term="android" /><category term="widget" /><summary>The kompare price comparison widget was released to the Play Store just a few days ago.</summary></entry><entry><title>Unable to access jarfile /Applications/Android solution</title><link href="http://localhost:4000/android/solution-unable-to-access-jarfile/" rel="alternate" type="text/html" title="Unable to access jarfile /Applications/Android solution" /><published>2013-08-30T00:00:00+09:00</published><updated>2013-08-30T00:00:00+09:00</updated><id>http://localhost:4000/android/solution-unable-to-access-jarfile</id><content type="html" xml:base="http://localhost:4000/android/solution-unable-to-access-jarfile/">&lt;p&gt;When trying to run ProGuard from Android Studio (for example during the process of building a signed Application), the following error may pop up.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Error [ProjectName] Unable to access jarfile /Applications/Android&lt;/code&gt;
+This is most likely caused in an environment, where Android Studio is installed in a path containing whitespaces and the called proguard script cannot handle whitespaces in the path. On my Mac workmachine, I installed Android Studio at:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/Applications/Android Studio.app&lt;/code&gt;
+The solution is as simple as editing&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/Applications/Android Studio.app/sdk/tools/proguard/bin/proguard.sh&lt;/code&gt;
+and changing&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;java -jar $PROGUARD_HOME/lib/proguard.jar &quot;$@&quot;&lt;/code&gt;
+to&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;java -jar &quot;$PROGUARD_HOME/lib/proguard.jar&quot; &quot;$@&quot;&lt;/code&gt;&lt;/p&gt;</content><author><name>Maik Buchmeyer</name></author><category term="android studio" /><category term="proguard" /><summary>When trying to run ProGuard from Android Studio (for example during the process of building a signed Application), the following error may pop up.</summary></entry><entry><title>GPUImage dreht Portrait-Bild nach Fotografieren mit KameraGPUImage rotates an image shot in portrait mode by 90 degrees</title><link href="http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees" rel="alternate" type="text/html" title="GPUImage dreht Portrait-Bild nach Fotografieren mit Kamera&lt;!--:en--&gt;GPUImage rotates an image shot in portrait mode by 90 degrees" /><published>2013-08-27T12:08:09+09:00</published><updated>2013-08-27T12:08:09+09:00</updated><id>http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees</id><content type="html" xml:base="http://localhost:4000/blog/2013/08/27/android/gpuimage-rotates-portrait-image-90-degrees">&lt;p&gt;The other day I came across a small issue, while using the &lt;a href=&quot;https://github.com/CyberAgent/android-gpuimage&quot;&gt;Android port of GPUImage&lt;/a&gt;. On some devices (mainly Samsung), an image captured in portrait by the camera intent and then fed to GPUImageView would be rotated by 90 degrees. On other devices, this would work perfectly. Also, selecting an already captured image from the gallery worked just fine.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Despite being captured in portrait mode, the resulting image will be rotated when loaded in GPUImageView
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I first noticed that the problematic devices were all setting the device orientation to landscape when opening up the camera mode. There were a few noticeable rotations during the process of capturing and reviewing an image. I thought they would somehow write wrong Exif data into the image, but I soon was proved wrong.&lt;/p&gt;
+
+&lt;p&gt;The real issue lied within my way of loading the image to GPUImageView:&lt;/p&gt;
+
+&lt;p&gt;I grabbed the Uri, once the user supplied a picture via camera, gallery or share with my app function in my &lt;code class=&quot;highlighter-rouge&quot;&gt;onActivityResult&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;p&gt;[…]
+case R.string.choose_photo:
+case R.string.take_photo:
+case R.string.share:
+	if (resultCode == RESULT_OK) {
+		final Uri uri;
+		switch (requestCode) {
+			case R.string.take_photo:
+				// same as I configured via intent.putExtra(MediaStore.EXTRA_OUTPUT, mTempFileUri); in the photo intent
+				uri = mTempFileUri;
+				break;
+			case R.string.share:
+				uri = data.getParcelableExtra(Intent.EXTRA_STREAM);
+				break;
+			default:
+				// some fixes for url-encoded paths like DropBox returns; and paths without “file://” scheme
+				uri = Utils.extractProperFileUri(data.getData());
+				break;
+		}
+		// now feed the image to GPUImageView
+		mGPUImageView.setImage(uri);
+	}
+[…]&lt;/p&gt;
+
+&lt;p&gt;Setting the image by passing an Uri object, leads to this internal flow in GPUImage:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;delegate loading to GPUImage, which will start a &lt;code class=&quot;highlighter-rouge&quot;&gt;LoadImageUriTask&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;the above task will either load the image from web (uri starts with http or https) or using a &lt;a href=&quot;http://developer.android.com/reference/android/content/ContentResolver.html&quot;&gt;ContentResolver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;then, it will determine a proper size and &lt;strong&gt;rotation&lt;/strong&gt; for the image, using a media query to &lt;code class=&quot;highlighter-rouge&quot;&gt;MediaStore.Images.ImageColumns.ORIENTATION&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;.. and finally return the image resized and rotated to be displayed within the GPUImageView (involves calls to setRenderer and so forth)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The problem lies within step 3, if the given Uri’s scheme is not &lt;code class=&quot;highlighter-rouge&quot;&gt;content&lt;/code&gt; but &lt;code class=&quot;highlighter-rouge&quot;&gt;file&lt;/code&gt;. Media queries work on proper content Uris, so Android can look into the meta data associated with the image from a &lt;a href=&quot;http://developer.android.com/reference/android/provider/MediaStore.html&quot;&gt;media collection&lt;/a&gt;. On the other side, when passing an Uri with a &lt;code class=&quot;highlighter-rouge&quot;&gt;file&lt;/code&gt;-scheme, the ContentResolver will find no additional meta data for a „generic file“ which resides on a given path. To get ahold of any additional image information, one should use the &lt;a href=&quot;http://developer.android.com/reference/android/media/ExifInterface.html&quot;&gt;ExifInterface&lt;/a&gt; and read the &lt;code class=&quot;highlighter-rouge&quot;&gt;ExifInterface.TAG_ORIENTATION&lt;/code&gt; from the file.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, after a quick digging into the GPUImage code, I found that the method &lt;code class=&quot;highlighter-rouge&quot;&gt;mGPUImageView.setImage();&lt;/code&gt; actually supports various types of parameters and then uses slightly different ways to load and interpret them:&lt;/p&gt;
+
+&lt;p&gt;// load the image directly from bitmap data
+setImage(Bitmap bmp);&lt;/p&gt;
+
+&lt;p&gt;// load a file from the file system, interpreting exif data for proper rotation
+setImage(File file);&lt;/p&gt;
+
+&lt;p&gt;// load a file from the internet or media store, using media query for proper rotation
+setImage(Uri uri);&lt;/p&gt;
+
+&lt;p&gt;Since I also passed an Uri object when I referenced a file, GPUImage could not determine the proper rotation in the -non existing- media store data. Eventually, fixing this was as easy as that:&lt;/p&gt;
+
+&lt;p&gt;[…]
+// now feed the image to GPUImageView
+// either by File or other ContentResolver
+// important for correct usage of detecting image rotation (File: ExifInterface; ContentResolver: MediaStore &amp;gt; ImageColumns)
+if (“file”.equals(uri.getScheme())) {
+	mGPUImageView.setImage(new File(uri.getPath()));
+} else {
+	mGPUImageView.setImage(uri);
+}&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Providing GPUImageView with the proper parameters in setImage() leads to correct rotation
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I hope it helps someone facing the same issues. It is not specifically related to GPUImage, but to capturing an photo with Android and processing it in general, as you can see at &lt;a href=&quot;http://stackoverflow.com/search?q=android+portrait+camera+90&quot;&gt;stackoverflow&lt;/a&gt;. GPUImage employs best practices to load an image properly, if provided with the correct parameters.&lt;/p&gt;
+
+&lt;p&gt;Big thanks to &lt;a href=&quot;https://github.com/CyberAgent&quot;&gt;CyberAgent&lt;/a&gt; and &lt;a href=&quot;https://github.com/pboos&quot;&gt;pboos&lt;/a&gt; for proding us with that port of the &lt;a href=&quot;https://github.com/BradLarson/GPUImage&quot;&gt;original GPUImage library for iOS&lt;/a&gt;.&lt;/p&gt;</content><author><name>Maik Buchmeyer</name></author><category term="android" /><category term="app" /><category term="camera" /><category term="gpuimage" /><category term="orientation" /><category term="photo" /><category term="rotation" /><summary>The other day I came across a small issue, while using the [Android port of GPUImage][1]. On some devices (mainly Samsung), an image captured in portrait by the camera intent and then fed to GPUImageView would be rotated by 90 degrees. On other devices, this would work perfectly. Also, selecting an already captured image from the gallery worked just fine.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000{&quot;thumb&quot;=&gt;&quot;device-2013-08-27-104732preview.png&quot;}" /></entry><entry><title>Post with Large Feature Image and Text</title><link href="http://localhost:4000/readability-feature-post/" rel="alternate" type="text/html" title="Post with Large Feature Image and Text" /><published>2013-05-23T00:00:00+09:00</published><updated>2013-05-23T00:00:00+09:00</updated><id>http://localhost:4000/readability-feature-post</id><content type="html" xml:base="http://localhost:4000/readability-feature-post/">&lt;p&gt;This is a sample post with a large feature image&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+
+&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. &lt;em&gt;Ea fashion axe &lt;a href=&quot;#&quot;&gt;Marfa cillum aliquip&lt;/a&gt;. Retro Bushwick keytar cliche.&lt;/em&gt; Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+
+&lt;h2 id=&quot;cupidatat-90s-lo-fi-authentic-try-hard&quot;&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
+
+&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. &lt;strong&gt;&lt;a href=&quot;#&quot;&gt;Terry Richardson&lt;/a&gt; shabby chic +1&lt;/strong&gt;, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sartorial hoodie&lt;/li&gt;
+  &lt;li&gt;Labore viral forage&lt;/li&gt;
+  &lt;li&gt;Tote bag selvage&lt;/li&gt;
+  &lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
+
+&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
+
+&lt;h2 id=&quot;forage-occaecat-cardigan-qui&quot;&gt;Forage occaecat cardigan qui&lt;/h2&gt;
+
+&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
+
+&lt;h2 id=&quot;hoodie-duis&quot;&gt;Hoodie Duis&lt;/h2&gt;
+
+&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
+
+&lt;h3 id=&quot;thundercats-ho&quot;&gt;Thundercats Ho!&lt;/h3&gt;
+
+&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
+
+&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
+
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Texture image courtesty of &lt;a href=&quot;http://www.lovetextures.com/&quot;&gt;Lovetextures&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Maik Buchmeyer</name></author><category term="sample post" /><category term="readability" /><category term="test" /><summary>Custom written post descriptions are the way to go... if you&#39;re not lazy.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000{&quot;thumb&quot;=&gt;&quot;ie.jpg&quot;, &quot;feature&quot;=&gt;&quot;sample-image-4.jpg&quot;, &quot;credit&quot;=&gt;&quot;WeGraphics&quot;, &quot;creditlink&quot;=&gt;&quot;http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/&quot;}" /></entry><entry><title>A Post with Images</title><link href="http://localhost:4000/sample-post-images/" rel="alternate" type="text/html" title="A Post with Images" /><published>2013-05-22T00:00:00+09:00</published><updated>2013-05-22T00:00:00+09:00</updated><id>http://localhost:4000/sample-post-images</id><content type="html" xml:base="http://localhost:4000/sample-post-images/">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
+
+&lt;h3 id=&quot;figures-for-images-or-video&quot;&gt;Figures (for images or video)&lt;/h3&gt;
+
+&lt;h4 id=&quot;one-up&quot;&gt;One Up&lt;/h4&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;&lt;a href=&quot;http://www.flickr.com/photos/80901381@N04/7758832526/&quot; title=&quot;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&quot;&gt;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+
+&lt;h4 id=&quot;two-up&quot;&gt;Two Up&lt;/h4&gt;
+
+&lt;p&gt;Apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;half&lt;/code&gt; class like so to display two images side by side that share the same caption.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;half&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1-large.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-2-large.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-2.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these two images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And you’ll get something that looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;half&quot;&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.JPG&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpeg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Two images.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;three-up&quot;&gt;Three Up&lt;/h4&gt;
+
+&lt;p&gt;Apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;third&lt;/code&gt; class like so to display three images side by side that share the same caption.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;third&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-2.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-3.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these three images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And you’ll get something that looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;third&quot;&gt;
+	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
+	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
+	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
+	&lt;figcaption&gt;Three images.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name>Maik Buchmeyer</name></author><category term="sample post" /><category term="images" /><category term="test" /><summary>Examples and code for displaying images in posts.</summary></entry><entry><title>Moonbase – Das Ende der Gif-Animation?</title><link href="http://localhost:4000/blog/2013/01/21/browser/moonbase-das-ende-der-gif-animation" rel="alternate" type="text/html" title="Moonbase – Das Ende der Gif-Animation?" /><published>2013-01-21T10:01:49+09:00</published><updated>2013-01-21T10:01:49+09:00</updated><id>http://localhost:4000/blog/2013/01/21/browser/moonbase-das-ende-der-gif-animation</id><content type="html" xml:base="http://localhost:4000/blog/2013/01/21/browser/moonbase-das-ende-der-gif-animation">&lt;blockquote&gt;
+  &lt;p&gt;Jahrelang waren Gif-Animationen auf vielen Internetseiten fester gestalterischer Bestandteil. Dank der vielseitigen Einsetzbarkeit der Animationen überlebten die Bewegtbilder die letzten Jahrzehnte im sonst schnelllebigen Internet. Nun scheint das Programm &lt;a href=&quot;http://moonbase.com/&quot;&gt;&amp;gt; Jahrelang waren Gif-Animationen auf vielen Internetseiten fester gestalterischer Bestandteil. Dank der vielseitigen Einsetzbarkeit der Animationen überlebten die Bewegtbilder die letzten Jahrzehnte im sonst schnelllebigen Internet. Nun scheint das Programm&lt;/a&gt; das Ende dieser Ära einzuläuten.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jakelodwick.com/&quot;&gt;Jake Lodwick&lt;/a&gt;, beteiligt an der Entwicklung von Vimeo, präsentiert mit Moonbase ein Programm, dass dem Anwender erlaubt komplexe Animationen auf HTML 5 Basis ohne Vorkenntnisse zu erstellen.&lt;/p&gt;
+
+&lt;h2 id=&quot;die-arbeit-mit-moonbase&quot;&gt;Die Arbeit mit Moonbase&lt;/h2&gt;
+
+&lt;p&gt;Grundlage des Tools ist eine grafische Benutzeroberfläche, die es dem Anwender erlaubt ohne Programmiererfahrung oder sonstige Vorkenntnisse bedient zu werden. An die Nutzung wird der User durch ein simples, aufgabenorientiertes Tutorial herangeführt. Farben, Gestaltung oder Texte werden einfach über die Oberfläche des Programms den eigenen Vorstellungen angepasst. Darüber hinaus können mit Moonbase erstellte Animationen wieder in ihre einzelnen Bestandteile zerlegt werden. So entsteht in kurzer Zeit eine einfache Konstruktion, die die Grundlage für eine komplexe Animation darstellen kann.&lt;/p&gt;
+
+&lt;h2 id=&quot;vorteile-gegenber-gif-animationen&quot;&gt;Vorteile gegenüber Gif-Animationen&lt;/h2&gt;
+
+&lt;p&gt;Da mit Moonbase erstellte Animationen auf HTML 5 basieren, lassen sie sich ähnlich einfach wie Gifs in eine Homepage integrieren. Allerdings besteht keine Beschränkung auf nur 256 Farben, so dass die Grafik ohne größere Qualitätsverluste verwendet werden kann. Durch die Plug &amp;amp; Play Oberfläche können kreative Konzepte von Grafikern oder Homepagebetreibern unabhängig von Programmierkenntnissen oder den Rückgriff auf Fachkräfte konzipiert und umgesetzt werden.&lt;/p&gt;
+
+&lt;p&gt;Trotz der gesteigerten grafischen Ästhetik der Animationen ist nur eine geringe Prozessorleistung für die Darstellung erforderlich. Selbst auf portablen Endgeräten werden die Grafiken reibungslos angezeigt. Grenzwertig wird die Darstellung lediglich, wenn mehrere Animationen auf einer Seite eingebunden sind. Diese Problematik lässt sich allerdings durch geschickte Layoutkonzepte umgehen.&lt;/p&gt;
+
+&lt;p&gt;Die Macher von Moonbase erhoffen sich mit ihrem Programm eine neue Ära der Gestaltungsmöglichkeiten einzuleiten. Dank benutzerfreundlicher Oberfläche und HTML 5 Basis lassen sich kreative Konzepte nicht nur leichter umsetzen, sondern auch grafisch deutlich ansprechender als mit Gif-Animationen gestalten. Um sich von Moonbase selbst einen Eindruck verschaffen zu können besteht auf der Homepage des Projekts die Möglichkeit, das Programm kostenlos und ohne vorherige Registrierung zu testen. Allerdings existieren für die webbasierte Version von Moonbase noch keine Eigenschaften wie zum Beispiel eine Timeline. Da es sich bei der aktuellen Version des Programms jedoch nur um eine Testversion handelt und eine kostenpflichtige Variante von Moonbase absehbar zu sein scheint, könnten solche Features in Zukunft noch folgen.&lt;/p&gt;</content><author><name>connex_kaiser</name></author><category term="animation" /><category term="html5" /><category term="wysiwyg" /><summary>Jahrelang waren Gif-Animationen auf vielen Internetseiten fester gestalterischer Bestandteil. Dank der vielseitigen Einsetzbarkeit der Animationen überlebten die Bewegtbilder die letzten Jahrzehnte im sonst schnelllebigen Internet. Nun scheint das Programm [&amp;gt; Jahrelang waren Gif-Animationen auf vielen Internetseiten fester gestalterischer Bestandteil. Dank der vielseitigen Einsetzbarkeit der Animationen überlebten die Bewegtbilder die letzten Jahrzehnte im sonst schnelllebigen Internet. Nun scheint das Programm][1] das Ende dieser Ära einzuläuten.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000{&quot;thumb&quot;=&gt;&quot;astronaut.png&quot;}" /></entry><entry><title>Social SEO – Content Content Content</title><link href="http://localhost:4000/blog/2011/09/22/seo/social-seo-roundup" rel="alternate" type="text/html" title="Social SEO – Content Content Content" /><published>2011-09-22T13:09:13+09:00</published><updated>2011-09-22T13:09:13+09:00</updated><id>http://localhost:4000/blog/2011/09/22/seo/social-seo-roundup</id><content type="html" xml:base="http://localhost:4000/blog/2011/09/22/seo/social-seo-roundup">&lt;blockquote&gt;
+  &lt;p&gt;Social SEO ist eine Zusammenführung der klassischen Suchmaschinenoptimierung mit dem stetig wichtiger werdenden Social Media Management.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Bis Dezember 2010 war der Einfluss von Social Media für die Suchmaschinenoptimierung sehr umstritten. Matt Cutts, Chefingenieur von Google, &lt;a href=&quot;http://www.youtube.com/watch?v=ofhwPC-5Ub4&quot; title=&quot;Beitrag auf Youtube ansehen&quot;&gt;bestätigte im Winter 2012 offiziell&lt;/a&gt;, dass &lt;strong&gt;Social Media Beiträge nun im Suchalgorithmus berücksichtigt&lt;/strong&gt; werden. Ziel ist es, durch qualitativ gute SEO-Maßnahmen (Onpage / Offpage), interessante und lesenswerte Inhalte anzubieten und so eine natürliche Verbreitung zu fördern.&lt;/p&gt;
+
+&lt;p&gt;Die Buttons von Facebook, Twitter und Google+ sollten auf der Homepage in das Design integriert werden und so dem Leser schnell die Möglichkeit bieten, es mit seinen favorisierten Netzwerk zu teilen. Die Inhalte sollten gerade im Social SEO themenrelevant, richtig geschrieben, interessant oder auch lustig sein. Unter Einbindung von Grafiken, Bildern und Videos werden diese Beiträge mehr gelesen und auch mit anderen geteilt.&lt;/p&gt;
+
+&lt;h2 id=&quot;social-comments-relevanter-als-8217normale8216-kommentare&quot;&gt;Social Comments relevanter als ’normale‘ Kommentare&lt;/h2&gt;
+
+&lt;p&gt;Eine &lt;a href=&quot;http://www.seo-united.de/blog/seo/einfluss-von-social-media-aktivitaten-auf-seo.htm&quot; title=&quot;Studie von Searchmetric auf dem Searchmetrics Blog nachlesen&quot;&gt;Untersuchung im Juni 2011 von Searchmetrics&lt;/a&gt; [&lt;a href=&quot;http://mediavrog.net/blog/wp-content/uploads/2011/09/searchmetrics-facebook.pdf&quot; title=&quot;Pressemitteilung von Searchmetrics als PDF downloaden&quot;&gt;PDF&lt;/a&gt;] hat ergeben, dass &lt;strong&gt;Facebook-Likes und Shares auch Einfluss auf die Positionierung im Suchmaschinenergebnis&lt;/strong&gt; haben, was die Aussage von Matt Cutts unterstreicht. Der Studie kann man entnehmen, dass das Teilen von Inhalten bedeutender für die Suchmaschinenoptimierung ist, als das einfache Kommentieren von Beiträgen.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bei &lt;strong&gt;Facebook&lt;/strong&gt; werden die Links, die man online stellt, als Nofollow Links angezeigt. Von daher könnte man davon ausgehen, dass diese Links nicht viel wert sind. Jedoch sollte man beim Linkaufbau auf die &lt;strong&gt;Natürlichkeit der Linkstruktur achten und für ein organisches Aussehen&lt;/strong&gt; auch hier Backlinks aufbauen.&lt;/li&gt;
+  &lt;li&gt;Die &lt;strong&gt;Relevanz von Twitter-Nachrichten&lt;/strong&gt; ist durch die Aufhebung der Echtzeitsuche bei Google erheblich gesunken. Lediglich bei Bing werden Tweets und Retweets in Suchergebnissen gefunden.&lt;/li&gt;
+  &lt;li&gt;Die &lt;strong&gt;+1 Empfehlungen sowie die Google+ Shares&lt;/strong&gt; des eigenen sozialen Umfelds beeinflussen schon bei Google+ Usern die Suchergebnisse. Wie groß die Bedeutung des +1 Button für die Google-Suche ist bzw. sein wird, ist bisher jedoch noch nicht bekannt.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gefahren&quot;&gt;Gefahren&lt;/h2&gt;
+
+&lt;p&gt;Eine mögliche Gefahr beim fleißigen Teilen und Sharen kann großes Interesse sein, so dass Blogger anfangen den Content zu duplizieren. Es kann schnell passieren, dass Beiträge und Artikel auf unterschiedlichen Seiten erscheinen. Für die Seite die diesen Betrag zuerst veröffentlicht hat, kann dies&lt;a href=&quot;http://www.google.com/support/webmasters/bin/answer.py?answer=66359&quot; title=&quot;Erklärungen zu Duplicate Content in der Google Online Hilfe&quot;&gt; &lt;strong&gt;negativen Einfluss auf das Ranking haben&lt;/strong&gt;&lt;/a&gt;. Um das zu überprüfen, gibt es frei zugängliche online Content Monitoring-Tools wie &lt;a href=&quot;http://www.copyscape.com/&quot; title=&quot;Duplicate Content Checking Service&quot;&gt;Copyscape&lt;/a&gt;. In schweren Fällen von Urheberrechtsverletzung durch duplicate content kann z. B. bei Google ein &lt;a href=&quot;http://www.google.de/dmca.html&quot; title=&quot;Erklärungen zu DMCA&quot;&gt;DMCA-Antrag&lt;/a&gt; gestellt werden, um diese Seiten aus dem Index zu entfernen.&lt;/p&gt;
+
+&lt;h2 id=&quot;unternehmensprofile-pflegen&quot;&gt;Unternehmensprofile pflegen&lt;/h2&gt;
+
+&lt;p&gt;Social Media Unternehmensprofile müssen &lt;strong&gt;stets gepflegt, aktualisiert und mit auch fremden Inhalten gefüllt&lt;/strong&gt; werden, um dadurch Mehrwert für die Leser zu schaffen. Den Nutzern sollten Anreize geboten werden, um die Inhalte zu teilen und zu liken. Mit Hilfe von Keywords und Markenamen können Profile bei stetiger Pflege auch Social Media optimiert werden. Auch diese Maßnahme unterstützt beim Ranken bei den gängigen Suchmaschinen. Zudem ist der persönliche Kontakt durch Social Media in Bezug auf die Kundenbindung nicht zu unterschätzen.&lt;/p&gt;
+
+&lt;p&gt;Beim Linkaufbau, im Speziellen &lt;strong&gt;bei Gastartikeln auf anderen Blogs, sollten interessante und individuelle Beiträge&lt;/strong&gt; geliefert werden, welche in Bezug auf den restlichen Content des Blogs eine hohe Relevanz aufweisen. Unternehmen können so den Kontakt zur Blogosphäre intensivieren und ausbauen.&lt;/p&gt;
+
+&lt;h2 id=&quot;kritisch-und-wohlbedacht-mit-feedback-umgehen&quot;&gt;Kritisch und wohlbedacht mit Feedback umgehen&lt;/h2&gt;
+
+&lt;p&gt;Engagiert man sich als Unternehmen stark in der Social Media Welt kann man sich oft über positives Feedback freuen. Jedoch muss man auch lernen mit negativer Kritik umzugehen. Hierbei ist es sehr wichtig so schnell wie möglich, aber dennoch wohlüberlegt, zu reagieren. Allein eine patzige Antwort kann einen hohen Schaden für das Unternehmen anrichten, wenn sich diese durch Multiplikatoren verbreitet. Ein &lt;strong&gt;geschultes und kundenorientiertes Beschwerdemanagement&lt;/strong&gt; zahlt sich an dieser Stelle aus.&lt;/p&gt;
+
+&lt;p&gt;Abschließend ist zu sagen, dass &lt;strong&gt;erfolgreiches Social SEO ein Zusammenschluss mehrerer Maßnahmen&lt;/strong&gt; ist und nicht isoliert bearbeitet werden kann. Der klassische Linkaufbau, die Social Media Optimization, das Social Media Marketing zählen ebenso dazu wie die Online PR.&lt;/p&gt;</content><author><name>twago_christina</name></author><summary>Social SEO ist eine Zusammenführung der klassischen Suchmaschinenoptimierung mit dem stetig wichtiger werdenden Social Media Management.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000{&quot;thumb&quot;=&gt;&quot;social-seo.jpg&quot;}" /></entry></feed>

@@ -1,0 +1,36 @@
+<p>layout: post
+title: ‘Extension Backend Konfiguration in Typo3 4.2.8 von Typ file’
+published: true
+author: mediavrog
+comments: true
+date: 2009-08-19 07:08:19
+tags:
+    - bug
+    - extension
+    - konfiguration
+    - typo3
+categories:
+    - extensions
+    - typo3
+permalink: &gt;
+    /2009/08/19/typo3/extension-backend-konfiguration-in-typo3-428-von-typ-file
+image:
+    thumb: typo33.jpg
+—
+&gt; Ich bin gerade bei der Entwicklung einer neuen Extension auf ein seltsames Problem gestoßen, bei der in der Typo3 Extension Backend Konfiguration kein File Upload möglich ist:</p>
+
+<p>In der ext_conf_template.txt (vgl. <a href="http://mediavrog.net/blog/2007/05/28/typo3/extensions/backend-be-extension-konfiguration-von-konstanten-direkt-nach-installation-moglich-machen/">Hintergrundinformationen zum Konfigurieren von Extensions</a>) habe ich folgende Konfiguration vorgenommen:</p>
+
+<h1 id="catcfebasicfile-typefile-label-use-your-own-configuration">cat=cfe.basic/file; type=file; label= Use your own configuration</h1>
+<p>customConfig = EXT:cfeConfiguration.js</p>
+
+<p>Nun sollte Typo3 im Backend ein Uploadfeld bereitstellen, welches nur Javascript-Dateien akzeptiert.</p>
+
+<p>Der Output sieht aber ganz anders aus: ein Select-Feld mit der Dateiendung – nichts weiter.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Konfigurationstyp: file wird als select gerendert und nicht wie erwartet als upload Feld
+</code></pre>
+</div>
+
+<p>Kennt jemand dieses Problem unter Typo3 4.2.8? Würde mich freuen zu hören! Derweil versuche ich dem Problem auf die Schliche zu kommen…</p>
+

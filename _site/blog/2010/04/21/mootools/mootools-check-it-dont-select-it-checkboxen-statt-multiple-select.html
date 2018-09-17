@@ -1,0 +1,612 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Mootools “Check it, don’t select it” - Checkboxen statt multiple SelectMootools “Check it, don’t select it” - checkboxes instead of multiple select - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="Mootools “Check it, don’t select it” - Checkboxen statt multiple SelectMootools “Check it, don’t select it” - checkboxes instead of multiple select">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select">
+  <meta property="og:url" content="http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select">
+
+
+
+  <meta property="og:description" content="  Bereits vor einigen Jahren habe ich das [Statement von Nicholas Rougeux bezüglich der Nutzerfreundlichkeit von Mehrfachauswahlfeldern][1] (select[multiple]) gelesen. Er stellt als Alternative dazu eine CheckedListBox vor. Diese habe ich zur freien Verwendung in eine Mootools-Klasse gepackt.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2010-04-21T21:04:37+09:00">
+  
+    <link rel="next" href="http://localhost:4000/blog/2010/06/07/widgets-wgt/mobile-widgets-eine-einfuhrung" title="Mobile Widgets - Eine Einführung">
+  
+  
+    <link rel="prev" href="http://localhost:4000/blog/2010/03/08/mootools/factory-method-design-patterns-in-mootools-1" title="Factory method - design patterns in Mootools 1">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Mootools “Check it, don’t select it” - Checkboxen statt multiple SelectMootools “Check it, don’t select it” - checkboxes instead of multiple select">
+    <meta itemprop="description" content="  Bereits vor einigen Jahren habe ich das [Statement von Nicholas Rougeux bezüglich der Nutzerfreundlichkeit von Mehrfachauswahlfeldern][1] (select[multiple]) gelesen. Er stellt als Alternative dazu eine CheckedListBox vor. Diese habe ich zur freien Verwendung in eine Mootools-Klasse gepackt.">
+    <meta itemprop="datePublished" content="April 21, 2010">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Mootools “Check it, don’t select it” - Checkboxen statt multiple Select<!--:en-->Mootools “Check it, don’t select it” - checkboxes instead of multiple select
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/Check-it-dont-select-it.gif" alt="Mootools "Check it, don't select it" - Checkboxen statt multiple Select<!--:en-->Mootools "Check it, don't select it" - checkboxes instead of multiple select
+ thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <blockquote>
+  <p>Bereits vor einigen Jahren habe ich das <a href="http://c82.net/posts.php?id=25" title="Beitrag auf c82.net in englischer Sprache lesen">Statement von Nicholas Rougeux bezüglich der Nutzerfreundlichkeit von Mehrfachauswahlfeldern</a> (select[multiple]) gelesen. Er stellt als Alternative dazu eine CheckedListBox vor. Diese habe ich zur freien Verwendung in eine Mootools-Klasse gepackt.</p>
+</blockquote>
+
+<h2 id="selectmultiple-ist-nicht-sehr-benutzerfreundlich">Select[multiple] ist nicht sehr benutzerfreundlich</h2>
+
+<p>Um den Artikel kurz aufzugreifen: Auswahlfelder mit Mehrfachauswahl sind nicht sehr benutzerfreundlich. Der Nutzer muss zum Selektieren mehrerer Werte die Strg-Taste gedrückt halten – lässt er einmal aus Versehen los (z.B. beim Scrollen durch die Liste) und markiert nun einen Wert, so ist nur noch dieser allein ausgewählt. Das Gleiche Problem zeigt sich beim Benutzen der Hoch und Runter-Tasten zum Navigieren der Optionen.</p>
+
+<h2 id="eine-liste-von-checkboxen-als-alternative">Eine Liste von Checkboxen als Alternative</h2>
+
+<p>Checkboxen sind hingegen einfacher in der Bedienung: Ein Klick aktiviert sie, ein weiterer deselektiert sie wieder. Der Nutzer kann sich so leichter auf seine primäre Aufgabe (das Selektieren von Optionen) konzentrieren, als darauf zu achten, bestimmte Tasten zu drücken.</p>
+
+<h2 id="checkedlistbox-fr-mootools">CheckedListBox für Mootools</h2>
+
+<p>Zur Wiederverwendung und schnellen Verbesserung der Benutzerfreundlichkeit auch in bestehenden Systemen (wo z.B. die HTML-Templates nicht geändert werden sollen) habe ich eine Mootools-Klasse geschrieben, welche select[multiple]-Elemente in ungeordnete Listen von input[type=checkbox] überführt. Dabei übernimmt es die Dimensionen des select-Feldes, damit das Layout nicht springt.</p>
+
+<p>In dieser Implementierung steht es frei, eine Mehrfachauswahl vollständig durch eine Liste von Checkboxen zu ersetzen oder die Mehrfachauswahl nur auszublenden. Letzteres kann vor allem sinnvoll sein, um bereits bestehende Javascripte, welche das select-Element in seiner Funktion erweitern (z.B. Filter) nicht anpassen zu müssen. Um das select zu komplett zu ersetzen, kann dem Konstruktor die Option replaceOriginal übergeben werden.</p>
+
+<p>window.addEvent(“domready”, (function($){
+   new CheckedListBox($(“mySelect”));
+   new CheckedListBox($(“mySelect2”), {replaceOriginal: true} )
+}).pass(document.id) );</p>
+
+<h2 id="download">Download</h2>
+
+<p>Es ist natürlich noch viel Raum für Verbesserungen. Vorschläge/Patches sind willkommen :):</p>
+
+<p>Bis ich das Plugin für die Mootools Forge aufbereitet habe, kann folgender Download Link genutzt werden:</p>
+
+<p><a href="http://mediavrog.net/blog/wp-content/uploads/2010/03/CheckedListBox.js">CheckedListBox.js (2,88 kB)</a>{.download}</p>
+
+<p>Das minimal benötigte CSS (vgl. auch die Demo weiter unten für ein vollständiges Beispiel):</p>
+
+<p>.cidsi{
+   border: 1px solid #ccc;
+}</p>
+
+<p>.cidsi li label:hover, .cidsi label.cidsi-checked{
+   background-color: #EFFF79;
+}</p>
+
+<p>.cidsi li label{
+   cursor: pointer;
+   border-bottom: 1px dotted #ccc;
+   text-indent: -35px;
+   display: block;
+   padding: 10px 10px 10px 35px;
+}</p>
+
+<p>.cidsi li label input{
+   vertical-align: top;
+   margin:0 10px;
+}</p>
+
+<ul>
+  <li>html .checklist label { height: 1%; }</li>
+</ul>
+
+<h2 id="demo">Demo</h2>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#checkbox" class="page__taxonomy-item" rel="tag">checkbox</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#mehrfachauswahl" class="page__taxonomy-item" rel="tag">mehrfachauswahl</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#plugin" class="page__taxonomy-item" rel="tag">plugin</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#select" class="page__taxonomy-item" rel="tag">select</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#usability" class="page__taxonomy-item" rel="tag">usability</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#mootools" class="page__taxonomy-item" rel="tag">mootools</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2010-04-21T21:04:37+09:00">April 21, 2010</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2010/2010-04-21-mootools-check-it-dont-select-it-checkboxen-statt-multiple-select.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/blog/2010/03/08/mootools/factory-method-design-patterns-in-mootools-1" class="pagination--pager" title="Factory method - design patterns in Mootools 1
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/blog/2010/06/07/widgets-wgt/mobile-widgets-eine-einfuhrung" class="pagination--pager" title="Mobile Widgets - Eine Einführung
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2010/2010-04-21-mootools-check-it-dont-select-it-checkboxen-statt-multiple-select.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2010/04/21/mootools/mootools-check-it-dont-select-it-checkboxen-statt-multiple-select">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

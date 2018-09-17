@@ -1,0 +1,92 @@
+<p>layout: post
+title: ‘dynamischer Seitentitel in Typo3 wie Klickpfad/Breadcrumb’
+published: true
+author: mediavrog
+comments: true
+date: 2007-05-30 01:05:33
+tags:
+    - seo
+    - typo3
+categories:
+    - ts-snippets
+permalink: &gt;
+    /2007/05/30/typo3/ts-snippets/dynamischer-seitentitel-in-typo3-wie-klickpfadbreadcrumb
+image:
+    thumb: typo33.jpg
+—
+&gt; Viele möchten Ihre Seite auch google gern schmackhaft machen. Dass man heutzutage ohne Suchworte im Titel nur mit sehr starkem Content eine vordere Platzierung erreicht ist wohl auch jedem klar, der mal bei google nach „xbox 360“ sucht.</p>
+
+<p>Es muss also ein dynamischer Seitentitel her, welcher hierarchisch aufgebaut einem Klickpfad (rootline, breadcrumb) ähnelt. Und genau diese Idee ist schon der Ansatz und die Lösung: wir erstellen im title-Tag einen Klickpfad ohne Verlinkungen. Doch Eins nach dem Anderen (folgende Sriptzeilen gehören natürlich ins Typoscript Setup):</p>
+
+<ol>
+  <li>
+    <h3 id="die-typo3-seitige-generierung-des-titels-ausschalten">Die Typo3-seitige Generierung des Titels ausschalten</h3>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>config.noPageTitle = 2
+</code></pre>
+</div>
+
+<ol>
+  <li>
+    <h3 id="den-klickpfad-als-hmenu-in-headerdata">den Klickpfad als HMENU in headerData</h3>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>page.headerData.80 = COA page.headerData.80 { wrap = 
+</code></pre>
+</div>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+
+<p>10 = HMENU
+10 {
+special = rootline
+special.range = 1|-1
+includeNotInMenu = 1</p>
+
+<p>1 = TMENU
+1.NO = 1
+1.NO.doNotLinkIt = 1
+1.NO.allWrap = | | |<em>| | | |</em>| |
+}</p>
+
+<p>20=TEXT
+20.data = DB:sys_template:1:sitetitle
+20.wrap =  - |
+}</p>
+
+<h3 id="damit-wird-ein-seitentitel-nach-folgendem-schema-aufgebaut">Damit wird ein Seitentitel nach folgendem Schema aufgebaut:</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Hauptseite</td>
+      <td>Unterseite</td>
+      <td>UnterUnterseite – Seitentitel (wie im Haupttemplate festgelegt)**</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dabei-wirken-sich-folgende-zeilen-besonders-auf-das-setup-aus">Dabei wirken sich folgende Zeilen besonders auf das Setup aus:</h3>
+
+<p>includeNotInMenu = 1 ~Auch die Seitentitel von „Nicht im Menü“-Seiten werden angezeigt</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>special.range = 1</td>
+      <td>-1 ~ Beginnt auf Ebene 1 (also unter root und zeigt die aktuelle Seite mit an)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>20.data = DB:sys_template:1:sitetitle ~ Holt den Seitentitel des Haupttemplate aus der DB</p>
+
+<p>1.NO.doNotLinkIt = 1 ~ Wichtig damit keine HTML Anker um die Titel gelegt werden</p>

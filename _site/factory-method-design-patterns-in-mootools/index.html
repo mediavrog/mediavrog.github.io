@@ -1,0 +1,35 @@
+<p>layout: post
+title: ‘Factory method - design patterns in Mootools 1’
+published: true
+author: steve
+comments: true
+date: 2010-03-08 01:03:03
+tags:
+    - design pattern
+    - factory
+    - mixin
+categories:
+    - mootools
+image:
+    thumb: mootools.jpg
+—
+&gt; Wer den Objektorientierungsansatz von Mootools oft nutzt wird das <strong><a href="http://de.wikipedia.org/wiki/Fabrikmethode">factory method pattern</a></strong> früher oder später nutzen wollen. Eine einfache Implementierung als Mixin könnte wie folgt aussehen:</p>
+
+<p><code class="highlighter-rouge">javascript
+var Factory = new Class({
+   factor: function(classname, params) {
+      return new window[classname](params);
+   }
+});
+</code></p>
+
+<p>Jede Mootools-Klasse wird bei ihrer Definition einer Variablen zugewiesen, welche sich automatisch im global scope, dem window-object, befindet und über den Objektzugriff „[]“ angesprochen werden kann.</p>
+
+<p>Die Implementierung dieses Entwurfsmusters lässt sich nun in jeder weiteren Klasse einfach als Mixin nutzen.</p>
+
+<p><code class="highlighter-rouge">javascript
+var myClass = new Class({
+   Implements: [Factory]
+});
+</code></p>
+

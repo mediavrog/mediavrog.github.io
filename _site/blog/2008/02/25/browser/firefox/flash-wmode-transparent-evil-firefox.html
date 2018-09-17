@@ -1,0 +1,608 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Flash: wmode = transparent = evil (Firefox) - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="Flash: wmode = transparent = evil (Firefox)">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox">
+  <meta property="og:url" content="http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox">
+
+
+
+  <meta property="og:description" content="  Besonders im Firefox sorgt wmode=transparent des Öfteren für kleine oder große Bugs, welche sich hartnäckig halten und oftmals nicht gleich mit wmode transparent in Verbindung gebracht werden – das sorgt für viele (Achtung Ironie:) lustige Debugstunden, was sich beim Halten einer Deadline natürlich besonders gut macht.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2008-02-25T12:02:45+09:00">
+  
+    <link rel="next" href="http://localhost:4000/blog/2008/02/25/weitere-themen/server/mysql-lastet-vserver-aus" title="mysql lastet vServer aus">
+  
+  
+    <link rel="prev" href="http://localhost:4000/blog/2007/12/27/weitere-themen/linktipps-spass/umfrage-zum-thema-internetradio-radio-online" title="Umfrage zum Thema: Internetradio - Radio online">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Flash: wmode = transparent = evil (Firefox)">
+    <meta itemprop="description" content="  Besonders im Firefox sorgt wmode=transparent des Öfteren für kleine oder große Bugs, welche sich hartnäckig halten und oftmals nicht gleich mit wmode transparent in Verbindung gebracht werden – das sorgt für viele (Achtung Ironie:) lustige Debugstunden, was sich beim Halten einer Deadline natürlich besonders gut macht.">
+    <meta itemprop="datePublished" content="February 25, 2008">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Flash: wmode = transparent = evil (Firefox)
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/firefox.jpg" alt="Flash: wmode = transparent = evil (Firefox) thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <blockquote>
+  <p>Besonders im Firefox sorgt wmode=transparent des Öfteren für kleine oder große Bugs, welche sich hartnäckig halten und oftmals nicht gleich mit wmode transparent in Verbindung gebracht werden – das sorgt für viele (Achtung Ironie:) lustige Debugstunden, was sich beim Halten einer Deadline natürlich besonders gut macht.</p>
+</blockquote>
+
+<p>Dieser Post soll über bekannte Bugs aufklären und neue Sammeln.</p>
+
+<h2 id="erklrung-des-parameters-wmode">Erklärung des Parameters wmode</h2>
+
+<p>wmode kann beim Einfügen von Flash in (X)HTML genutzt werden, um den Hintergrund des Flashfilms (swf) transparent zu schalten und somit dem Browser die Möglichkeit zu geben, andere Elemente unter den Flashfilm zu rendern. Dies ist an sich eine feine Sache, denn eigentlich besitzt Flash, in eine Webseite eingebettet, exklusiven Zugriff auf den Pixelbereich (=&gt; eigenes <em>hWnd</em>) und kann nicht mit HTML-Elementen auf der Seite interagieren. Somit sind keine gegenseitigen Überdeckungen und Transparenzen möglich. Zur Erklärung ein kurzer Ausschnitt aus der Flash-Hilfe, welche zum Standard-Wert <strong>window</strong> des wmode-Parameters folgendes schreibt:</p>
+
+<blockquote>
+  <p><strong>window:</strong> Die Anwendung wird in einem eigenen rechteckigen Fenster auf einer Webseite abgespielt. Diese Option legt fest, dass die Flash-Anwendung keinerlei Interaktion mit den HTML-Ebenen durchführt und immer das oberste Element ist.</p>
+</blockquote>
+
+<p>Da dieses Verhalten nicht immer gewünscht ist, gibt es weiterhin die Werte <strong>opaque</strong> und <strong>transparent</strong>. Sie ermöglichen, dass der Flashfilm als Element der HTML-Seite verstanden werden kann. Es greifen dadurch auch Positionierung, z-Index und so kann der Flashfilm nun auch von anderen (X)HTML-Elementen überdeckt werden.</p>
+
+<p>Eine sehr gute Erläuterung fand ich dazu im Artikel <a href="http://www.communitymx.com/content/article.cfm?cid=e5141" title="Artikel zum Parameter wmode öffnen (englisch)">Flash, DHTML Menus and Accessibility</a> von <a href="http://www.communitymx.com/author.cfm?cid=1008" title="Profil von Stephanie Sullivan öffnen.">Stephanie Sullivan</a>.</p>
+
+<h2 id="was-ist-das-problem-mit-wmode">Was ist das Problem mit wmode?</h2>
+
+<p>Leider sorgt das Rendern per <strong>wmode transparent</strong> oder <strong>opaque</strong> manchmal zu unerwünschten Nebeneffekten. Dieser Post soll alle Eigenheiten des Flashplayers sammeln, welche von wmode provoziert werden. Meistens treten sie (leider) im Firefox auf, was in der Geschichte des Flash-Plugins seinen Ursprung hat (Stichwort NPAPI vs. DirectX).</p>
+
+<p>Sollte ein Bug einen Browser außer Firefox betreffen, so wird er in eckigen Klammern hinter dem Titel vermerkt.</p>
+
+<p>Die Anmerkung „Kein Workaround bekannt“ meinst, dass außer wmode auf window zu setzen kein praktikabler Lösungsvorschlag gemacht werden könnte. <strong>Mit wmode=window tauchen diese Bugs nicht auf.</strong></p>
+
+<h2 id="liste-der-probleme">Liste der Probleme</h2>
+
+<ul>
+  <li>
+    <p><strong>kein @ in Formularfeldern</strong>
+    Nicht nur das @, sondern alle möglichen nicht-Standard Zeichen werden in den Feldern nicht mehr angezeigt. <a href="http://www.5etdemi.com/blog/archives/2005/06/firefox-wmodetransparent-is-completely-screwy-and-breaks-textfields" title="Beitrag zu wmode Problemen lesen">Dieser Post im 5 1/2 Blog</a> zeigt das Problem – inklusive Diskussion zum Thema in den Kommentaren.
+    <em>Kein Workaround bekannt.</em></p>
+  </li>
+  <li>
+    <p><strong>kein blinkender Cursor in den Feldern</strong>
+    Ebenfalls durch wmode transparent oder opaque hervorgerufen.
+    <em>Kein Workaround bekannt.</em></p>
+  </li>
+  <li>
+    <p><strong>hitarea von Schaltflächen bleibt bei gescrolltem Inhalt an der alten Stelle</strong>
+    <em>Kein Workaround bekannt.</em></p>
+  </li>
+  <li>
+    <p><strong>Performance-Probleme beim Abspielen von flv</strong>
+    Gerade bei gekeyten Filmen (transparente flv’s) in Verbindung mit wmode=transparent kommt es zu herben Performanceeinbußen und die flv’s beginnen zu stocken oder werden nicht abgespielt, bis man mit der Maus über dem Flashfilm hin- und herfährt.
+    Hier sollte man ernsthaft in Betracht ziehen, ob die Tranzparenz des swf unbedingt benötigt wird und diese ggf. abschalten (wmode auf window setzen).
+    Der Einbruch der Leistungsfähigkeit ist auch Adobe bekannt und wird oftmals bei der Erklärung zu wmode als Hinweis genannt:
+    <strong>Note:</strong> If windowless mode is used, performance can be affected to some degree. If fastest performance is a top priority, you may consider other design options.
+    <em>Kein Workaround bekannt.</em></p>
+  </li>
+</ul>
+
+<p>Sollten euch andere Bugs auffallen, könnt ihr sie gern hier diskutieren.</p>
+
+<p>Zu einer Liste mit bereits bei <a href="https://bugzilla.mozilla.org" title="Mozilla Bugtracker öffnen">bugzilla</a> gemeldeten Bugs betreffend des Flash Plugins gelangt man mit dem Suchbegriff <em>flash</em> in der <a href="https://bugzilla.mozilla.org/query.cgi" title="Bugzilla Suchmaske öffnen">Bugzilla Suchmaske</a>.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#flash" class="page__taxonomy-item" rel="tag">flash</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#opaque" class="page__taxonomy-item" rel="tag">opaque</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#swf" class="page__taxonomy-item" rel="tag">swf</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#transparent" class="page__taxonomy-item" rel="tag">transparent</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#wmode" class="page__taxonomy-item" rel="tag">wmode</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#firefox" class="page__taxonomy-item" rel="tag">firefox</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2008-02-25T12:02:45+09:00">February 25, 2008</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2008/2008-02-25-flash-wmode-transparent-evil-firefox.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/blog/2007/12/27/weitere-themen/linktipps-spass/umfrage-zum-thema-internetradio-radio-online" class="pagination--pager" title="Umfrage zum Thema: Internetradio - Radio online
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/blog/2008/02/25/weitere-themen/server/mysql-lastet-vserver-aus" class="pagination--pager" title="mysql lastet vServer aus
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2008/2008-02-25-flash-wmode-transparent-evil-firefox.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2008/02/25/browser/firefox/flash-wmode-transparent-evil-firefox">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

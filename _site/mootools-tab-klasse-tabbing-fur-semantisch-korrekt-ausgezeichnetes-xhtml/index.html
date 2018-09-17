@@ -1,0 +1,73 @@
+<p>layout: post
+title: ‘mootools - “SmartTabs” : Tab-Klasse / Tabbing für semantisch korrekt ausgezeichnetes XHTML’
+published: true
+author: mediavrog
+comments: true
+date: 2007-06-04 12:06:38
+tags:
+    - javascript
+    - mootools
+    - screenreader
+    - semantisch
+    - tabbing
+    - tabs
+    - xhtml
+categories:
+    - mootools
+permalink: &gt;
+    /2007/06/04/mootools/mootools-tab-klasse-tabbing-fur-semantisch-korrekt-ausgezeichnetes-xhtml
+image:
+    thumb: mootools.jpg
+—
+&gt; Ich habe mit mootools 1.0 eine kleine Tab-Klasse geschrieben, welche Tabs auch aus Listen erzeugen kann, damit das XHTML semantisch korrekt bleibt und somit auch für Screenreader der Inhalt schlüssig angeordnet ist.</p>
+
+<p>Andere Scripts die ich bis jetzt fand, funktionierten meist überhaupt nicht, wenn Javascript ausgeschalten war oder die Überschriften und zugehörige Inhalte waren semantisch nicht korrekt angeordnet.</p>
+
+<p><em>Ich prüfe momentan noch, ob die Klasse unter mootools 1.1 läuft und dann werde ich sie hier für jedermann verfügbar veröffentlichen.</em> Die Klasse läuft problemlos ab mootools 1.0 :)_</p>
+
+<p>_</p>
+
+<h2 id="kurzinfo">Kurzinfo:</h2>
+
+<ul>
+  <li>Tabs mit Javascript/mootools</li>
+  <li>Größe: ca. 4,3 kB</li>
+  <li>basiert auf Framwork: mootools 1.0/1.1</li>
+  <li>Lizenz: MIT</li>
+</ul>
+
+<h2 id="features">Features:</h2>
+
+<ul>
+  <li>Tabs aus Listen erzeugen</li>
+  <li>mehrere Tabs auf einer Seite problemlos</li>
+  <li>onActive und onBackground Callback Funktionen für z.B. Animation beim Tabwechsel</li>
+  <li>Klasse „json“ kann als Javascript-Flag an den Body gehangen werden, um per CSS die Inhalte auch ohne Javascript fein darstellen zu können</li>
+  <li>Tabbing auch per Links in den Tabs möglich</li>
+</ul>
+
+<h2 id="todo8217s">ToDo’s:</h2>
+
+<ul>
+  <li>Tabs in Tabs schachteln</li>
+  <li>Links außerhalb der Tabs steuern Tabbing</li>
+  <li>Links die Tabbing steuern generell verbessern/erweitern</li>
+</ul>
+
+<h2 id="download">Download:</h2>
+
+<ul>
+  <li><a href="http://mediavrog.net/blog/wp-content/uploads/2007/06/classtabs.js" title="SmartTabs - semantic Tabs with mootools">SmartTabs – semantic Tabs with mootools</a></li>
+</ul>
+
+<h2 id="initialisierung">Initialisierung:</h2>
+
+<p>var props = {scope: “.highslide-html”,baseulSelector: “.tabbed”,contentSelector: “.tabcontent”,togglerSelector: “.tabbed li.tabtoggler”,activeTabClass: “active”, insertAsListItem: “li”,addJsFlag: true};
+var tabnow = new tabs(props);</p>
+
+<p><strong>Eine kleine Doku sowie Beispiele folgen demnächst.</strong> Wer findig ist, kann die Klasse schon nutzen oder schreibt mir einfach.</p>
+
+<p>Es würde mich freuen wenn Du einen Kommentar hinterlässt wenn Du SmartTabs verwendest.</p>
+
+<p>Ansonsten sind Verbesserungsvorschläge gern willkommen.</p>
+

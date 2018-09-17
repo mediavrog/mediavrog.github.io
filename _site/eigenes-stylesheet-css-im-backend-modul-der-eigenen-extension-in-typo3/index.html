@@ -1,0 +1,49 @@
+<p>layout: post
+title: ‘eigenes Stylesheet / CSS im Backend Modul der eigenen Extension in Typo3’
+published: true
+author: mediavrog
+comments: true
+date: 2007-05-27 09:05:54
+tags:
+    - backend-modul
+    - css,
+    - extension
+    - stylesheet
+    - typo3
+categories:
+    - extensions
+permalink: &gt;
+    /2007/05/27/typo3/extensions/eigenes-stylesheet-css-im-backend-modul-der-eigenen-extension-in-typo3
+image:
+    thumb: typo3.jpg
+—
+&gt; Für alle die es auch interessiert. Es gibt die Möglichkeit, ein zusätzliches Stylesheet im Backendmodul einer selbst geschriebenen Typo3-Extension zu laden.</p>
+
+<h2 id="konfiguration">Konfiguration</h2>
+
+<p>In der main-Funktion des Backendmoduls wird per</p>
+
+<p>$this-&gt;doc = t3lib_div::makeInstance(‘mediumDoc’);</p>
+
+<p>eine Instanz des template-Objektes erstellt, welches einige interessane Funktionen bietet.</p>
+
+<p>(Nachzulesen in der <a href="http://typo3.org/fileadmin/typo3api-3.8.0/d4/d79/classtemplate.html" title="Klassendokumentation ansehen">offiziellen Klassendokumentation</a>).</p>
+
+<p>Unter Anderen besitzt es die Membervariable styleSheetFile2, welche standardmäßig nicht gesetzt ist.</p>
+
+<p>Und genau hier docken wir an. Beispielhaft hier mal meine Implementation:</p>
+
+<p>$this-&gt;doc-&gt;styleSheetFile2 = “../”.substr(t3lib_extMgm::extPath($this-&gt;extName),strlen(PATH_site)).”mod1/style.css”;</p>
+
+<p>$this-&gt;extName habe ich selbst als Membervariable meines Module gesetzt (tx_meineExtension).</p>
+
+<p>Die style.css liegt wie zu erkennen im Ordnerdes mod1-Verzeichnisses.</p>
+
+<p>Die subst-Funktion wird verwendet um einen relativen Pfad zu generieren.</p>
+
+<p><strong>Update</strong></p>
+
+<p>Robert Heel postete diesen (einfacheren) Vorschlag – Danke!</p>
+
+<p>$this-&gt;doc-&gt;styleSheetFile2=$GLOBALS[“temp_modPath”].’style.css’;</p>
+

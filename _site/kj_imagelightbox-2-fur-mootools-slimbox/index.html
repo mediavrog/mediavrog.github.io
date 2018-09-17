@@ -1,0 +1,54 @@
+<p>layout: post
+title: ‘kj_imagelightbox 2 für mootools slimbox’
+published: true
+author: mediavrog
+comments: true
+date: 2008-05-23 08:05:21
+tags:
+    - extension
+    - lightbox
+    - mootools
+    - slimbox
+    - typo3
+categories:
+    - extensions
+    - mootools
+permalink: &gt;
+    /2008/05/23/typo3/extensions/kj_imagelightbox-2-fur-mootools-slimbox
+image:
+    thumb: mootools.jpg
+—
+&gt; Ich habe mich vor einiger Zeit mal mit dem Typo3 Plugin kj_imagelightbox 2 befasst und es in einem Projekt eingesetzt. Da ich aber anstatt der Kombination aus Prototype/Scriptaculous/Lightbox lieber eine mootools/slimbox einsetzen wollte, habe ich das Plugin entsprechend umgeschrieben, so dass es möglich wird, mootools zu verwenden.</p>
+
+<p><strong>Meine Anpassungen basieren auf der Version 1.4.2 der kj Imagelightbox.</strong></p>
+
+<h2 id="die-8222neue8220-kjimagelightbox">Die „neue“ kj_imagelightbox</h2>
+
+<p>Folgende Möglichkeiten bieten sich nun in der Extension-Konfiguration:</p>
+
+<ul>
+  <li><strong>Use mootools slimbox</strong> – JS will be mootools/slimbox instead of prototype/scriptaculous/lightbox (more lightweight) [<em>selbserklärend</em>]</li>
+  <li><strong>Deactivate inclusion of JSFramework –</strong> useful if you are already using this js framework on your site [<em>Option zum Abschalten der Einbindung des Javascript-Frameworks, falls es auf der Seite schon verwendet wird</em>]</li>
+</ul>
+
+<p>Alle anderen Einstellungen für die Lightbox werden auch für die Slimbox übernommen.</p>
+
+<h2 id="download">Download</h2>
+
+<p><a href="http://mediavrog.net/blog/wp-content/uploads/2008/05/t3x_kj_imagelightbox2-1_4_2.t3x">t3x_kj_imagelightbox2-1_4_2 [ *.t3x, 738 kB ]</a></p>
+
+<p>[paypal]Ist dir diese Arbeit 1 € wert?[/paypal]</p>
+
+<p>.</p>
+
+<h2 id="gepatchte-files-prepend-top">gepatchte Files {.prepend-top}</h2>
+
+<ul>
+  <li>class.ux_tslib_content.php</li>
+  <li>ext_conf_template.txt</li>
+  <li>ext_tables.php</li>
+  <li>neuer Ordner „slimbox“ mit den Files der Slimbox sortiert in Ordnern css, images, js</li>
+</ul>
+
+<p>Danke an den <a href="http://www.typo3-tutorials.org/meine-extensions/kj-imagelightbox-v2.html" title="kj imagelightbox auf typo3-tutorials.de runterladen und Kudos verteilen">Programmierer dieses schönen Plugins</a>.</p>
+

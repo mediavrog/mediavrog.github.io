@@ -1,0 +1,29 @@
+<p>layout: post
+title: ‘mysql lastet vServer aus’
+published: true
+author: mediavrog
+comments: true
+date: 2008-02-25 12:02:52
+tags:
+    - auslastung
+    - cpu
+    - last
+    - mysql
+    - mysql.log
+    - repair
+    - server
+    - sql
+    - vserver
+categories:
+    - server
+permalink: /2008/02/25/weitere-themen/server/mysql-lastet-vserver-aus
+image:
+    thumb: server.jpg
+—
+&gt; In den vergangenen 4 Tagen war mein Server und damit auch einige Projekte kaum zu erreichen. Nach hin und her mit meinem Dienstleister, der mir auch erfreulicherweise den Weg zur Fehlerlösung ebnete, habe ich mich also heute auf die Suche nach dem Fehler gemacht.</p>
+
+<p>Er sollte wohl <strong>etwas mit mysql zu tun</strong> haben, erfuhr ich in einer mail. Auch im Virtuozzo lag der CPU-Verbrauch des mysql-Dienstes bei 40% (Tendenz steigend) – die Auslastung der CPU des vServers lag derweil bei ca. 2700%. <strong>Nach einem Stopp des mysql war alles ok</strong> – nur liefen halt die Projekte und mein Blog nicht ;P</p>
+
+<p>Nach wiederholtem Neustart und überprüfen der Projekte habe ich mal in die mysql.log geschaut (hätte ich viel eher machen sollen) und stellte fest, dass wohl <strong>eine Tabelle kaputt ist</strong>. <strong>Unter „Prozesse“</strong> (erreichbar über Interface wie phpmyadmin oder ähnlichem oder eben Konsole) zeichnete sich ein klares Bild ab – eine <strong>Tabellenabfrage (keine besonders große mit joins oder sowas) wurde einfach nicht beendet und blieb ewig offen. Die CPU-Last stieg und stieg witer an</strong>..</p>
+
+<p>Lange Rede kurzer Sinn: <strong>Ich habe die fehlerhaften Tabellen (bei mir waren es wp_comments und wp_postmeta) per REPAIR mal reparieren lassen.</strong> In der Auswertung wurden auch fehlerhafte Sektoren erkannt und gefixed. Nun läuft wieder alles einwandfrei und ich weiß nächstes Mal wo ich anfange zu suchen.</p>

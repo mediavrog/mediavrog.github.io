@@ -1,0 +1,576 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Markieren von Text abschalten ohne Javascript per CSS - mediavrog</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="mediavrog">
+<meta property="og:title" content="Markieren von Text abschalten ohne Javascript per CSS">
+
+
+  <link rel="canonical" href="http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css">
+  <meta property="og:url" content="http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css">
+
+
+
+  <meta property="og:description" content="  Ganz ohne Javascript und das überall verbreitete onselectstart bzw. onselect lässt sich das Selektieren von Text per CSS (bzw. über das Setzen eines Attributes für den Internet Explorer und Opera) verhindern.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2007-10-24T21:10:49+09:00">
+  
+    <link rel="next" href="http://localhost:4000/blog/2007/10/29/browser/internetexplorer/ie-bugfix-hintergrundfarbe-auserhalb-fieldset-mit-legend" title="IE bugfix - Hintergrundfarbe außerhalb fieldset mit legend">
+  
+  
+    <link rel="prev" href="http://localhost:4000/blog/2007/10/24/browser/browser-hangt-sich-beim-einbinden-von-javascript-auf-oder-sturzt-ab" title="Browser hängt sich beim Einbinden von Javascript auf oder stürzt ab">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Maik Buchmeyer",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!--<link rel="pingback" href="https://webmention.io/www.mediavrog.net/xmlrpc" />-->
+<link rel="webmention" href="https://webmention.io/www.mediavrog.net/webmention" />
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">mediavrog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/blog/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="kudos" data-amount="0" data-url="http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css"></div>
+  
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/bio-photo.jpg" class="author__avatar" alt="Maik Buchmeyer">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Maik Buchmeyer</h3>
+    <p class="author__bio">Full stack & mobile engineer. CTO at AIR at en-japan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Tokyo</li>
+      
+      
+      
+      
+      
+        <li><a href="https://twitter.com/@mediavrog" rel="me"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/mediavrog" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Markieren von Text abschalten ohne Javascript per CSS">
+    <meta itemprop="description" content="  Ganz ohne Javascript und das überall verbreitete onselectstart bzw. onselect lässt sich das Selektieren von Text per CSS (bzw. über das Setzen eines Attributes für den Internet Explorer und Opera) verhindern.">
+    <meta itemprop="datePublished" content="October 24, 2007">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Markieren von Text abschalten ohne Javascript per CSS
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+          
+          
+            <div class="thumb">
+              <img src="http://localhost:4000/images/css.jpg" alt="Markieren von Text abschalten ohne Javascript per CSS thumb image" />
+            </div>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <blockquote>
+  <p>Ganz ohne Javascript und das überall verbreitete onselectstart bzw. onselect lässt sich das Selektieren von Text per CSS (bzw. über das Setzen eines Attributes für den Internet Explorer und Opera) verhindern.</p>
+</blockquote>
+
+<p>Dazu sei als Allererstes erwähnt, dass ich diese Möglichkeit <strong>NIE</strong> auf normalen Text einer Webseite anwenden würde, da so die Usability <strong>EXTREM</strong> eingeschränkt wird und der Besucher verwirrt die Seite verlässt. Außerdem kann sich der findige Besucher auch über den Quelltext der Seite entsprechende Textpassagen kopieren – als Kopierschutz sollte diese Methode also nicht erwägt werden!</p>
+
+<h2 id="wozu-das-ganze-also-berhaupt">Wozu das ganze also überhaupt?</h2>
+
+<p>Ich bin vor kurzem bei der Weiterentwicklung der <a href="http://customformelements.net/" title="Custom form elements - Seite in neuem Fenster öffnen">Custom Form Elements</a> auf ein Problem gestossen, als ich ein Text-Label einer Schaltfläche (dynamisch generiert) vor versehentlichem Markieren schützen wollte. Schaltflächen lassen wie gewohnt ein Markieren ihres Label eh nicht zu und dieses Verhalten musste ich imitieren. Die Lösung habe ich nach einiger Recherche zusammengetragen und sie funktioniert bei mir für IE 6/7, Opera 9, Netscape, Firefox 2, Safari:</p>
+
+<h2 id="mootools-code-eigenschaften-per-js-setzen">Mootools code (Eigenschaften per JS setzen):</h2>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">ie</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">opera</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">lab</span><span class="p">.</span><span class="nx">setProperty</span><span class="p">(</span><span class="s2">"unselectable"</span><span class="p">,</span><span class="s2">"on"</span><span class="p">);}</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">gecko</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">lab</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">(</span><span class="s2">"MozUserSelect"</span><span class="p">,</span><span class="s2">"none"</span><span class="p">);}</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">webkit</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">lab</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">(</span><span class="s2">"KhtmlUserSelect"</span><span class="p">,</span><span class="s2">"none"</span><span class="p">);}</span>
+</code></pre>
+</div>
+
+<h2 id="css--attribut">CSS / Attribut</h2>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.myUnselectableText</span><span class="p">{</span>
+<span class="c">/* Gecko-based, Mozilla */</span>
+<span class="nl">-moz-user-select</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span>
+<span class="c">/* Safari */</span>
+<span class="nl">-khtml-user-select</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Für Opera und IE 6/7 wird die Eigenschaft unselectable gesetzt.</p>
+
+<p><strong>Anmerkung</strong>: ein XHTML Dokument validiert nicht mehr, wird diese Eigenschaft in den Quelltext geschrieben, also sollte man dieses Attribut lieber per JS setzen :)</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"myUnselectableText"</span> <span class="na">unselectable=</span><span class="s">"on"</span><span class="nt">&gt;</span>Absatz<span class="nt">&lt;/p&gt;</span>;
+</code></pre>
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#css" class="page__taxonomy-item" rel="tag">css</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#text-selection" class="page__taxonomy-item" rel="tag">text-selection</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#browser" class="page__taxonomy-item" rel="tag">browser</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published on </strong> <time datetime="2007-10-24T21:10:49+09:00">October 24, 2007</time></p>
+        
+        
+          
+<p class="page__fix">
+  <strong><i class="fa fa-fw fa-bug" aria-hidden="true"></i> Found a mistake?</strong>
+  <span>
+    <a class="btn btn--inverse" href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-10-24-markieren-von-text-abschalten-ohne-javascript-per-css.md" rel="nofollow">Please fix it</a>
+    Thanks :)
+  </span>
+</p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/blog/2007/10/24/browser/browser-hangt-sich-beim-einbinden-von-javascript-auf-oder-sturzt-ab" class="pagination--pager" title="Browser hängt sich beim Einbinden von Javascript auf oder stürzt ab
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/blog/2007/10/29/browser/internetexplorer/ie-bugfix-hintergrundfarbe-auserhalb-fieldset-mit-legend" class="pagination--pager" title="IE bugfix - Hintergrundfarbe außerhalb fieldset mit legend
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Comments</h4>
+  
+    <section id="comments"><!-- start custom comments snippet -->
+
+
+
+<p class="notice--success">
+  <a href="https://github.com/mediavrog/mediavrog.github.io/edit/master/_posts/2007/2007-10-24-markieren-von-text-abschalten-ohne-javascript-per-css.md" rel="nofollow"><strong>Leave a comment</strong></a>
+  &mdash;
+  Edit this page on github and issue a PR for your comment please.
+  <a href="https://github.com/mediavrog/mediavrog.github.io/wiki#how-to-comment" rel="nofollow"><sup>HowTo?</sup></a>
+</p>
+
+
+
+
+
+<!--<p><small><span data-webmention-count data-url="http://localhost:4000/blog/2007/10/24/browser/markieren-von-text-abschalten-ohne-javascript-per-css">0</span> mentions</small></p>-->
+<!-- end custom comments snippet --></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/career/headhunted-not/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Headhunted - Not
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">When to be careful to not just pass on your data to any recruiter.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/javascript/bootstrap-datepicker-readonly/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Read-only for bootstrap datepicker calendar popup
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Small js to simulate read only in the calendar popup.
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/blog/2013/10/12/app/kompare/kompare-widget-for-price-comparison-released">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - ein Widget zum einfachen vergleichen von Preisen released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Vor ein paar Tagen ging das kompare Widget nun endlich im [Play Store][1] live.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/apps/kompare-android-price-comparison-widget/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">kompare - Android widget for price comparison released
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The kompare price comparison widget was released to the Play Store just a few days ago.
+
+</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/mediavrog"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Maik Buchmeyer. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

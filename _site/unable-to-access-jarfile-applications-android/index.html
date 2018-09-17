@@ -1,0 +1,34 @@
+<p>layout: post
+title: ‘<!--:en-->Unable to access jarfile /Applications/Android SolutionUnable to access jarfile /Applications/Android Loesung’
+published: true
+author: mediavrog
+comments: true
+date: 2013-08-30 07:08:45
+tags:
+    - android studio
+    - mac
+    - proguard
+categories:
+    - android
+permalink: &gt;
+    /2013/08/30/android/unable-to-access-jarfile-applications-android
+—
+When trying to run ProGuard from Android Studio (for example during the process of building a signed Application), the following error may pop up.</p>
+
+<p>Error [ProjectName] Unable to access jarfile /Applications/Android</p>
+
+<p>This is most likely caused in an environment, where Android Studio is installed in a path containing whitespaces and the called proguard script cannot handle whitespaces in the path. On my Mac workmachine, I installed Android Studio at:</p>
+
+<p>/Applications/Android Studio.app</p>
+
+<p>The solution is as simple as editing</p>
+
+<p>/Applications/Android Studio.app/sdk/tools/proguard/bin/proguard.sh</p>
+
+<p>and changing</p>
+
+<p>java -jar $PROGUARD_HOME/lib/proguard.jar “$@”</p>
+
+<p>to</p>
+
+<p>java -jar “$PROGUARD_HOME/lib/proguard.jar” “$@”</p>

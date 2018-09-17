@@ -1,0 +1,264 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TYPO3 - Direct Mail Newsletter werden nicht verschickt &#8211; mediavrog</title>
+<meta name="description" content="
+  Das solide Newslettersystem Direct Mail bereitet besonders Einsteigern immer wieder Kopfschmerzen: Oftmals werden Newsletter aus unerklärlichen Gründen nicht verschickt und die Nutzerführung war für die Redakteure, welche letztenendes den Newsletter aufbereiten und verschicken sollen bis vor Kurzem recht umständlich.
+
+
+">
+<meta name="keywords" content="direct-mail, htaccess, newsletter, typo3">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="TYPO3 - Direct Mail Newsletter werden nicht verschickt">
+<meta name="twitter:description" content="
+  Das solide Newslettersystem Direct Mail bereitet besonders Einsteigern immer wieder Kopfschmerzen: Oftmals werden Newsletter aus unerklärlichen Gründen nicht verschickt und die Nutzerführung war für die Redakteure, welche letztenendes den Newsletter aufbereiten und verschicken sollen bis vor Kurzem recht umständlich.
+
+
+">
+<meta name="twitter:site" content="@mediavrog">
+<meta name="twitter:creator" content="@mediavrog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://127.0.0.1:4000/images/typo33.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TYPO3 - Direct Mail Newsletter werden nicht verschickt">
+<meta property="og:description" content="
+  Das solide Newslettersystem Direct Mail bereitet besonders Einsteigern immer wieder Kopfschmerzen: Oftmals werden Newsletter aus unerklärlichen Gründen nicht verschickt und die Nutzerführung war für die Redakteure, welche letztenendes den Newsletter aufbereiten und verschicken sollen bis vor Kurzem recht umständlich.
+
+
+">
+<meta property="og:url" content="http://127.0.0.1:4000/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt/">
+<meta property="og:site_name" content="mediavrog">
+
+<meta property="og:image" content="http://127.0.0.1:4000/images/typo33.jpg">
+
+
+
+
+
+
+<link rel="canonical" href="http://127.0.0.1:4000/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt/">
+<link href="http://127.0.0.1:4000/feed.xml" type="application/atom+xml" rel="alternate" title="mediavrog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://127.0.0.1:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://127.0.0.1:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://127.0.0.1:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://127.0.0.1:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400,300" />
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://127.0.0.1:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://127.0.0.1:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://127.0.0.1:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://127.0.0.1:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://127.0.0.1:4000/">mediavrog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+				    <li><a href="http://127.0.0.1:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://127.0.0.1:4000/blog/" >Blog</a></li>
+				
+				    
+				    <li><a href="http://127.0.0.1:4000/projects/" >Projects</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://127.0.0.1:4000/images/bio-photo.png" class="bio-photo" alt="Maik Vlcek bio photo">
+
+
+  <h4 itemprop="name">Maik Vlcek</h4>
+  <p><small>Full stack & mobile engineer</small></p>
+  
+  
+  <a href="http://twitter.com/mediavrog" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  
+  <a href="http://github.com/mediavrog" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://127.0.0.1:4000/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt/" rel="bookmark" title="TYPO3 - Direct Mail Newsletter werden nicht verschickt">TYPO3 - Direct Mail Newsletter werden nicht verschickt</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <blockquote>
+  <p>Das solide Newslettersystem Direct Mail bereitet besonders Einsteigern immer wieder Kopfschmerzen: Oftmals werden Newsletter aus unerklärlichen Gründen nicht verschickt und die Nutzerführung war für die Redakteure, welche letztenendes den Newsletter aufbereiten und verschicken sollen bis vor Kurzem recht umständlich.</p>
+</blockquote>
+
+<p>Dieser Beitrag soll die wichtigsten Probleme behandeln und mit Hilfe der Kommentare ständig erweitert werden.</p>
+
+<h2 id="html-newsletter-werden-nicht-verschickt">HTML-Newsletter werden nicht verschickt</h2>
+
+<p>Dieses Problem lässt sich zum Glück in den meisten Fällen einfach und schnell regeln. Die häufigste Ursache liegt in der Liste der Abonnements – sind diese händisch eingepflegt oder per direct_mail_subscription nicht komplett in die Datenbank geschrieben, so fehlt der <strong>Haken im Feld</strong> „<strong>Newsletter im HTML-Format empfangen</strong>“ bei den Abonnementen. Damit dieses automatisch gesetzt wird, sollte man im Template für das Anmeldeformular ein hidden-Feld einfügen:</p>
+
+<p>Somit wird für jeden neuen Abonnementen der Wert gleich auf 1 gesetzt.</p>
+
+<p><a href="#commentform" title="Schreibe einen Kommetar dazu">Welche Gründe gibt es noch? Schreib nen Kommentar.</a></p>
+
+<h2 id="massenversand-startet-verarbeitet-abonnenten-aber-es-werden-keine-mails-verschickt">Massenversand startet, verarbeitet Abonnenten aber es werden keine Mails verschickt</h2>
+
+<p>Für dieses Problem kann es mehrere Ursachen geben, das Resultat ist immer das selbe: Der Versand wird angestoßen, aber in der Versand-Statistik steht keine Anzahl der Versendeten Mails.</p>
+
+<ul>
+  <li>
+    <h3 id="in-vebindung-mit-htaccess">In Vebindung mit htaccess</h3>
+
+    <p>In einem meiner Projekte habe ich zur <a href="http://mediavrog.net/blog/2007/07/26/seo/vermeidung-von-duplicate-content-im-bezug-auf-suchmaschinen/" title="Artikel zum Thema Duplicate Content und Suchmaschinen in diesem Blog lesen">Vermeidung von duplicate Content</a> per htaccess die Anfragen an die Domain domainname.tld auf www.domainname.tld umgeleitet. Nun habe ich mich trotzdem unter domainname.tld/typo3 eingeloggt und wollte einen Newsletter versenden. Es lief soweit alles normal und auch die Vorschau sah gut aus. Leider wurden die E-Mails per Massenversand nicht verschickt (vgl. Bild oben). Eine Testmail ergab außerdem, dass nicht der Inhalt des Newsletters, sondern die <strong>gesamte Seite als Newsletter verschickt</strong> wurde. Nach eingehender Prüfung musste ich feststellen, dass direct_mail nicht die per baseURL gesetzte URI als Ausgangsbasis zum Rendern/Erstellen des Inhalts des Newsletters verwendet, sondern den Pfad des eingeloggten Nutzers. In meinem Fall habe ich mich noch einmal ausgeloggt und unter www.domainname.tld/typo3 wieder eingeloggt – der Newsletter konnte problemlos verschickt werden.</p>
+
+    <p>Fazit: Ich werde die htaccess-Konfiguration wohl noch einmal überprüfen, so dass alle Parameter beim Umleiten ohne www zu www mitgenommen werden.</p>
+
+    <p>Welche Probleme habt ihr erfahren und wie gelöst? Hinterlasst einen Komentar oder einen Trackback. Ich möchte hier gern eine Problemlöse-Sammlung rund um direct_mail enstehen lassen.</p>
+  </li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://127.0.0.1:4000/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:4000/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://127.0.0.1:4000/typo3/typo3-direct-mail-newsletter-werden-nicht-verschickt/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>TYPO3 - Direct Mail Newsletter werden nicht verschickt</strong> was published on <time datetime="2008-05-29T11:05:21+09:00">May 29, 2008</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+
+  
+  <aside class="read-next">
+    <a class="read-next-story prev " style="" href="http://127.0.0.1:4000/formatting-post/" title="Formatting Post">
+      <section class="post">
+        <h2>Formatting Post</h2>
+        Demo post displaying the various ways of highlighting code in Markdown.
+      </section>
+    </a>
+  </aside>
+  
+
+
+<div class="footer-wrap">
+  <footer>
+    
+
+<section class="copyright"><a href="http://127.0.0.1:4000">Maik Vlcek</a> &copy; 2016</section>
+<section class="poweredby">Proudly published with <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a></section>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://127.0.0.1:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://127.0.0.1:4000/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-1304393-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+
+
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 ## [3.2.12](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.12)
 
+
 ### Enhancements
 
 - Remove window width "magic number" from sticky sidebar check in `main.js` for improved flexibility. [#375](https://github.com/mmistakes/minimal-mistakes/pull/375)
